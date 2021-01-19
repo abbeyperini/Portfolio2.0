@@ -1,0 +1,38 @@
+header {
+  background-color: darkgrey;
+  display: grid;
+  grid-template-areas: 
+  ". . ."
+  ". name ."
+  ". title ."
+  ". button ."
+  "nav nav nav";
+  text-align: center;
+  align-items: center;
+  grid-template-rows: .5fr 1fr 1fr 1fr 1fr;
+}
+
+.header_name {
+  grid-area: name;
+  margin-bottom: 0;
+}
+
+.header_title {
+  grid-area: title;
+}
+
+.header_button {
+  grid-area: button;
+  width: 150px;
+  background-color: darkgrey;
+  border: solid 1px black;
+  margin: auto;
+  padding: 15px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-area: nav;
+}
