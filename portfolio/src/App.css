@@ -1,5 +1,12 @@
+/* dark theme colors
+jet - #292929
+charcoal - #2F4550
+dark electric blue - #586F7C
+powder blue - #B8DBD9
+cultured - #F9F8F8 */
+
 header {
-  background-color: darkgrey;
+  background-color: #2F4550;
   display: grid;
   grid-template-areas: 
   ". . ."
@@ -10,6 +17,7 @@ header {
   text-align: center;
   align-items: center;
   grid-template-rows: .5fr 1fr 1fr 1fr 1fr;
+  height: 50rem;
 }
 
 .header_name {
@@ -24,8 +32,8 @@ header {
 .header_button {
   grid-area: button;
   width: 150px;
-  background-color: darkgrey;
-  border: solid 1px black;
+  background-color: #2F4550;
+  border: solid 1px #B8DBD9;
   margin: auto;
   padding: 15px;
 }
@@ -35,4 +43,9 @@ nav {
   align-items: center;
   justify-content: space-evenly;
   grid-area: nav;
+}
+
+.header_button:hover, .header_button:focus {
+  background-color: #B8DBD9;
+  color: #292929;
 }
