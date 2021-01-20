@@ -10,23 +10,26 @@ header {
   display: grid;
   grid-template-areas: 
   ". . ."
-  ". name ."
-  ". title ."
-  ". button ."
-  "nav nav nav";
+  ". text ."
+  ". button .";
   text-align: center;
   align-items: center;
-  grid-template-rows: .5fr 1fr 1fr 1fr 1fr;
-  height: 50rem;
+  grid-template-rows: 1fr 1fr 1fr .25fr;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.header_text {
+  grid-area: text;
 }
 
 .header_name {
-  grid-area: name;
-  margin-bottom: 0;
+  padding: 20px;
 }
 
 .header_title {
-  grid-area: title;
+  padding: 10px;
 }
 
 .header_button {
@@ -43,9 +46,41 @@ nav {
   align-items: center;
   justify-content: space-evenly;
   grid-area: nav;
+  background-color: #2F4550;
+  padding: 20px;
 }
 
-.header_button:hover, .header_button:focus {
+.nav_button {
+  border: none;
+  background-color: #2F4550;
+  padding: 10px;
+  font-size: 18px;
+  border: solid 1px #B8DBD9;
+}
+
+.header_button:hover, .header_button:focus, .nav_button:hover, .nav_button:focus {
   background-color: #B8DBD9;
   color: #292929;
+}
+
+.header_testing {
+  margin: 300px;
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }
