@@ -7,6 +7,7 @@ import Blog from './components/Blog';
 import About from './components/About';
 import Contact from './components/Contact';
 import { CSSTransitionGroup } from 'react-transition-group';
+import Toggle from './components/Toggle';
 
 function App() {
   const [hidden, setHidden] = useState(false)
@@ -27,11 +28,14 @@ function App() {
         transitionLeaveTimeout={300}>
         {!hidden && <Header key="1" hideHeader={hideHeader}/>}
       </CSSTransitionGroup>
-      <NavBar hideHeader={hideHeader}/>
-      <Work />
-      <Blog />
-      <About />
-      <Contact />
+      <div className="main-container">
+        {hidden && <NavBar hideHeader={hideHeader}/>}
+        {hidden && <Toggle />}
+        {hidden && <Work />}
+        {hidden && <Blog />}
+        {hidden && <About />}
+        {hidden && <Contact />}
+      </div>
     </div>
   );
 }

@@ -1,0 +1,173 @@
+:root {
+    /** sunny side **/
+    --blue-background: #c2e9f6;
+    --blue-border: #72cce3;
+    --blue-color: #96dcee;
+    --yellow-background: #fffaa8;
+    --yellow-border: #f5eb71;
+    /** dark side **/
+    --indigo-background: #808fc7;
+    --indigo-border: #5d6baa;
+    --indigo-color: #6b7abb;
+    --gray-border: #e8e8ea;
+    --gray-dots: #e8e8ea;
+}
+
+@keyframes reverse {
+    0% {
+        left: 104px;
+        width: 80px;
+    }
+    60% {
+        left: 72px;
+        width: 110px;
+    }
+    100% {
+        left: 3px;
+    }
+}
+    
+@keyframes switch {
+    0% {
+        left: 3px;
+    }
+    60% {
+        left: 3px;
+        width: 110px;
+    }
+    100% {
+        left: 97px;
+        width: 80px;
+    }
+}
+
+.toggle--checkbox {
+    display: none;
+}
+  
+.container--toggle {
+    display: grid;
+    place-items: center;
+    min-height: 200px;
+    position: relative;
+    grid-area: toggle;
+    margin: 20px;
+}
+
+/* background */
+.toggle--label {
+    width: 200px;
+    height: 104px;
+    background: var(--indigo-color);
+    border-radius: 100px;
+    border: 5px solid var(--indigo-border);
+    display: flex;
+    position: relative;
+    transition: all 350ms ease-in;
+}
+
+.toggle--checkbox:checked + .toggle--label {
+    background: var(--blue-color);
+    border-color: var(--blue-border);
+}
+
+/* sun and moon */
+.toggle--checkbox:checked + .toggle--label:before {
+    animation-name: reverse;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+    transition: all 360ms ease-in;
+    background: var(--yellow-background);
+    border-color: var(--yellow-border);
+}
+
+.toggle--label:before {
+    animation-name: switch;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+    content: '';
+    width: 80px;
+    height: 80px;
+    border: 5px solid var(--gray-border);
+    top: 2px;
+    left: 3px;
+    position: absolute;
+    border-radius: 80px;
+    background: white;
+}
+
+/* moon dimples */
+.toggle--label:after {
+    transition-delay: 0ms;
+    transition: all 250ms ease-in;
+    position: absolute;
+    content: '';
+    box-shadow: var(--gray-dots) -13px 0 0 2px, var(--gray-dots) -24px 14px 0 -2px;
+    left: 143px;
+    top: 23px;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.toggle--checkbox:checked + .toggle--label:after {
+    transition-delay: 50ms;
+    opacity: 0;
+}
+
+/* clouds */
+.toggle--checkbox:checked + .toggle--label .toggle--label-background {
+    width: 10px;
+    left: 135px;
+}
+
+.toggle--checkbox:checked + .toggle--label .toggle--label-background:before {
+    top: -5px;
+    width: 40px;
+    height: 5px;
+}
+
+.toggle--checkbox:checked + .toggle--label .toggle--label-background:after {
+    top: 5px;
+    width: 40px;
+    height: 5px;
+    left: -10px;
+}
+
+/* stars */
+.toggle--label-background {
+    border-radius: 5px;
+    position: relative;
+    background: white;
+    left: 60px;
+    width: 5px;
+    transition: all 150ms ease-in;
+    top: 45px;
+    height: 5px;
+}
+
+.toggle--label-background:before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: -25px;
+    border-radius: 5px;
+    background: white;
+    left: -20px;
+    transition: all 150ms ease-in;
+}
+
+.toggle--label-background:after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: -30px;
+    top: 20px;
+    border-radius: 5px;
+    background: white;
+    transition: all 150ms ease-in;
+}

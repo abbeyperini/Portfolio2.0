@@ -2,7 +2,10 @@ import React from 'react';
 
 function Blog() {
     return (
-        <p className="header_testing">Blog feed here.</p>
+        <div className="container_blog">
+            <h1 className="section_title">Blog</h1>
+            <p className="blog_text">Blog feed here.</p>
+        </div>
     )
 }
 

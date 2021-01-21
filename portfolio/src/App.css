@@ -48,6 +48,7 @@ nav {
   grid-area: nav;
   background-color: #2F4550;
   padding: 20px;
+  grid-area: nav;
 }
 
 .nav_button {
@@ -83,4 +84,52 @@ nav {
 .example-leave.example-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
+}
+
+.skills-icon {
+  width: 30px;
+}
+
+.subwork_image, .old-wall_image {
+  height: 400px;
+}
+
+.container_about, .container_blog, .container_contact, .container_work, .subWork {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  background-color: #2F4550;
+  margin: 20px;
+}
+
+.section_title {
+  margin: 10px;
+}
+
+.container_about {
+  grid-area: about;
+}
+
+.container_blog {
+  grid-area: blog;
+}
+
+.container_contact {
+  grid-area: contact;
+}
+
+.container_work {
+  grid-area: portfolio;
+}
+
+.main-container {
+  display: grid;
+  grid-template-areas: 
+  "nav nav nav"
+  " . . toggle"
+  ". portfolio ."
+  ". blog ."
+  ". about ."
+  ". contact .";
+  grid-template-columns: 1fr 2fr 1fr;
 }
