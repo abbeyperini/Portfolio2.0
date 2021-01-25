@@ -5,6 +5,11 @@ dark electric blue - #586F7C
 powder blue - #B8DBD9
 cultured - #F9F8F8 */
 
+p, h2, h3 {
+  padding: 10px;
+  margin: 10px;
+}
+
 header {
   background-color: #2F4550;
   display: grid;
@@ -86,24 +91,36 @@ nav {
   transition: opacity 300ms ease-in;
 }
 
+.container_skills-icon {
+  margin: 20px;
+}
+
 .skills-icon {
-  width: 30px;
+  width: 60px;
+  margin: 20px;
 }
 
 .subwork_image, .old-wall_image {
-  height: 400px;
+  max-height: 400px;
+  max-width: 400px;
+  margin: 10px;
+}
+
+.main-container {
+  background-color: #586F7C;
 }
 
 .container_about, .container_blog, .container_contact, .container_work, .subWork {
   display: flex;
   flex-direction: column;
   place-items: center;
-  background-color: #2F4550;
+  background-color:#2F4550;
   margin: 20px;
+  border-radius: 50px;
 }
 
 .section_title {
-  margin: 10px;
+  margin-top: 20px;
 }
 
 .container_about {
@@ -126,10 +143,18 @@ nav {
   display: grid;
   grid-template-areas: 
   "nav nav nav"
-  " . . toggle"
-  ". portfolio ."
+  ". portfolio toggle"
   ". blog ."
   ". about ."
   ". contact .";
   grid-template-columns: 1fr 2fr 1fr;
+}
+
+.work_icon {
+  width: 50px;
+  margin: 10px;
+}
+
+.about_headshot {
+  width: 300px;
 }

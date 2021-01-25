@@ -48,10 +48,11 @@
 .container--toggle {
     display: grid;
     place-items: center;
-    min-height: 200px;
+    min-height: 100px;
     position: relative;
     grid-area: toggle;
     margin: 20px;
+    align-self: flex-start;
 }
 
 /* background */

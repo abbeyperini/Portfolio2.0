@@ -4,6 +4,8 @@ import Bujogif from '../images/BujoToGo.gif';
 import Knitgif from '../images/knitworthygif.gif';
 import OWS1 from '../images/OWSmobile1.png';
 import OWS2 from '../images/OWSmobile2.png';
+import { ReactComponent as Chrome } from '../images/chrome.svg';
+import { ReactComponent as Github } from '../images/github.svg';
 
 function Work() {
     return (
@@ -17,8 +19,8 @@ function Work() {
                     most players are actively playing multiple games at the same time. Unfortunately, the communities for each individual game remain isolated. 
                     Gachasphere hopes bridge the gap between existing communities and connect players from all over the world together.</p>
                 <span className="subwork_links">
-                    <a href="https://github.com/brodri4/Gachasphere-client" target="_blank" rel="noreferrer">Github</a>
-                    <a href="http://gachasphere.surge.sh/" target="_blank" rel="noreferrer">Chrome</a>
+                    <a href="https://github.com/brodri4/Gachasphere-client" target="_blank" rel="noreferrer"><Github className="work_icon"/></a>
+                    <a href="http://gachasphere.surge.sh/" target="_blank" rel="noreferrer"><Chrome className="work_icon"/></a>
                 </span>
             </div>
             <div className="subWork">
@@ -32,8 +34,8 @@ function Work() {
                     complete later or backward because they were completed early). View your bullets in monthly, weekly, and daily spreads - traditional 
                     or calendar style. Bullets are stored with date time strings and returned in chronological order based on the time range of the view.</p>
                 <span className="subwork_links">
-                    <a href="https://github.com/abbeyperini/BujoToGo" target="_blank" rel="noreferrer">Github</a>
-                    <a href="http://bujo-to-go.surge.sh/#/index" target="_blank" rel="noreferrer">Chrome</a>
+                    <a href="https://github.com/abbeyperini/BujoToGo" target="_blank" rel="noreferrer"><Github className="work_icon"/></a>
+                    <a href="http://bujo-to-go.surge.sh/#/index" target="_blank" rel="noreferrer"><Chrome className="work_icon"/></a>
                 </span>
             </div>
             <div className="subWork">
@@ -47,8 +49,8 @@ function Work() {
                     project data to real life time and length measurements to put the amount of love that goes into a handmade gift into perspective for 
                     someone who does not knit or crochet.</p>
                 <span className="subwork_links">
-                    <a href="https://github.com/abbeyperini/Knitworthy" target="_blank" rel="noreferrer">Github</a>
-                    <a href="http://knitworthy.net/" target="_blank" rel="noreferrer">Chrome</a>
+                    <a href="https://github.com/abbeyperini/Knitworthy" target="_blank" rel="noreferrer"><Github className="work_icon"/></a>
+                    <a href="http://knitworthy.net/" target="_blank" rel="noreferrer"><Chrome className="work_icon"/></a>
                 </span>
             </div>
             <div className="subWork">
@@ -62,7 +64,7 @@ function Work() {
                         (written in XML1) and make it responsive. The screenshots above are the new mobile layout I designed. Click below to see more screenshots 
                     in my github repo, including the desktop view I matched as close as possible to the original.</p>
                 <span className="subwork_links">
-                    <a href="https://github.com/abbeyperini/OldWallSite" target="_blank" rel="noreferrer">Github</a>
+                    <a href="https://github.com/abbeyperini/OldWallSite" target="_blank" rel="noreferrer"><Github className="work_icon" /></a>
                 </span>
             </div>
         </div>
