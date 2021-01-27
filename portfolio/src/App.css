@@ -1,9 +1,10 @@
-/* dark theme colors
-jet - #292929
-charcoal - #2F4550
-dark electric blue - #586F7C
-powder blue - #B8DBD9
-cultured - #F9F8F8 */
+:root {
+  --jet-background: #292929;
+  --charcoal-background: #2F4550;
+  --dark-electric-blue: #586F7C;
+  --powder-blue: #B8DBD9;
+  --cultured-text: #F9F8F8;
+}
 
 p, h2, h3 {
   padding: 10px;
@@ -11,39 +12,50 @@ p, h2, h3 {
 }
 
 header {
-  background-color: #2F4550;
-  display: grid;
-  grid-template-areas: 
-  ". . ."
-  ". text ."
-  ". button .";
   text-align: center;
-  align-items: center;
-  grid-template-rows: 1fr 1fr 1fr .25fr;
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
 .header_text {
-  grid-area: text;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: .25em;
+  box-shadow: 0 0 .25em rgba(0,0,0,.25);
+  left: 50%;
+  padding: 10vmin;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: var(--charcoal-background);
 }
 
 .header_name {
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
 }
 
 .header_title {
   padding: 10px;
+  margin-top: 0px;
 }
 
 .header_button {
   grid-area: button;
   width: 150px;
-  background-color: #2F4550;
-  border: solid 1px #B8DBD9;
+  border: solid 3px var(--charcoal-background);
   margin: auto;
-  padding: 15px;
+  padding: 15px 10px 15px 10px;
+  color: var(--charcoal-background);
+  background-color: rgba(255, 255, 255, .1);
+  display: flex;
+  place-items: center;
+}
+
+.button_arrow {
+  height: 15px;
+  padding-left: 10px;
+  position: relative;
 }
 
 nav {
@@ -64,29 +76,43 @@ nav {
   border: solid 1px #B8DBD9;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  } 100% {
+    top: -3px;
+    transform: rotate(90deg);
+  }
+}
+
 .header_button:hover, .header_button:focus, .nav_button:hover, .nav_button:focus {
-  background-color: #B8DBD9;
-  color: #292929;
+  background-color: var(--charcoal-background);
+  color: var(--cultured-text);
 }
 
-.header_testing {
-  margin: 300px;
+.header_button:hover .button_arrow, .header_button:focus .button_arrow {
+  stroke: var(--cultured-text);
+  animation-name: spin;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  transition-delay: 0ms;
+  transition: all 200ms ease-in;
 }
 
-.example-enter {
+.header-enter {
   opacity: 0.01;
 }
 
-.example-enter.example-enter-active {
+.header-enter.header-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
 
-.example-leave {
+.header-leave {
   opacity: 1;
 }
 
-.example-leave.example-leave-active {
+.header-leave.header-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
@@ -157,4 +183,33 @@ nav {
 
 .about_headshot {
   width: 300px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  } 100% {
+    transform: translateX(25%);
+  }
+}
+
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, var(--powder-blue) 50%, var(--dark-electric-blue) 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: .5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: 1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
 }

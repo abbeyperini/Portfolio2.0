@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <CSSTransitionGroup
-        transitionName="example"
+        transitionName="header"
         transitionEnterTimeout={500}
         transitionLeaveTimeout={300}>
         {!hidden && <Header key="1" hideHeader={hideHeader}/>}

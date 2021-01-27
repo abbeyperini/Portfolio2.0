@@ -63,3 +63,6 @@ Deployed with
 ## Acknowledgements
 
 - [Chris Bongers](https://h.daily-dev-tips.com/creating-day-night-css-only-toggle-switch)
+- [Hola svg](https://holasvg.com/icons/)
+- [Devicon](https://devicon.dev/)
+- [chris22smith](https://codepen.io/chris22smith/pen/RZogMa)
