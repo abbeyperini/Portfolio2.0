@@ -15,12 +15,12 @@
 
 @keyframes reverse {
     0% {
-        left: 104px;
-        width: 80px;
+        left: 47px;
+        width: 40px;
     }
     60% {
-        left: 72px;
-        width: 110px;
+        left: 3px;
+        width: 80px;
     }
     100% {
         left: 3px;
@@ -33,11 +33,11 @@
     }
     60% {
         left: 3px;
-        width: 110px;
+        width: 80px;
     }
     100% {
-        left: 97px;
-        width: 80px;
+        left: 47px;
+        width: 40px;
     }
 }
 
@@ -48,20 +48,19 @@
 .container--toggle {
     display: grid;
     place-items: center;
-    min-height: 100px;
+    min-height: 60px;
     position: relative;
     grid-area: toggle;
     margin: 20px;
-    align-self: flex-start;
 }
 
 /* background */
 .toggle--label {
-    width: 200px;
-    height: 104px;
+    width: 100px;
+    height: 54px;
     background: var(--indigo-color);
     border-radius: 100px;
-    border: 5px solid var(--indigo-border);
+    border: 3px solid var(--indigo-border);
     display: flex;
     position: relative;
     transition: all 350ms ease-in;
@@ -87,13 +86,13 @@
     animation-duration: 350ms;
     animation-fill-mode: forwards;
     content: '';
-    width: 80px;
-    height: 80px;
-    border: 5px solid var(--gray-border);
-    top: 2px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--gray-border);
+    top: 1px;
     left: 3px;
     position: absolute;
-    border-radius: 80px;
+    border-radius: 40px;
     background: white;
 }
 
@@ -103,11 +102,11 @@
     transition: all 250ms ease-in;
     position: absolute;
     content: '';
-    box-shadow: var(--gray-dots) -13px 0 0 2px, var(--gray-dots) -24px 14px 0 -2px;
-    left: 143px;
-    top: 23px;
-    width: 10px;
-    height: 10px;
+    box-shadow: var(--gray-dots) -14px 0 0 1px, var(--gray-dots) -22px 12px 0 -1px;
+    left: 80px;
+    top: 10px;
+    width: 6px;
+    height: 6px;
     background: transparent;
     border-radius: 50%;
     opacity: 1;
@@ -120,19 +119,21 @@
 
 /* clouds */
 .toggle--checkbox:checked + .toggle--label .toggle--label-background {
-    width: 10px;
-    left: 135px;
+    width: 5px;
+    left: 65px;
+    top: 22px;
 }
 
 .toggle--checkbox:checked + .toggle--label .toggle--label-background:before {
-    top: -5px;
-    width: 40px;
+    top: -4px;
+    left: -5px;
+    width: 20px;
     height: 5px;
 }
 
 .toggle--checkbox:checked + .toggle--label .toggle--label-background:after {
-    top: 5px;
-    width: 40px;
+    top: 3px;
+    width: 20px;
     height: 5px;
     left: -10px;
 }
@@ -142,19 +143,19 @@
     border-radius: 5px;
     position: relative;
     background: white;
-    left: 60px;
-    width: 5px;
+    left: 32px;
+    width: 4px;
     transition: all 150ms ease-in;
-    top: 45px;
-    height: 5px;
+    top: 25px;
+    height: 4px;
 }
 
 .toggle--label-background:before {
     content: '';
     position: absolute;
-    width: 5px;
-    height: 5px;
-    top: -25px;
+    width: 4px;
+    height: 4px;
+    top: -15px;
     border-radius: 5px;
     background: white;
     left: -20px;
@@ -164,10 +165,10 @@
 .toggle--label-background:after {
     content: '';
     position: absolute;
-    width: 5px;
-    height: 5px;
-    left: -30px;
-    top: 20px;
+    width: 4px;
+    height: 4px;
+    left: -20px;
+    top: 10px;
     border-radius: 5px;
     background: white;
     transition: all 150ms ease-in;

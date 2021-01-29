@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import '../landingBackground.css';
 import { ReactComponent as Arrow } from '../images/arrow.svg';
 
 function Header(props) {

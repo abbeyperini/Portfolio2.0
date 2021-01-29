@@ -11,7 +11,7 @@ function Work() {
     return (
         <div className="container_work">
             <h1 className="section_title">Portfolio</h1>
-            <div className="subWork">
+            <div id="gachasphere" className="subWork">
                 <h2 className="subwork_title--primary">Gachasphere</h2>
                 <h3 className="subwork_title--secondary">Capstone Project</h3>
                 <img className="subwork_image" src={Gachagif} alt="Gachasphere mobile walkthrough"/>
@@ -23,7 +23,7 @@ function Work() {
                     <a href="http://gachasphere.surge.sh/" target="_blank" rel="noreferrer"><Chrome className="work_icon"/></a>
                 </span>
             </div>
-            <div className="subWork">
+            <div id="BujoToGo" className="subWork">
                 <h2 className="subwork_title--primary">BujoToGo</h2>
                 <h3 className="subwork_title--secondary">Solo Full-Stack Project</h3>
                 <img className="subwork_image" src={Bujogif} alt="BujoToGo walkthrough gif"/>
@@ -38,7 +38,7 @@ function Work() {
                     <a href="http://bujo-to-go.surge.sh/#/index" target="_blank" rel="noreferrer"><Chrome className="work_icon"/></a>
                 </span>
             </div>
-            <div className="subWork">
+            <div id="knitworthy" className="subWork">
                 <h2 className="subwork_title--primary">Knitworthy</h2>
                 <h3 className="subwork_title--secondary">Front End Project</h3>
                 <img className="subwork_image" src={Knitgif} alt="gif of a user navigating Knitworthy"/>
@@ -53,7 +53,7 @@ function Work() {
                     <a href="http://knitworthy.net/" target="_blank" rel="noreferrer"><Chrome className="work_icon"/></a>
                 </span>
             </div>
-            <div className="subWork">
+            <div id="OWS" className="subWork">
                 <h2 className="subwork_title--primary">Old Wall Site</h2>
                 <h3 className="subwork_title--secondary">Front End Hobby Project</h3>
                 <div className="subWork_container_image">

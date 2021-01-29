@@ -1,4 +1,5 @@
 import React from 'react';
+import Toggle from './Toggle';
 
 function NavBar(props) {
     const handleOnClick = () => {
@@ -12,6 +13,7 @@ function NavBar(props) {
             <p>Blog</p>
             <p>About</p>
             <p>Contact</p>
+            <Toggle />
         </nav>
     )
 }
