@@ -6,38 +6,48 @@ import Work from './components/Work';
 import Blog from './components/Blog';
 import About from './components/About';
 import Contact from './components/Contact';
-import { CSSTransitionGroup } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 
 function App() {
-  const [hidden, setHidden] = useState(false)
+  const [hidden, setHidden] = useState(false);
+  const [single, setSingle] = useState(false);
+  const [singleShow, setSingleShow] = useState('');
   
   const hideHeader = () => {
     if (hidden) {
-      setHidden(false)
+      setHidden(false);
     } else if (!hidden) {
-      setHidden(true)
+      setHidden(true);
+      setSingle(false);
     }
   }
 
+  const chooseComponent = (component) => {
+      setSingle(true);
+      setSingleShow(component);
+  }
+
+  // apply CSSTransition to main components as well
   return (
     <div className="App">
-      <CSSTransitionGroup
-        transitionName="header"
-        transitionEnterTimeout={500}
-        transitionLeaveTimeout={300}>
-        {!hidden && <Header key="1" hideHeader={hideHeader}/>}
-      </CSSTransitionGroup>
+      <CSSTransition
+        classNames="header"
+        in={!hidden}
+        timein={500}
+        timeout={300}
+        unmountOnExit>
+        <Header key="1" hideHeader={hideHeader}/>
+      </CSSTransition>
       <div className="main-container">
-        <CSSTransitionGroup
-        transitionName="header"
-        transitionEnterTimeout={500}
-        transitionLeaveTimeout={300}>
-          {hidden && <NavBar hideHeader={hideHeader}/>}
-          {hidden && <Work />}
-          {hidden && <Blog />}
-          {hidden && <About />}
-          {hidden && <Contact />}
-        </CSSTransitionGroup>
+        {hidden && <NavBar hideHeader={hideHeader} chooseComponent={chooseComponent}/>}
+        {hidden && !single && <Work />}
+        {hidden && !single && <Blog />}
+        {hidden && !single && <About />}
+        {hidden && !single && <Contact />}
+        {hidden && single && singleShow === "work" && <Work />}
+        {hidden && single && singleShow === "blog" && <Blog />}
+        {hidden && single && singleShow === "about" && <About />}
+        {hidden && single && singleShow === "contact" && <Contact />}
       </div>
     </div>
   );

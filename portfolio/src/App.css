@@ -2,9 +2,11 @@
   --jet-background: #292929;
   --charcoal-background: #2F4550;
   --dark-electric-blue: #586F7C;
-  --powder-blue: #B8DBD9;
+  --powder-blue: #b8dbd9;
   --cultured-text: #F9F8F8;
 }
+
+/* Cultured text is fine on on the first 3, jet as text is fine on all of them, jet and charcoal are fine as text on powder blue */
 
 p, h2, h3 {
   padding: 10px;
@@ -21,32 +23,34 @@ header {
 .header_text {
   background-color: rgba(255, 255, 255, .5);
   border-radius: .25em;
-  box-shadow: 0 0 .25em rgba(0,0,0,.25);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   left: 50%;
   padding: 10vmin;
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  color: var(--charcoal-background);
+  color: var(--jet-background);
 }
 
 .header_name {
   padding: 20px 20px 0px 20px;
+  font-weight: 700;
 }
 
 .header_title {
   padding: 10px;
   margin-top: 0px;
+  font-weight: 500;
 }
 
 .header_button {
   grid-area: button;
   width: 150px;
-  border: solid 3px var(--charcoal-background);
+  border: solid 3px var(--jet-background);
   margin: auto;
   padding: 15px 10px 15px 10px;
-  color: var(--charcoal-background);
+  color: var(--jet-background);
   background-color: rgba(255, 255, 255, .1);
   display: flex;
   place-items: center;
@@ -66,14 +70,15 @@ nav {
   grid-area: nav;
   background-color: #2F4550;
   padding: 20px;
+  outline: none;
 }
 
 .nav_button {
-  border: none;
   background-color: #2F4550;
-  padding: 10px;
-  font-size: 18px;
+  padding: 5px;
+  font-size: 16px;
   border: solid 1px #B8DBD9;
+  margin: 3px;
 }
 
 @keyframes spin {
@@ -86,7 +91,7 @@ nav {
 }
 
 .header_button:hover, .header_button:focus, .nav_button:hover, .nav_button:focus {
-  background-color: var(--charcoal-background);
+  background-color: var(--jet-background);
   color: var(--cultured-text);
 }
 
@@ -99,20 +104,24 @@ nav {
   transition: all 200ms ease-in;
 }
 
+.nav_button:hover, .nav_button:focus, .nav_button:active, .header_button:focus, .header_button:hover, .header_button:active {
+  outline: none;
+}
+
 .header-enter {
   opacity: 0.01;
 }
 
-.header-enter.header-enter-active {
+.header-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
 
-.header-leave {
+.header-exit {
   opacity: 1;
 }
 
-.header-leave.header-leave-active {
+.header-exit-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
@@ -143,7 +152,7 @@ nav {
   place-items: center;
   margin: 20px;
   background: rgba( 255, 255, 255, 0.35 );
-  box-shadow: 0 0 .25em rgba(0,0,0,.25);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   backdrop-filter: blur( 6.0px );
   -webkit-backdrop-filter: blur( 6.0px );
   border-radius: 10px;
@@ -186,19 +195,19 @@ nav {
 .subWork {
   display: grid;
   grid-template-areas: 
-  "title pic"
-  "type pic"
-  "icons pic"
-  "text text";
-  grid-template-columns: 1fr 1fr;
+    "title"
+    "type"
+    "pic"
+    "icons"
+    "text";
+  grid-template-rows: .25fr .25fr 1fr .25fr 1fr;
   place-items: center;
-  background: rgba( 255, 255, 255, 0.35 );
-  box-shadow: 0 0 .25em rgba(0,0,0,.25);
-  backdrop-filter: blur( 6.0px );
-  -webkit-backdrop-filter: blur( 6.0px );
+  background: rgba(184, 219, 217, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
+  backdrop-filter: blur( 10.5px );
+  -webkit-backdrop-filter: blur( 10.5px );
   border-radius: 10px;
-  max-width: 300px;
-  margin-left: 20px;
+  margin: 20px;
 }
 
 .subwork_title--primary {
@@ -240,18 +249,33 @@ nav {
 }
 
 .about_headshot {
-  width: 300px;
+  width: 150px;
 }
 
-@media screen and (min-width: 600px) {
-  .subWork {
-    max-width: 600px;
+@media screen and (min-width: 350px) {
+  .about_headshot {
+    width: 300px;
   }
+}
 
+@media screen and (min-width: 700px) {
   .subWork_container_image > img, .subwork_image {
     max-width: 400px;
     max-height: 200px;
   }
+
+  .subWork {
+    grid-template-areas: 
+    "title text"
+    "type text"
+    "pic text"
+    "icons text";
+    grid-template-rows: 1fr;
+    grid-template-columns: .25fr 1fr;
+  }
+}
+
+@media screen and (min-width: 900px) {
 
   nav {
     flex-direction: row;

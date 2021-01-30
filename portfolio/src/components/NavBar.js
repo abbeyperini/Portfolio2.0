@@ -3,16 +3,20 @@ import Toggle from './Toggle';
 
 function NavBar(props) {
     const handleOnClick = () => {
-        props.hideHeader()
+        props.hideHeader();
+    }
+
+    const chooseComponent = (component) => {
+        props.chooseComponent(component);
     }
 
     return (
         <nav>
             <button className="nav_button" onClick={handleOnClick}><p>Home</p></button>
-            <p>Portfolio</p>
-            <p>Blog</p>
-            <p>About</p>
-            <p>Contact</p>
+            <button className="nav_button" onClick={() => chooseComponent("work")} ><p>Portfolio</p></button>
+            <button className="nav_button" onClick={() => chooseComponent("blog")}><p>Blog</p></button>
+            <button className="nav_button" onClick={() => chooseComponent("about")}><p>About</p></button>
+            <button className="nav_button" onClick={() => chooseComponent("contact")}><p>Contact</p></button>
             <Toggle />
         </nav>
     )
