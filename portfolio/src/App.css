@@ -23,8 +23,6 @@ header {
 .header_text {
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
-  backdrop-filter: blur( 5px );
-  -webkit-backdrop-filter: blur( 5px );
   border-radius: 10px;
   left: 50%;
   padding: 10vmin;
@@ -77,55 +75,10 @@ nav {
 
 .nav_button {
   background-color: #2F4550;
-  padding: 5px;
+  padding: 10px;
   font-size: 16px;
-  border: solid 1px #B8DBD9;
+  border: none;
   margin: 3px;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  } 100% {
-    top: -3px;
-    transform: rotate(90deg);
-  }
-}
-
-.header_button:hover, .header_button:focus, .nav_button:hover, .nav_button:focus {
-  background-color: var(--jet-background);
-  color: var(--cultured-text);
-}
-
-.header_button:hover .button_arrow, .header_button:focus .button_arrow {
-  stroke: var(--cultured-text);
-  animation-name: spin;
-  animation-duration: .5s;
-  animation-fill-mode: forwards;
-  transition-delay: 0ms;
-  transition: all 200ms ease-in;
-}
-
-.nav_button:hover, .nav_button:focus, .nav_button:active, .header_button:focus, .header_button:hover, .header_button:active {
-  outline: none;
-}
-
-.header-enter {
-  opacity: 0.01;
-}
-
-.header-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.header-exit {
-  opacity: 1;
-}
-
-.header-exit-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
 }
 
 .container_skills-icon {
@@ -204,10 +157,8 @@ nav {
     "text";
   grid-template-rows: .25fr .25fr 1fr .25fr 1fr;
   place-items: center;
-  background: rgba(184, 219, 217, 0.45);
+  background: rgba(184, 219, 217, .7);
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
-  backdrop-filter: blur( 10.5px );
-  -webkit-backdrop-filter: blur( 10.5px );
   border-radius: 10px;
   margin: 20px;
 }
@@ -253,6 +204,56 @@ nav {
 .about_headshot {
   width: 150px;
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  } 100% {
+    top: -3px;
+    transform: rotate(90deg);
+  }
+}
+
+.header_button:hover, .header_button:focus {
+  background-color: var(--jet-background);
+  color: var(--cultured-text);
+}
+
+.header_button:hover .button_arrow, .header_button:focus .button_arrow {
+  stroke: var(--cultured-text);
+  animation-name: spin;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  transition-delay: 0ms;
+  transition: all 200ms ease-in;
+}
+
+.nav_button:hover, .nav_button:focus, .nav_button:active, .header_button:focus, .header_button:hover, .header_button:active {
+  outline: none;
+  cursor: pointer;
+}
+
+.nav_button:hover, .nav_button:focus, .nav_button:active {
+  border: solid 2px #B8DBD9;
+}
+
+.header-enter, .navBar-enter, .mainFull-enter, .single-enter {
+  opacity: 0.01;
+}
+
+.header-enter-active, .navBar-enter-active, .mainFull-enter-active, .single-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.header-exit, .navBar-exit, .mainFull-exit, .single-exit {
+  opacity: 1;
+}
+
+.header-exit-active, .navBar-exit-active, .mainFull-exit-active, .single-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+} 
 
 @media screen and (min-width: 350px) {
   .about_headshot {

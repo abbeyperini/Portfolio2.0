@@ -7,6 +7,8 @@ import Blog from './components/Blog';
 import About from './components/About';
 import Contact from './components/Contact';
 import { CSSTransition } from 'react-transition-group';
+import MainFull from './components/MainFullCSS';
+import Single from './components/SingleCSS';
 
 function App() {
   const [hidden, setHidden] = useState(false);
@@ -27,7 +29,6 @@ function App() {
       setSingleShow(component);
   }
 
-  // apply CSSTransition to main components as well
   return (
     <div className="App">
       <CSSTransition
@@ -39,15 +40,22 @@ function App() {
         <Header key="1" hideHeader={hideHeader}/>
       </CSSTransition>
       <div className="main-container">
-        {hidden && <NavBar hideHeader={hideHeader} chooseComponent={chooseComponent}/>}
-        {hidden && !single && <Work />}
-        {hidden && !single && <Blog />}
-        {hidden && !single && <About />}
-        {hidden && !single && <Contact />}
-        {hidden && single && singleShow === "work" && <Work />}
-        {hidden && single && singleShow === "blog" && <Blog />}
-        {hidden && single && singleShow === "about" && <About />}
-        {hidden && single && singleShow === "contact" && <Contact />}
+        <CSSTransition
+          classNames="navBar"
+          in={hidden}
+          timein={500}
+          timeout={300}
+          unmountOnExit>
+          <NavBar hideHeader={hideHeader} chooseComponent={chooseComponent}/>
+        </CSSTransition>
+        <MainFull condition={hidden && !single} component={<Work />}/>
+        <MainFull condition={hidden && !single} component={<Blog />}/>
+        <MainFull condition={hidden && !single} component={<About />}/>
+        <MainFull condition={hidden && !single} component={<Contact />}/>
+        <Single condition={hidden && single && singleShow === "work"} component={<Work />}/>
+        <Single condition={hidden && single && singleShow === "blog"} component={<Blog />}/>
+        <Single condition={hidden && single && singleShow === "about"} component={<About />}/>
+        <Single condition={hidden && single && singleShow === "contact"} component={<Contact />}/> 
       </div>
     </div>
   );

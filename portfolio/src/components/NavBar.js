@@ -12,11 +12,11 @@ function NavBar(props) {
 
     return (
         <nav>
-            <button className="nav_button" onClick={handleOnClick}><p>Home</p></button>
-            <button className="nav_button" onClick={() => chooseComponent("work")} ><p>Portfolio</p></button>
-            <button className="nav_button" onClick={() => chooseComponent("blog")}><p>Blog</p></button>
-            <button className="nav_button" onClick={() => chooseComponent("about")}><p>About</p></button>
-            <button className="nav_button" onClick={() => chooseComponent("contact")}><p>Contact</p></button>
+            <button className="nav_button" onClick={handleOnClick}>Home</button>
+            <button className="nav_button" onClick={() => chooseComponent("work")} >Portfolio</button>
+            <button className="nav_button" onClick={() => chooseComponent("blog")}>Blog</button>
+            <button className="nav_button" onClick={() => chooseComponent("about")}>About</button>
+            <button className="nav_button" onClick={() => chooseComponent("contact")}>Contact</button>
             <Toggle />
         </nav>
     )
