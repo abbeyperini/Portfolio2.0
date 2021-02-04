@@ -1,13 +1,3 @@
-:root {
-  --jet-background: #292929;
-  --charcoal-background: #2F4550;
-  --dark-electric-blue: #586F7C;
-  --powder-blue: #b8dbd9;
-  --cultured-text: #F9F8F8;
-}
-
-/* Cultured text is fine on on the first 3, jet as text is fine on all of them, jet and charcoal are fine as text on powder blue */
-
 p, h2, h3 {
   padding: 10px;
   margin: 10px;
@@ -30,7 +20,7 @@ header {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  color: var(--jet-background);
+  color: var(--dark-text);
 }
 
 .header_name {
@@ -47,10 +37,10 @@ header {
 .header_button {
   grid-area: button;
   width: 150px;
-  border: solid 3px var(--jet-background);
+  border: solid 3px var(--dark-text);
   margin: auto;
   padding: 15px 10px 15px 10px;
-  color: var(--jet-background);
+  color: var(--dark-text);
   background: rgba(255, 255, 255, 0.1);
   display: flex;
   place-items: center;
@@ -68,16 +58,17 @@ nav {
   align-items: center;
   justify-content: space-evenly;
   grid-area: nav;
-  background-color: #2F4550;
+  background-color: var(--dark-background);
   padding: 20px;
   outline: none;
 }
 
 .nav_button {
-  background-color: #2F4550;
+  background-color: var(--dark-background);
+  color: var(--light-text);
   padding: 10px;
   font-size: 16px;
-  border: none;
+  border: solid 2px transparent;
   margin: 3px;
 }
 
@@ -98,7 +89,7 @@ nav {
 }
 
 .main-container {
-  background-color: #586F7C;
+  background-color: var(--light-background);
 }
 
 .container_about, .container_blog, .container_contact {
@@ -124,7 +115,7 @@ nav {
   "OWS";
   grid-template-columns: 1fr;
   margin: 1%;
-  color: var(--jet-background);
+  color: var(--dark-text);
   row-gap: 20px;
   background: rgba( 255, 255, 255, 0.35 );
   padding-bottom: 20px;
@@ -193,12 +184,16 @@ nav {
 .section_title {
   margin-top: 20px;
   grid-area: sectionTitle;
-  color: var(--cultured-text);
+  color: var(--dark-text);
 }
 
 .work_icon {
   width: 50px;
   margin: 10px;
+}
+
+#gachaGif {
+  border-radius: 10px;
 }
 
 .about_headshot {
@@ -215,12 +210,12 @@ nav {
 }
 
 .header_button:hover, .header_button:focus {
-  background-color: var(--jet-background);
-  color: var(--cultured-text);
+  background-color: var(--dark-text);
+  color: var(--light-text);
 }
 
 .header_button:hover .button_arrow, .header_button:focus .button_arrow {
-  stroke: var(--cultured-text);
+  stroke: var(--light-text);
   animation-name: spin;
   animation-duration: .5s;
   animation-fill-mode: forwards;
@@ -234,7 +229,7 @@ nav {
 }
 
 .nav_button:hover, .nav_button:focus, .nav_button:active {
-  border: solid 2px #B8DBD9;
+  border: solid 2px var(--accent);
 }
 
 .header-enter, .navBar-enter, .mainFull-enter, .single-enter {

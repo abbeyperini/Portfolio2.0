@@ -1,5 +1,5 @@
-import './App.css';
-import React, { useState } from 'react';
+import './styles/App.css';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import NavBar from './components/NavBar';
 import Work from './components/Work';
@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import { CSSTransition } from 'react-transition-group';
 import MainFull from './components/MainFullCSS';
 import Single from './components/SingleCSS';
+import setTheme from './utils/themes';
 
 function App() {
   const [hidden, setHidden] = useState(false);
@@ -29,6 +30,14 @@ function App() {
       setSingleShow(component);
   }
 
+  useEffect(() => {
+    if (localStorage.getItem('theme')) {
+      setTheme('theme-dark');
+    } else {
+      setTheme('theme-light')
+    }
+  })
+
   return (
     <div className="App">
       <CSSTransition
@@ -46,7 +55,7 @@ function App() {
           timein={500}
           timeout={300}
           unmountOnExit>
-          <NavBar hideHeader={hideHeader} chooseComponent={chooseComponent}/>
+          <NavBar setTheme={setTheme} hideHeader={hideHeader} chooseComponent={chooseComponent}/>
         </CSSTransition>
         <MainFull condition={hidden && !single} component={<Work />}/>
         <MainFull condition={hidden && !single} component={<Blog />}/>

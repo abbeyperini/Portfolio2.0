@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.theme-light {
+  --dark-text: #5E4B56;
+  --accent: #5E4B56;
+  --dark-background: #DBE7E4;
+  --beau-blue: #BCD4E6;
+  --light-text: #5E4B56;
+  --light-background: #EDDCD2;
+  --work-icon: #5E4B56;
+}
+
+/* --light-text is fine on on the first 3, --dark-text is fine on all of them, --dark-text and dark-background are fine as text on --accent */
+.theme-dark {
+  --dark-text: #292929;
+  --dark-background: #2F4550;
+  --light-background: #586F7C;
+  --accent: #b8dbd9;
+  --light-text: #F9F8F8;
+  --work-icon: #292929;
+}
+
+html, #root {
+  font-family: 'Roboto Mono', monospace;
+  background-color: var(--dark-background);
+  color: var(--dark-text);
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+button {
+  font-family: 'Roboto Mono', monospace;
+}
