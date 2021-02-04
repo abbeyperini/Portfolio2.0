@@ -9,7 +9,7 @@ import Contact from './components/Contact';
 import { CSSTransition } from 'react-transition-group';
 import MainFull from './components/MainFullCSS';
 import Single from './components/SingleCSS';
-import setTheme from './utils/themes';
+import { setTheme, keepTheme } from './utils/themes';
 
 function App() {
   const [hidden, setHidden] = useState(false);
@@ -31,11 +31,7 @@ function App() {
   }
 
   useEffect(() => {
-    if (localStorage.getItem('theme')) {
-      setTheme('theme-dark');
-    } else {
-      setTheme('theme-light')
-    }
+    keepTheme()
   })
 
   return (
