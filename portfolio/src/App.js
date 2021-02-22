@@ -10,6 +10,7 @@ import { CSSTransition } from 'react-transition-group';
 import MainFull from './components/MainFullCSS';
 import Single from './components/SingleCSS';
 import { setTheme, keepTheme } from './utils/themes';
+import FullBlog from './components/FullBlog';
 
 function App() {
   const [hidden, setHidden] = useState(false);
@@ -62,6 +63,7 @@ function App() {
         <Single condition={hidden && single && singleShow === "about"} component={<About />}/>
         <Single condition={hidden && single && singleShow === "contact"} component={<Contact />}/> 
       </div>
+      <FullBlog />
     </div>
   );
 }
