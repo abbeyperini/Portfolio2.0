@@ -12,7 +12,7 @@
 
 ## About the Project
 
-- I originally built my portfolio in HTML, CSS, and Javascript before I started the DigitalCrafts' bootcammp. I'm now rebuilding it in React.
+- I originally built my portfolio in HTML, CSS, and Javascript before I started the DigitalCrafts' bootcamp. I'm now rebuilding it in React.
 
 ## Usage
 
