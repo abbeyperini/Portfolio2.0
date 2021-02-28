@@ -11,14 +11,14 @@ import Blog8 from './blog/Blog8';
 function FullBlog() {
     return (
         <section>
-            <Blog1 />
-            <Blog2 />
-            <Blog3 />
-            <Blog4 />
-            <Blog5 />
-            <Blog6 />
-            <Blog7 />
             <Blog8 />
+            <Blog7 />
+            <Blog6 />
+            <Blog5 />
+            <Blog4 />
+            <Blog3 />
+            <Blog2 />
+            <Blog1 />
         </section>
     )
 }

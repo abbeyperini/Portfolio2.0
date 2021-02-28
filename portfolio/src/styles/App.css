@@ -261,8 +261,36 @@ nav {
   transition: opacity 300ms ease-in;
 }
 
+.blog-preview {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 500px;
+  overflow-x: scroll;
+  border: none;
+  margin: 20px;
+  border-radius: 15px;
+  padding-left: 0;
+  background: rgba(184, 219, 217, .7);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
+}
+
 .blog_image {
   width: 300px;
+}
+
+.preview_image {
+  max-width: 200px;
+  max-height: 150px;
+}
+
+.preview {
+  list-style-type: none;
+  margin: 10px;
+}
+
+.preview p {
+  width: 200px;
 }
 
 .blog p {
@@ -347,6 +375,12 @@ a:hover, a:focus {
     grid-template-rows: 1fr;
     grid-template-columns: .25fr 1fr;
     margin: 20px;
+  }
+
+  .blog-preview {
+    flex-direction: row;
+    height: 350px;
+    width: 90%;
   }
 }
 

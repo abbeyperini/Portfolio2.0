@@ -1,12 +1,17 @@
 import React from 'react';
+import Swoctopus from '../../images/swoctopus.jpg';
+import LOLMemory from '../../images/LOLMemory.jpg';
+import K2p2Knitting from '../../images/k2p2Knitting.png';
+import Dowland from '../../images/dowland.jpg';
 
 function Blog8() {
      return (
           <article className="blog">
-               {/* <!-- Cover picture was knit by Abbey Perini. The pattern is Embrace Octopus Sweater by Maia E. Sirnes. The yarn is Malabrigo Rios in Whale Road and Natural. --> */}
+               <img src={Swoctopus} className="blog_image" alt="Knit by Abbey Perini. The pattern is Embrace Octopus Sweater by Maia E. Sirnes. The yarn is Malabrigo Rios in Whale Road and Natural."></img>
                <h1>Knitting as Programming</h1>
                <h2>or how I learned programmers owe it all to fiber</h2>
                <h3 className="blog_published-heading">Originally published on dev.to on February 10, 2021</h3>
+               <h3>Cover photo knit by Abbey Perini. The pattern is Embrace Octopus Sweater by Maia E. Sirnes. The yarn is Malabrigo Rios in Whale Road and Natural.</h3>
                <hr></hr>
                <p>As part of my bootcamp, I was asked to present for 10 minutes on any topic. I've been crocheting since 2013 and knitting since 2018, and I had 
                     noticed some similarities between the way I approached a project in either fiber arts or programming. What I did not expect to find was a rich 
@@ -22,7 +27,7 @@ function Blog8() {
                <p>The relationship between fiber arts and programming gets even more overt with
                     <a href="http://drhart.ucoz.com/index/core_memory/0-123-0-123">Core Rope Memory</a> (also called Little Old Lady Memory). Used in the 1960's by
                     NASA, software written by MIT programmers was woven into core rope memory by female workers.</p>
-               {/* <!--a woman weaves wire to create core rope memory--> */}
+               <img src={LOLMemory} className="blog_image" alt="a woman weaves wire to create core rope memory"></img>
                <p>The direction the current was forced through the wires induced field forces to circulate in a clockwise or counterclockwise direction. One 
                     direction is a stored 1, while the other is a stored 0. The result was non-volatile storage, which could retain a large amount of information 
                     without power - roughly 2.5 megabytes per cubic meter. This was an 18-fold improvement over magnetic-core memory, the standard solution used at 
@@ -49,7 +54,7 @@ function Blog8() {
                     followed by 2 purl stitches. The difference between stitches is how you feed the new loop of yarn through the live stitch on your needle.
                     Effectively, a knit stitch goes through the front of the loop. A purl stitch goes through the back of the loop. Repeating this for several
                     rows is how you would get a ribbed brim on a hat.</p>
-               {/* <!--K2P2 ribbing--> */}
+               <img src={K2p2Knitting} className="blog_image" alt="K2P2 ribbing"></img>
                <h3>Patterns as Programming</h3>
                <ul>
                     <li>Knitting pattern designers follow DRY.</li>
@@ -65,7 +70,7 @@ function Blog8() {
                </ul>
                <p>This shawl was created using 8 stitches - all knit based (no purl). One row was written like this: k3, SM, (k2tog, yo) 2 times, 
                     [k1, yo, ssk, yo, sk2p, yo, k2tog, yo] to 5 stitches before marker, k1, (yo, ssk) 2 times), SM, k3</p>    
-               {/* <!--Knit by Abbey Perini, pattern by Dowland by Dee O'Keefe, yarn is Meeker Street by The Jewelry Box")--> */}
+               <img src={Dowland} className="blog_image" alt="Knit by Abbey Perini, pattern by Dowland by Dee O'Keefe, yarn is Meeker Street by The Jewelry Box"></img>
                <p>There have even been two (no longer supported) programming languages designed specifically for hand knitting - KnitML, a markup language, and KEL,
                     inspired by Groovy, a Java language.</p>
                <h3>Patterns as Regular Expressions</h3>

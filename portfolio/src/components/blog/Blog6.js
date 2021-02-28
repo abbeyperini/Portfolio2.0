@@ -1,8 +1,10 @@
 import React from 'react';
+import Blog6Cover from '../../images/blog6Cover.jpg';
 
 function Blog6() {
     return (
      <article className="blog">
+     <img src={Blog6Cover} className="blog_image" alt="trees and fog"></img>
      <h1>#100DaysOfCode</h1>
      <h2 className="blog_published-heading">Originally posted on Medium on January 19, 2021</h2>
      <p>It’s been 323 days since I first started this coding journey. Today I finished the <a href="https://www.100daysofcode.com/">#100DaysOfCode challenge</a> — a public commitment to code

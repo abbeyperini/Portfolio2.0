@@ -1,12 +1,19 @@
 import React from 'react';
+import Blog7Cover from '../../images/blog7Cover.png';
+import Login from '../../images/login.png';
+import LoginHover from '../../images/primaryHover.gif';
+import LoginClick from '../../images/click.gif';
+import Secondary from '../../images/secondary.png';
+import SecondaryClick from '../../images/secondaryClick.gif';
+import AllButtons from '../../images/allButtons.gif';
 
 function Blog7() {
     return  (
         <article className="blog">
-            {/* <!-- cover photo --> */}
+            <img src={Blog7Cover} alt="a login form with a orange primary button, blue secondary button, and a tertiary button styled like text" className="blog_image"></img>
             <h1>A Trio of Buttons for a Bubbly, Colorful Site</h1>
             <h2 className="blog_published-heading">Originally published on dev.to on January 28, 2021</h2>
-            <p>We'll use a shifting background gradient, a simple `transform: translate` animation, and a button styled like text.</p>
+            <p>We'll use a shifting background gradient, a simple <code>transform: translate</code> animation, and a button styled like text.</p>
             <hr></hr>
             <p>I've been reading up on design principles for web projects. For my last big project, <a href="http://gachasphere.surge.sh/#/index">Gachasphere</a> I wanted to implement hierarchical
                 buttons. So I made 3 button styles to apply across the site: primary, secondary, and tertiary.</p>
@@ -47,7 +54,7 @@ to right,
                 </code>
             </pre>
             <p>That should give you this:</p>
-            {/* <!-- Login button with red, yellow, and orange gradient --> */}
+            <img src={Login} className="blog_image" alt="Login button with red, yellow, and orange gradient"></img>
             <p>Then, the hover effect. Add this to your <code>.primary-button</code> rule-set:</p>
             <pre>
                 <code>
@@ -65,7 +72,7 @@ to right,
                 </code>
             </pre>
             <p>Which should give us this:</p>
-            {/* <!--Login button with hover gradient background animation--> */}
+            <img src={LoginHover} className="blog_image" alt="Login button with hover gradient background animation"></img>
             <p>The second declaration will shift the color back on click:</p>
             <pre className="blog_code-block">
                 <code>
@@ -77,7 +84,7 @@ to right,
                 </code>
             </pre>
             <p>Which should look like this:</p>
-            {/* <!--Login button with hover and click gradient background animation--> */}
+            <img src={LoginClick} className="blog_image" alt="Login button with hover and click gradient background animation"></img>
             <p>Both include the <code>outline: none;</code> declaration, which will prevent the default blue focus outline provided by the &lt;button&gt; tag for accessibility purposes.</p>
             <h2>Secondary</h2>
             <p>I wanted my secondary button to be a sibling not a twin to my primary button. So it'll have slightly less padding, but the same <code>border-radius</code> and <code>box-shadow</code>.
@@ -101,7 +108,7 @@ to right,
                 </code>
             </pre>
             <p>Which will give you this:</p>
-            {/* <!--Login button with blue gradient background--> */}
+            <img src={Secondary} className="blog_image" alt="Login button with blue gradient background"></img>
             <p>Finally, we'll add a slightly different click animation, using <code>transform: translate</code> with a new rule-set. Now, the button will move 3px on the x-axis and y-axis when it's
                 clicked- some nice visual feedback for the user.</p>
             <pre className="blog_code-block">
@@ -112,7 +119,7 @@ to right,
                 </code>
             </pre>
             <p>Which should give you:</p>
-            {/* <!-- Login button with blue gradient background and click animation --> */}
+            <img src={SecondaryClick} className="blog_image" alt="Login button with blue gradient background and click animation"></img>
             <p>The text color has a high enough contrast with the background, so the cursor is probably enough… but because the button colors include the background colors, I've left the focus
                 outline on.</p>
             <h2>Tertiary</h2>
@@ -129,7 +136,7 @@ to right,
                 </code>
             </pre>
             <p>Put it all together and they look like this:</p>
-            {/* <!-- Gachasphere login page --> */}
+            <img src={AllButtons} className="blog_image" alt="Gachasphere login page"></img>
             <p>A clear hierarchy! Pretty obvious the login button is a call to action. The next button that your eye moves to navigates you to the register page instead of the login page. The
                 "forgot password" and "login as guest" options are easily found, but don't pull focus.</p>
             <h2>Conclusion</h2>
