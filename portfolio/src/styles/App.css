@@ -261,6 +261,53 @@ nav {
   transition: opacity 300ms ease-in;
 }
 
+.blog_image {
+  width: 300px;
+}
+
+.blog p {
+  width: 500px;
+}
+
+.blog {
+  background: rgba(184, 219, 217, .7);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog li {
+  list-style-type: none;
+  width: 500px;
+  margin: 10px;
+}
+
+.blog_code-block {
+  background-color: #eee;
+  border: 1px solid black;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+p code, li code {
+  background-color: #eee;
+  border: 1px solid black;
+  text-align: center;
+  padding: 1px 5px 1px 5px;
+  border-radius: 10px;
+}
+
+.blog_published-heading {
+  font-style: italic;
+  font-size: 1em;
+}
+
 a:link, a:visited, a:hover, a:active {
   color: var(--dark-text);
   text-decoration: none;

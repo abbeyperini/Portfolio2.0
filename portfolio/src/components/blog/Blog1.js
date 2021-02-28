@@ -1,13 +1,12 @@
-import { render } from '@testing-library/react';
 import React from 'react';
 import Blog1Cover from '../../images/blog1Cover.jpg';
 
 function Blog1() {
     return (
-        <article>
-            <img src={Blog1Cover} alt="The Olympic Mountain range stretches into the distance, in the foreground is grass and rocks"></img>
+        <article className="blog">
+            <img src={Blog1Cover} alt="The Olympic Mountain range stretches into the distance, in the foreground is grass and rocks" className="blog_image"></img>
             <h1>Embrace the Struggle While Learning to Code</h1>
-            <h2>Originally published on Medium on September 25, 2020</h2>
+            <h2 className="blog_published-heading">Originally published on Medium on September 25, 2020</h2>
             <p>Wrapping up my 3rd week of a 16 week coding bootcamp, I can tell you that there is no substitute for staring at a coding problem while your brain struggles. Leading up to 
                 class, I had been doing a lot of practicing (because everyone knows practice makes perfect), but I wasn’t struggling.</p>
             <p>You always hear that everything you need to learn how to code is on the internet already. Codecademy, Udemy, FreeCodeCamp, LabEx, and many more will provide you with a wealth
@@ -27,7 +26,7 @@ function Blog1() {
             <p>I can tell you that adapting to the feeling of struggling is different in every medium. I’d already honed this skill across plenty of hobbies. If I had given up every time a
                 pattern looked like gibberish when crocheting, I wouldn’t have 35,567+ yards of yarn in knitted and crocheted finished objects today. From my degree and experience working
                 in staffing, I can safely say that while interviewers focus on a candidate’s resume and skills, they should also be verifying a candidate is willing to say 
-                <a href="https://www.edsurge.com/news/2019-10-28-why-struggle-is-essential-for-the-brain-and-our-lives">“I don’t know, but I will find out.”</a></p>
+                <a href="https://www.edsurge.com/news/2019-10-28-why-struggle-is-essential-for-the-brain-and-our-lives"> “I don’t know, but I will find out.”</a></p>
         </article>
     )
 }
