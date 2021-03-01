@@ -53,7 +53,7 @@ function App() {
         unmountOnExit>
         <Header key="1" hideHeader={hideHeader}/>
       </CSSTransition>
-      <div className="main-container">
+      { hidden && <div className="main-container">
         <CSSTransition
           classNames="navBar"
           in={hidden}
@@ -79,7 +79,7 @@ function App() {
         <Single condition={hidden && single && singleShow === "Blog7"} component={<Blog7 />}/>
         <Single condition={hidden && single && singleShow === "Blog8"} component={<Blog8 />}/>
         <Single condition={hidden && single && singleShow === "FullBlog"} component={<FullBlog />}/>
-      </div>
+      </div> }
     </div>
   );
 }

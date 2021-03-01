@@ -86,16 +86,44 @@ nav {
 
 .main-container {
   background-color: var(--light-background);
+  padding-bottom: 100px;
 }
 
 .container_about, .container_blog, .container_contact {
   display: flex;
   flex-direction: column;
   place-items: center;
-  margin: 20px;
+  margin: 10px 0px 10px 0px;
   background: rgba( 255, 255, 255, 0.35 );
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
+}
+
+.contact-form {
+  background: rgba(184, 219, 217, .7);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.message_input {
+  margin-top: 5px;
+}
+
+.contact_button {
+  background: none;
+  color: var(--dark-text);
+  padding: 10px;
+  font-size: 16px;
+  border: solid 2px transparent;
+  margin: 3px;
 }
 
 .container_work {
@@ -108,7 +136,7 @@ nav {
   "knitworthy"
   "OWS";
   grid-template-columns: 1fr;
-  margin: 1%;
+  margin: 10px 0px 10px 0px;
   color: var(--dark-text);
   row-gap: 20px;
   background: rgba( 255, 255, 255, 0.35 );
@@ -243,6 +271,11 @@ nav {
   border: solid 2px var(--accent);
 }
 
+.contact_button:hover, .contact_button:focus, .contact_button:active {
+  cursor: pointer;
+  border: solid 2px var(--dark-text);
+}
+
 .header-enter, .navBar-enter, .mainFull-enter, .single-enter {
   opacity: 0.01;
 }
@@ -261,18 +294,26 @@ nav {
   transition: opacity 300ms ease-in;
 }
 
+.scroll-cropper {
+  width: 250px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px 0px 60px 0px;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
+}
+
 .blog-preview {
   display: flex;
   flex-direction: column;
   width: 250px;
-  height: 500px;
-  overflow-x: scroll;
+  height: 510px;
+  overflow-y: scroll;
   border: none;
-  margin: 20px;
   border-radius: 15px;
   padding-left: 0;
   background: rgba(184, 219, 217, .7);
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
+  scrollbar-width: thin;
 }
 
 .blog_image {
@@ -358,6 +399,18 @@ a:hover, a:focus {
   .subWork {
     margin: 10px;
   }
+
+  .container_about, .container_blog, .container_contact, .container_work {
+    margin: 20px;
+  }
+
+  .message {
+    flex-direction: row;
+  }
+  
+  .message_input {
+    margin-left: 5px;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -377,10 +430,18 @@ a:hover, a:focus {
     margin: 20px;
   }
 
+  .scroll-cropper {
+    height: 350px;
+    width: 90%;
+  }
+
   .blog-preview {
     flex-direction: row;
     height: 350px;
     width: 90%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    width: 100%;
   }
 }
 

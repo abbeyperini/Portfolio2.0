@@ -31,7 +31,7 @@ function Contact() {
     return (
         <aside className="container_contact">
             <h1 className="section_title">Contact</h1>
-            <form onSubmit={handleSubmit}>
+            <form className="contact-form" onSubmit={handleSubmit}>
                 <p>
                     <label>
                         Your Name: <input type="text" name="name" onChange={handleChange} />   
@@ -43,12 +43,12 @@ function Contact() {
                     </label>
                 </p>
                 <p>
-                    <label>
-                        Message: <textarea name="message" onChange={handleChange} />
+                    <label className="message">
+                        Message: <textarea name="message" onChange={handleChange} className="message_input"/>
                     </label>
                 </p>
                 <p>
-                    <button type="submit">Send</button>
+                    <button type="submit" className="contact_button">Send</button>
                 </p>
             </form>
         </aside>

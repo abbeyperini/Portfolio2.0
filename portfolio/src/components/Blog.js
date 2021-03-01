@@ -16,16 +16,18 @@ function Blog(props) {
     return (
         <div className="container_blog">
             <h1 className="section_title" onClick={() => chooseComponent("FullBlog")}>Blog</h1>
-            <ul className="blog-preview">
-                <Preview8 chooseComponent={props.chooseComponent}/>
-                <Preview7 chooseComponent={props.chooseComponent}/>
-                <Preview6 chooseComponent={props.chooseComponent}/>
-                <Preview5 chooseComponent={props.chooseComponent}/>
-                <Preview4 chooseComponent={props.chooseComponent}/>
-                <Preview3 chooseComponent={props.chooseComponent}/>
-                <Preview2 chooseComponent={props.chooseComponent}/>
-                <Preview1 chooseComponent={props.chooseComponent}/>
-            </ul>
+            <div className="scroll-cropper">
+                <ul className="blog-preview">
+                    <Preview8 chooseComponent={props.chooseComponent}/>
+                    <Preview7 chooseComponent={props.chooseComponent}/>
+                    <Preview6 chooseComponent={props.chooseComponent}/>
+                    <Preview5 chooseComponent={props.chooseComponent}/>
+                    <Preview4 chooseComponent={props.chooseComponent}/>
+                    <Preview3 chooseComponent={props.chooseComponent}/>
+                    <Preview2 chooseComponent={props.chooseComponent}/>
+                    <Preview1 chooseComponent={props.chooseComponent}/>
+                </ul>
+            </div>
         </div>
     )
 }
