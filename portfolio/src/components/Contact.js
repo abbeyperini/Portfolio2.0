@@ -31,7 +31,7 @@ function Contact() {
     return (
         <aside className="container_contact">
             <h1 className="section_title">Contact</h1>
-            <form onSubmit={handleSubmit} data-netlify="true">
+            <form onSubmit={handleSubmit}>
                 <p>
                     <label>
                         Your Name: <input type="text" name="name" onChange={handleChange} />   
