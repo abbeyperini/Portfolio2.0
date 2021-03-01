@@ -3,7 +3,9 @@ import Blog4Cover from '../../images/shibas.png';
 import Blog4Gif from '../../images/shibaCounter.gif';
 
 function Blog4() {
-    const urlCodeBlock = "let url = `https://dog.ceo/api/breed/shiba/images/random/&#36;&#123;num&#125;`;"
+    // eslint-disable-next-line
+    const urlCodeBlock = "let url = `https://dog.ceo/api/breed/shiba/images/random/${num};`;"
+    
     return (
         <article className="blog">
             <img src={Blog4Cover} className="blog_image" alt="'Counter!', a plus button, a minus button, and the current count reads 20. 14 of the 20 shiba pictures are show below the counter set up."></img>
