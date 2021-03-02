@@ -8,7 +8,7 @@ function Preview2(props) {
 
     return (
         <li className="preview">
-            <p onClick={() => chooseComponent("Blog2")}>Accessibility and React</p>
+            <button className="preview_button" onClick={() => chooseComponent("Blog2")}>Accessibility and React</button>
             <img src={Blog2Cover} alt="a keyboard with lighted keys currently set to rainbow" className="preview_image"></img>
         </li>
     )

@@ -8,7 +8,7 @@ function Preview8(props) {
 
     return (
         <li className="preview">
-            <p onClick={() => chooseComponent("Blog8")}>Knitting as Programming or how I learned programmers owe it all to fiber</p>
+            <button className="preview_button" onClick={() => chooseComponent("Blog8")}>Knitting as Programming or how I learned programmers owe it all to fiber</button>
             <img src={Dowland} className="preview_image" alt="Knit by Abbey Perini, pattern by Dowland by Dee O'Keefe, yarn is Meeker Street by The Jewelry Box"></img>
         </li>
     )

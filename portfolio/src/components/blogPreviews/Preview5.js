@@ -8,7 +8,7 @@ function Preview5(props) {
 
     return (
         <li className="preview">
-            <p onClick={() => chooseComponent("Blog5")}>Object Oriented Programming in Memes</p>
+            <button className="preview_button" onClick={() => chooseComponent("Blog5")}>Object Oriented Programming in Memes</button>
             <img src={PicardMeme} alt="`Here is my desired state. Make it so!` - Captain Picard" className="preview_image"></img>
         </li>
     )

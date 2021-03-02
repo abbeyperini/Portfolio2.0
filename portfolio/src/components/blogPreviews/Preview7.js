@@ -8,7 +8,7 @@ function Preview7(props) {
 
     return (
         <li className="preview">
-            <p onClick={() => chooseComponent("Blog7")}>A Trio of Buttons for a Bubbly, Colorful Site</p>
+            <button className="preview_button" onClick={() => chooseComponent("Blog7")}>A Trio of Buttons for a Bubbly, Colorful Site</button>
             <img src={Blog7Cover} alt="a login form with a orange primary button, blue secondary button, and a tertiary button styled like text" className="preview_image"></img>
         </li>
     )

@@ -8,7 +8,7 @@ function Preview1(props) {
 
     return (
         <li className="preview">
-            <p onClick={() => chooseComponent("Blog1")}>Embrace the Struggle While Learning to Code</p>
+            <button className="preview_button" onClick={() => chooseComponent("Blog1")}>Embrace the Struggle While Learning to Code</button>
             <img src={Blog1Cover} alt="The Olympic Mountain range stretches into the distance, in the foreground is grass and rocks" className="preview_image"></img>
         </li>
     )

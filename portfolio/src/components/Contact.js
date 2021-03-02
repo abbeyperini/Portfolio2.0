@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import resume from '../assets/abbeyperiniresume.pdf';
 
 function Contact() {
     const [message, setMessage] = useState({});
@@ -31,6 +32,8 @@ function Contact() {
     return (
         <aside className="container_contact">
             <h1 className="section_title">Contact</h1>
+            <p>Download my <a href={resume} download="AbbeyPeriniResume">resume</a>, visit my <a href="https://abbeyperini.github.io/">personal site</a>,
+            or connect with me on <a href="https://twitter.com/AbbeyPerini">Twitter</a> or <a href="https://www.linkedin.com/in/abigail-perini/">LinkedIn</a>.</p>
             <form className="contact-form" onSubmit={handleSubmit}>
                 <p>
                     <label>

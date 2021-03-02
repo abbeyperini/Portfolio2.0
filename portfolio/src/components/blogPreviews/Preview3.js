@@ -8,7 +8,7 @@ function Preview3(props) {
 
     return (
         <li className="preview">
-            <p onClick={() => chooseComponent("Blog3")}>CSS Animated Button with Offset Border</p>
+            <button className="preview_button" onClick={() => chooseComponent("Blog3")}>CSS Animated Button with Offset Border</button>
             <img src={Blog3Cover} alt="a tan login button with offset border on a blue background" className="preview_image"></img>
         </li>
     )

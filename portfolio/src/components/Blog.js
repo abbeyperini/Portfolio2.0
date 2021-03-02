@@ -15,7 +15,7 @@ function Blog(props) {
 
     return (
         <div className="container_blog">
-            <h1 className="section_title" onClick={() => chooseComponent("FullBlog")}>Blog</h1>
+            <button className="blog-section_title" onClick={() => chooseComponent("FullBlog")}>Blog</button>
             <div className="scroll-cropper">
                 <ul className="blog-preview">
                     <Preview8 chooseComponent={props.chooseComponent}/>
