@@ -5,7 +5,7 @@ function Blog1() {
     return (
         <article className="blog">
             <img src={Blog1Cover} alt="The Olympic Mountain range stretches into the distance, in the foreground is grass and rocks" className="blog_image"></img>
-            <h1>Embrace the Struggle While Learning to Code</h1>
+            <h1 className="blog_title">Embrace the Struggle While Learning to Code</h1>
             <h2 className="blog_published-heading">Originally published on Medium on September 25, 2020</h2>
             <p>Wrapping up my 3rd week of a 16 week coding bootcamp, I can tell you that there is no substitute for staring at a coding problem while your brain struggles. Leading up to 
                 class, I had been doing a lot of practicing (because everyone knows practice makes perfect), but I wasn’t struggling.</p>

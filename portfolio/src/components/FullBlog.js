@@ -10,7 +10,7 @@ import Blog8 from './blog/Blog8';
 
 function FullBlog() {
     return (
-        <section>
+        <section className="full-blog">
             <Blog8 />
             <Blog7 />
             <Blog6 />

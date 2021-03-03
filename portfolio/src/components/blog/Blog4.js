@@ -9,7 +9,7 @@ function Blog4() {
     return (
         <article className="blog">
             <img src={Blog4Cover} className="blog_image" alt="'Counter!', a plus button, a minus button, and the current count reads 20. 14 of the 20 shiba pictures are show below the counter set up."></img>
-            <h1>How To Reload a Page Whenever a User Makes a Change with React/Redux</h1>
+            <h1 className="blog_title">How To Reload a Page Whenever a User Makes a Change with React/Redux</h1>
             <h2 className="blog_published-heading">Originally published on Medium on January 7, 2021</h2>
             <p>You’ve got your React components. You figured out how to use Redux to feed them data. You make a component that creates/updates/deletes an item in your API, and put it in a page
                 displaying the items from your API. How do you get the whole page to reload to show the updated data every time a user makes a change? Redux state and the <code>useEffect()</code>
@@ -274,7 +274,7 @@ if (!props.shibes || !props.shibes[0]) {
                 </code>
             </pre>
             <p>Using JSX conditional logic and our Redux state, we can display different error messages based on the state of our async requests.</p>
-            <h3>Conclusion</h3>
+            <h3 className="blog_title-tertiary">Conclusion</h3>
             <p>After struggling to figure it out myself, I strove to create a straightforward example of how to use the <code>useEffect()</code> hook to reload components based on changes
                 other components are making.</p>
             <p>There are many ways to use this across an app, and the basic concept itself allows you to do fun things like custom error messages using JSX conditional logic.</p>

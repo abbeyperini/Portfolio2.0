@@ -372,7 +372,8 @@ nav {
 .caption {
   font-style: italic;
   font-size: 1em;
-  word-wrap: break-word;
+  max-width: 250px;
+  overflow-wrap: break-word;
 }
 
 .full-blog {
@@ -413,6 +414,12 @@ nav {
   text-align: left;
   padding: 10px;
   border-radius: 10px;
+}
+
+pre {
+  white-space: pre-wrap;
+  max-width: 250px;
+  overflow-x: auto;
 }
 
 p code, li code {
@@ -540,6 +547,10 @@ a:hover, a:focus {
     height: 300px;
     margin: 15px;
   }
+
+  pre {
+    max-width: 300px;
+  }
 }
 
 @media screen and (min-width: 525px) {
@@ -552,6 +563,14 @@ a:hover, a:focus {
     width: 350px;
     height: 350px;
     margin: 15px;
+  }
+
+  .blog_image {
+    max-width: 250px;
+  }
+
+  pre {
+    max-width: 500px;
   }
 }
 
@@ -587,6 +606,14 @@ a:hover, a:focus {
     overflow-y: hidden;
     overflow-x: scroll;
   }
+
+  .blog_image {
+    max-width: 300px;
+  }
+
+  pre {
+    max-width: 650px;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -602,5 +629,13 @@ a:hover, a:focus {
 
   nav {
     flex-direction: row;
+  }
+
+  .blog_image {
+    max-width: 500px;
+  }
+
+  pre {
+    max-width: 100%;
   }
 }

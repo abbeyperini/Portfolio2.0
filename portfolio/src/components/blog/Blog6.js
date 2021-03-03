@@ -5,14 +5,14 @@ function Blog6() {
     return (
      <article className="blog">
      <img src={Blog6Cover} className="blog_image" alt="trees and fog"></img>
-     <h1>#100DaysOfCode</h1>
+     <h1 className="blog_title">#100DaysOfCode</h1>
      <h2 className="blog_published-heading">Originally posted on Medium on January 19, 2021</h2>
      <p>It’s been 323 days since I first started this coding journey. Today I finished the <a href="https://www.100daysofcode.com/">#100DaysOfCode challenge</a> — a public commitment to code
           an hour on personal projects every day for 100 days.</p>
      <p>One of Kallaway’s rules is that you can miss a day, but not two days. With the exception of 4 day breaks over Thanksgiving and Christmas, I achieved that… while completing
           DigitalCrafts’ Immersive Full Stack Web Development Bootcamp. Would I recommend everyone do #100DaysOfCode on top of a bootcamp? No. However, I would say #100DaysOfCode kept my
                love of coding in perspective through the grind of the final weeks of my bootcamp.</p>
-     <h3>A few of the things I learned about on my own or created thanks to #100DaysOfCode:</h3>
+     <h3 className="blog_title-tertiary">A few of the things I learned about on my own or created thanks to #100DaysOfCode:</h3>
      <ul>
           <li>Algorithm solutions</li>
           <li>JavaScript Fetch requests</li>
@@ -46,7 +46,7 @@ function Blog6() {
      so #100DaysOfCode is partially responsible for my comfort level with CRUD operations.</p>
      <p>Most importantly, when classes started in September, I had trouble starting projects — either from lack of ideas or fear of failure. By the end of #100DaysOfCode, my log entries
           changed from “I’ll try and get this feature of this assignment working because I want to” to “I built this on a whim in a new language and loved it.”</p>
-     <h3>Conclusion</h3>
+     <h3 className="blog_title-tertiary">Conclusion</h3>
      <p>The #100DaysOfCode challenge and its online community welcome and challenge coders of any level. If you’re looking for a way to kickstart your personal projects this year, I would
           recommend it. If nothing else, at the end of 100 days, you’ll have a log of everything you learned about and created.</p>
      <p>For me, that log is a welcome reminder while I’m job searching. Not only does it show how much I’ve learned in a short amount of time, but it proves a sustained desire to create with

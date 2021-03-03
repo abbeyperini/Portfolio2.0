@@ -5,12 +5,12 @@ function Blog2() {
     return (
         <article className="blog">
             <img src={Blog2Cover} alt="a keyboard with lighted keys currently set to rainbow" className="blog_image"></img>
-            <h1>Accessibility and React</h1>
+            <h1 className="blog_title">Accessibility and React</h1>
             <h2 className="blog_published-heading">Originally published on Medium on November 11, 2020</h2>
             <p>If you’ve ever read anything about HTML on Mozilla Developer Network, you’ve probably come across the phrase “semantic HTML.”</p>
-            <p><blockquote>“Semantic HTML is the correct use of HTML to reinforce the meaning of content on a web page, rather than merely define its appearance.”</blockquote> 
+            <blockquote>“Semantic HTML is the correct use of HTML to reinforce the meaning of content on a web page, rather than merely define its appearance.”</blockquote> 
                 <p className="caption">-<a href="http://www.springboardseo.com/resources/what-is/semantic-html.html">Springboard SEO</a></p>
-                Meaning that appearance should be left to CSS (instead of using presentational HTML elements like <code>&lt;b&gt;</code>). Any developer’s goal should be to make their webpage
+                <p>Meaning that appearance should be left to CSS (instead of using presentational HTML elements like <code>&lt;b&gt;</code>). Any developer’s goal should be to make their webpage
                 accessible to as many users as possible, including those that rely on <a href="https://webaim.org/techniques/screenreader/">screen readers</a> or keyboard navigation.
                 Not to mention, a lot of these practices will bolster your SEO.</p>
             <p>Semantic HTML has a lot of <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">built in features</a> to take some of the accessibility work off of
@@ -22,15 +22,15 @@ function Blog2() {
                 but what happens when you hit single page apps like <a href="https://reactjs.org/">React</a>?</p>
             <p>In React, multiple elements can be rendered at the same time as long as they’re all children of one parent element. As a result, the common method is to throw all of
                 them in <code>&lt;div&gt;</code> within <code>&lt;div&gt;</code> within <code>&lt;div&gt;</code>.</p>
-            <h3>There are a few common sense steps to take right off the bat:</h3>
+            <h3 className="blog_title-tertiary">There are a few common sense steps to take right off the bat:</h3>
                 <ul>
-                <li>Read the React <a href="https://reactjs.org/docs/accessibility.html">accessibility documentation</a>.</li> 
-                <li>Remember that the for attribute is htmlFor in JSX.</li>
-                <li>Use <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;label&gt;</code>, headings, and 
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a> liberally.</li> 
-                <li>Use buttons to handle onClick events.</li>           
-                <li>Use links for navigation.</li> 
-                <li>Always test your page with a screen reader and keyboard navigation to see if you need to switch around tags to make navigation and focus possible.</li>
+                    <li>Read the React <a href="https://reactjs.org/docs/accessibility.html">accessibility documentation</a>.</li> 
+                    <li>Remember that the for attribute is htmlFor in JSX.</li>
+                    <li>Use <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;label&gt;</code>, headings, and 
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a> liberally.</li> 
+                    <li>Use buttons to handle onClick events.</li>           
+                    <li>Use links for navigation.</li> 
+                    <li>Always test your page with a screen reader and keyboard navigation to see if you need to switch around tags to make navigation and focus possible.</li>
                 </ul>
             <p>In addition, really get to know the handy tools React has to help you: <a href="https://reactjs.org/docs/fragments.html">Fragments</a> and 
                 <a href="https://reactjs.org/docs/refs-and-the-dom.html">Refs</a>. Fragments can help you declutter your containers, while still inserting components wherever you need

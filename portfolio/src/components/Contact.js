@@ -33,7 +33,7 @@ function Contact() {
         <aside className="container_contact">
             <h1 className="section_title">Contact</h1>
             <div className="subContact">
-                <p>Download my <a href={resume} download="AbbeyPeriniResume">resume</a>, visit my <a href="https://abbeyperini.github.io/">personal site</a>,
+                <p className="subContact_text">Download my <a href={resume} download="AbbeyPeriniResume">resume</a>, visit my <a href="https://abbeyperini.github.io/">personal site</a>,
                 connect with me on <a href="https://twitter.com/AbbeyPerini">Twitter</a> or <a href="https://www.linkedin.com/in/abigail-perini/">LinkedIn</a>, or fill out the form below to send me an email!</p>
                 <form className="contact-form" onSubmit={handleSubmit}>
                     <p>
