@@ -20,6 +20,8 @@
 
 ## Videos and Screenshots
 
+<img src="./portfolio.gif" alt="gif walkthrough of abbeyperini.dev" width="500>
+
 ## Getting Started
 
 To set up a local copy of the project follow the steps below.
@@ -53,7 +55,7 @@ npm start
 - [React](https://reactjs.org/)
 - [react-transition-group](https://www.npmjs.com/package/react-transition-group)
 
-Deployed with 
+Deployed with Netlify.
 
 ## Authors
 
