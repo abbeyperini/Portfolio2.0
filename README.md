@@ -21,7 +21,7 @@
 ## Videos and Screenshots
 
 ![gif walkthrough of abbeyperini.dev](/portfolio.gif)
-![gif walkthrough of mobile abbeyperini.dev](/mobilePortfolio.gif)
+![gif walkthrough of mobile abbeyperini.dev](/portfolioMobile.gif)
 
 ## Getting Started
 
