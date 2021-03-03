@@ -12,11 +12,11 @@
 
 ## About the Project
 
-- I originally built my portfolio in HTML, CSS, and Javascript before I started the DigitalCrafts' bootcamp. I'm now rebuilding it in React.
+- I wasn't happy with my professional portfolio being a template attached to the static personal site I built before starting my full-stack web development classes. While I've been job hunting, I've been building this site as a side project, and diving into aspects of front-end I love. It's built in React and CSS, incorporating react-transition-group. The landing page has the first svg I coded myself, and I've learned a lot about keyframes! I spent a lot of time on the light/dark mode - bulding the toggle, flipping it, adjusting its size, and making sure it shows the correct side no matter which theme is loaded. I enjoyed learning about CSS variables to create the dark and light themes, including getting the svgs to switch colors! This was the first project I deployed with Netlify, and setting up a serverless contact form was a breeze!
 
 ## Usage
 
-- Visit 
+- Visit [abbeyperini.dev](https://abbeyperini.dev)
 
 ## Videos and Screenshots
 
@@ -51,8 +51,7 @@ npm start
 - Javascript
 - CSS
 - [React](https://reactjs.org/)
-- [React Router DOM](https://reactrouter.com/web/guides/quick-start)
-- [Node.js](https://nodejs.org/en/)
+- [react-transition-group](https://www.npmjs.com/package/react-transition-group)
 
 Deployed with 
 

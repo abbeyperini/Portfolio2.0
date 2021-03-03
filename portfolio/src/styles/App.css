@@ -87,6 +87,7 @@ nav {
 .main-container {
   background-color: var(--light-background);
   padding-bottom: 100px;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
 }
 
 .container_about, .container_blog, .container_contact {
@@ -94,16 +95,33 @@ nav {
   flex-direction: column;
   place-items: center;
   margin: 10px 0px 10px 0px;
-  background: rgba( 255, 255, 255, 0.35 );
+}
+
+.subContact {
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
+  margin: 10px 0px 10px 0px;
+  background: var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-form {
-  background: rgba(184, 219, 217, .7);
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
   border-radius: 10px;
-  margin: 20px;
+  margin: 10px;
+}
+
+.contact-form p {
+  margin: 10px;
+  padding: 0px;
+}
+
+.contact-form input, .message_input {
+  margin: 10px;
 }
 
 .message {
@@ -114,7 +132,7 @@ nav {
 }
 
 .message_input {
-  margin-top: 5px;
+  padding: 30px 0px 30px 0px;
 }
 
 .contact_button {
@@ -131,18 +149,20 @@ nav {
   place-items: center;
   grid-template-areas: 
   "sectionTitle"
+  "thisSite"
   "gachasphere"
   "bujo"
   "knitworthy"
   "OWS";
   grid-template-columns: 1fr;
   margin: 10px 0px 10px 0px;
-  color: var(--dark-text);
   row-gap: 20px;
-  background: rgba( 255, 255, 255, 0.35 );
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   padding-bottom: 20px;
   border-radius: 10px;
+}
+
+#this {
+  grid-area: thisSite;
 }
 
 #gachasphere {
@@ -171,16 +191,17 @@ nav {
     "text";
   grid-template-rows: .25fr .25fr .25fr .25fr 1fr;
   place-items: center;
-  background: rgba(184, 219, 217, .7);
+  color: var(--dark-text);
+  background: var(--accent);
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
 }
 
 .subAbout {
-  background: rgba(184, 219, 217, .7);
+  background: var(--accent);
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
-  margin: 20px;
+  margin: 10px 0px 10px 0px;
   padding: 20px;
 }
 
@@ -223,20 +244,25 @@ nav {
 .section_title {
   margin-top: 20px;
   grid-area: sectionTitle;
-  color: var(--dark-text);
+  color: var(--light-text);
 }
 
 .blog-section_title, .preview_button {
   margin-top: 20px;
   background: none;
-  color: var(--dark-text);
   padding: 10px;
-  font-size: 16px;
   border: solid 2px transparent;
+}
+
+.blog-section_title {
+  font-size: 2em;
+  color: var(--light-text);
 }
 
 .preview_button {
   margin-bottom: 20px;
+  color: var(--dark-text);
+  font-size: 16px;
 }
 
 .work_icon {
@@ -284,9 +310,14 @@ nav {
   border: solid 2px var(--accent);
 }
 
-.contact_button:hover, .contact_button:focus, .contact_button:active, .blog-section_title:hover, .blog-section_title:focus, .blog-section_title:active, .preview_button:hover, .preview_button:focus, .preview_button:active {
+.contact_button:hover, .contact_button:focus, .contact_button:active, .preview_button:hover, .preview_button:focus, .preview_button:active {
   cursor: pointer;
   border: solid 2px var(--dark-text);
+}
+
+.blog-section_title:hover, .blog-section_title:focus, .blog-section_title:active {
+  cursor: pointer;
+  border: solid 2px var(--accent);
 }
 
 .header-enter, .navBar-enter, .mainFull-enter, .single-enter {
@@ -308,24 +339,22 @@ nav {
 }
 
 .scroll-cropper {
-  width: 250px;
-  height: 500px;
   overflow: hidden;
   border-radius: 10px;
-  margin: 20px 0px 60px 0px;
+  margin: 10px 0px 10px 0px;
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
 }
 
 .blog-preview {
   display: flex;
   flex-direction: column;
-  width: 250px;
-  height: 510px;
+  height: 1000px;
   overflow-y: scroll;
+  overflow-x: hidden;
   border: none;
   border-radius: 15px;
   padding-left: 0;
-  background: rgba(184, 219, 217, .7);
+  background: var(--accent);
   scrollbar-width: thin;
 }
 
@@ -341,6 +370,10 @@ nav {
 .preview {
   list-style-type: none;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
 }
 
 .preview p {
@@ -409,7 +442,7 @@ a:hover, a:focus {
     max-width: 300px;
   }
 
-  .subWork {
+  .subWork, .subAbout, .scroll-cropper {
     margin: 10px;
   }
 
@@ -443,18 +476,20 @@ a:hover, a:focus {
     margin: 20px;
   }
 
+  .subAbout, .subContact {
+    margin: 20px;
+  }
+
   .scroll-cropper {
-    height: 350px;
-    width: 90%;
+    width: 98%;
+    margin: 20px;
   }
 
   .blog-preview {
     flex-direction: row;
-    height: 350px;
-    width: 90%;
+    height: 99.9%;
     overflow-y: hidden;
     overflow-x: scroll;
-    width: 100%;
   }
 }
 
