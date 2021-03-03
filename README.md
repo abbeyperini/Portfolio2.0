@@ -20,6 +20,8 @@
 
 ## Videos and Screenshots
 
+<img src="portfolio.gif" alt="gif walkthrough of abbeyperini.dev" width="500 />
+
 ## Getting Started
 
 To set up a local copy of the project follow the steps below.
