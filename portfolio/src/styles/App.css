@@ -297,6 +297,7 @@ nav {
   background: none;
   margin-bottom: 10px;
   margin-top: 5px;
+  padding: 5px;
 }
 
 .scroll-cropper {
@@ -637,5 +638,9 @@ a:hover, a:focus {
 
   pre {
     max-width: 100%;
+  }
+
+  .subContact {
+    width: 98%
   }
 }
