@@ -20,7 +20,7 @@
 
 ## Videos and Screenshots
 
-<img src="./portfolio.gif" alt="gif walkthrough of abbeyperini.dev" width="500 />
+<img src="portfolio.gif" alt="gif walkthrough of abbeyperini.dev" width="500 />
 
 ## Getting Started
 
