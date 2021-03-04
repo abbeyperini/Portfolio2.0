@@ -9,7 +9,7 @@ import Contact from './components/Contact';
 import { CSSTransition } from 'react-transition-group';
 import MainFull from './components/MainFullCSS';
 import Single from './components/SingleCSS';
-import { setTheme, keepTheme } from './utils/themes';
+import { keepTheme } from './utils/themes';
 import Blog1 from './components/blog/Blog1';
 import Blog2 from './components/blog/Blog2';
 import Blog3 from './components/blog/Blog3';
@@ -60,7 +60,7 @@ function App() {
           timein={500}
           timeout={300}
           unmountOnExit>
-          <NavBar setTheme={setTheme} hideHeader={hideHeader} chooseComponent={chooseComponent}/>
+          <NavBar hideHeader={hideHeader} chooseComponent={chooseComponent}/>
         </CSSTransition>
         <MainFull condition={hidden && !single} component={<Work />}/>
         <MainFull condition={hidden && !single} component={<Blog chooseComponent={chooseComponent}/>} />
