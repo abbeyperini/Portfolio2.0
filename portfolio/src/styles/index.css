@@ -10,10 +10,8 @@
   --accent: #dbe7e4;
   --button-border: #5E4B56;
   --dark-background: #DBE7E4;
-  --beau-blue: #BCD4E6;
   --light-text: #5E4B56;
   --light-background: #EDDCD2;
-  --work-icon: #5E4B56;
 }
 
 /* --light-text is fine on on the first 3, --dark-text is fine on all of them, --dark-text and dark-background are fine as text on --accent */
@@ -24,7 +22,6 @@
   --accent: #b8dbd9;
   --button-border: #b8dbd9;
   --light-text: #F9F8F8;
-  --work-icon: #292929;
 }
 
 html, #root {
