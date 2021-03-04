@@ -162,12 +162,28 @@ nav {
     "pic"
     "icons"
     "text";
-  grid-template-rows: .25fr .25fr .25fr .25fr 1fr;
+  grid-template-rows: .1fr .1fr .1fr .1fr 1fr;
   place-items: center;
   color: var(--dark-text);
   background: var(--accent);
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
+}
+
+.this-subWork {
+  display: grid;
+  grid-template-areas: 
+    "title"
+    "type"
+    "icons"
+    "text";
+  grid-template-rows: .1fr .1fr .1fr 1fr;
+  place-items: center;
+  color: var(--dark-text);
+  background: var(--accent);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
+  border-radius: 10px;
+  margin: 10px 0px 10px 0px;  
 }
 
 .subwork_title--primary {
@@ -305,6 +321,7 @@ nav {
   border-radius: 10px;
   margin: 10px 0px 10px 0px;
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
+  width: 100%;
 }
 
 .blog-preview {
@@ -522,7 +539,7 @@ a:hover, a:focus {
     max-width: 300px;
   }
 
-  .subWork, .subAbout, .scroll-cropper {
+  .subWork, .subAbout, .scroll-cropper, .this-subWork {
     margin: 10px;
   }
 
@@ -551,6 +568,10 @@ a:hover, a:focus {
 
   pre {
     max-width: 300px;
+  }
+
+  .scroll-cropper {
+    width: 95%;
   }
 }
 
@@ -592,12 +613,22 @@ a:hover, a:focus {
     margin: 20px;
   }
 
+  .this-subWork {
+    grid-template-areas: 
+    "title text"
+    "type text"
+    "icons text";
+    grid-template-rows: .5fr .1fr 1fr;
+    grid-template-columns: .25fr 1fr;
+    margin: 20px;
+  }
+
   .subAbout, .subContact, .blog {
     margin: 20px;
   }
 
   .scroll-cropper {
-    width: 98%;
+    width: 95%;
     margin: 20px;
   }
 
@@ -642,5 +673,15 @@ a:hover, a:focus {
 
   .subContact {
     width: 98%
+  }
+
+  .scroll-cropper {
+    width: 96%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .scroll-cropper {
+    width: 98%;
   }
 }

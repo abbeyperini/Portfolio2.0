@@ -3,7 +3,7 @@ import { ReactComponent as Github } from '../../images/github.svg';
 
 function ThisSite() {
     return (
-        <div id="this" className="subWork">
+        <div id="this" className="this-subWork">
             <h2 className="subwork_title--primary">AbbeyPerini.dev</h2>
             <h3 className="subwork_title--secondary">Professional Website</h3>
             <p className="subwork_text">I wasn't happy with my professional portfolio being a template attached to the static personal site
