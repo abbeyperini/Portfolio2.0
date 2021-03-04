@@ -646,6 +646,10 @@ a:hover, a:focus {
   pre {
     max-width: 650px;
   }
+
+  .work_icon {
+    padding-bottom: 20px;
+  }
 }
 
 @media screen and (min-width: 800px) {
