@@ -8,6 +8,7 @@
 .theme-light {
   --dark-text: #5E4B56;
   --accent: #dbe7e4;
+  --button-border: #5E4B56;
   --dark-background: #DBE7E4;
   --beau-blue: #BCD4E6;
   --light-text: #5E4B56;
@@ -21,6 +22,7 @@
   --dark-background: #2F4550;
   --light-background: #586F7C;
   --accent: #b8dbd9;
+  --button-border: #b8dbd9;
   --light-text: #F9F8F8;
   --work-icon: #292929;
 }

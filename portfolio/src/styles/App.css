@@ -482,7 +482,7 @@ button:hover, button:focus, button:active {
 }
 
 .nav_button:hover, .nav_button:focus, .nav_button:active {
-  border: solid 2px var(--accent);
+  border: solid 2px var(--button-border);
 }
 
 .contact_button:hover, .contact_button:focus, .contact_button:active, .preview_button:hover, .preview_button:focus, .preview_button:active {
@@ -492,7 +492,7 @@ button:hover, button:focus, button:active {
 
 .blog-section_title:hover, .blog-section_title:focus, .blog-section_title:active {
   cursor: pointer;
-  border: solid 2px var(--light-text);
+  border: solid 2px var(--button-border);
 }
 
 /* react transition group animations */
