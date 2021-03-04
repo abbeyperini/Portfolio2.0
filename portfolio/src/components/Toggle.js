@@ -6,7 +6,7 @@ function Toggle() {
     const [togClass, setTogClass] = useState('dark');
     let theme = localStorage.getItem('theme');
 
-    const handleOnClick = (props) => {
+    const handleOnClick = () => {
         if (localStorage.getItem('theme') === 'theme-dark') {
             setTheme('theme-light');
             setTogClass('light')
