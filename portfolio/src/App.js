@@ -18,6 +18,7 @@ import Blog5 from './components/blog/Blog5';
 import Blog6 from './components/blog/Blog6';
 import Blog7 from './components/blog/Blog7';
 import Blog8 from './components/blog/Blog8';
+import Blog9 from './components/blog/Blog9';
 import FullBlog from './components/FullBlog';
 
 function App() {
@@ -78,6 +79,7 @@ function App() {
         <Single condition={hidden && single && singleShow === "Blog6"} component={<Blog6 />}/>
         <Single condition={hidden && single && singleShow === "Blog7"} component={<Blog7 />}/>
         <Single condition={hidden && single && singleShow === "Blog8"} component={<Blog8 />}/>
+        <Single condition={hidden && single && singleShow === "Blog9"} component={<Blog9 />}/>
         <Single condition={hidden && single && singleShow === "FullBlog"} component={<FullBlog />}/>
       </div> }
     </div>

@@ -460,6 +460,14 @@ p code, li code {
   width: 50%;
 }
 
+#darkLightM {
+  border-radius: 50px;
+}
+
+#blog9DarkCSS {
+  margin-bottom: 5px;
+}
+
 /* button animations */
 
 button:hover, button:focus, button:active {

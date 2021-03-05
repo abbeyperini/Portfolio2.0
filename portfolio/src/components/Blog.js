@@ -7,6 +7,7 @@ import Preview5 from './blogPreviews/Preview5';
 import Preview6 from './blogPreviews/Preview6';
 import Preview7 from './blogPreviews/Preview7';
 import Preview8 from './blogPreviews/Preview8';
+import Preview9 from './blogPreviews/Preview9';
 
 function Blog(props) {
     const chooseComponent = (component) => {
@@ -18,6 +19,7 @@ function Blog(props) {
             <button className="blog-section_title" onClick={() => chooseComponent("FullBlog")}>Blog</button>
             <div className="scroll-cropper">
                 <ul className="blog-preview">
+                    <Preview9 chooseComponent={props.chooseComponent}/>
                     <Preview8 chooseComponent={props.chooseComponent}/>
                     <Preview7 chooseComponent={props.chooseComponent}/>
                     <Preview6 chooseComponent={props.chooseComponent}/>
