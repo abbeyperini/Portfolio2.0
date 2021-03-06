@@ -38,17 +38,17 @@ function Contact() {
                 <form className="contact-form" onSubmit={handleSubmit}>
                     <p>
                         <label>
-                            Your Name: <input type="text" name="name" onChange={handleChange} />   
+                            Your Name: <input type="text" name="name" onChange={handleChange} required />   
                         </label>
                     </p>
                     <p>
                         <label>
-                            Your Email: <input type="email" name="email" onChange={handleChange}></input>
+                            Your Email: <input type="email" name="email" onChange={handleChange} required></input>
                         </label>
                     </p>
                     <p>
                         <label className="message">
-                            Message: <textarea name="message" onChange={handleChange} className="message_input"/>
+                            Message: <textarea name="message" onChange={handleChange} className="message_input" required/>
                         </label>
                     </p>
                     <p>
