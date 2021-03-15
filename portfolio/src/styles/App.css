@@ -284,7 +284,7 @@ nav {
   margin: 10px;
 }
 
-.message {
+.message, .contact_email, .contact_name {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -525,15 +525,14 @@ button:hover, button:focus, button:active {
 
 /* links */
 
-a:link, a:visited, a:hover, a:active {
+a:link, a:visited {
   color: var(--dark-text);
-  text-decoration: none;
+  text-decoration: underline dotted;
+  cursor: pointer;
 }
 
-a:hover, a:focus {
+a:hover, a:focus, a:active {
   color: var(--light-background);
-  text-decoration: underline;
-  cursor: pointer;
 }
 
 /* media queries */
@@ -554,13 +553,13 @@ a:hover, a:focus {
   .container_about, .container_blog, .container_contact, .container_work {
     margin: 20px;
   }
-
-  .message {
-    flex-direction: row;
-  }
   
   .message_input {
     margin-left: 5px;
+  }
+
+  .contact-form {
+    min-width: 300px;
   }
 
   .preview_image {
@@ -657,6 +656,15 @@ a:hover, a:focus {
 
   .work_icon {
     padding-bottom: 20px;
+  }
+
+  .contact-form {
+    min-width: 600px;
+    padding: 15px;
+  }
+
+  .message, .contact_name, .contact_email {
+    flex-direction: row;
   }
 }
 

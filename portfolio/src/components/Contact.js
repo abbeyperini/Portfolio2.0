@@ -37,12 +37,12 @@ function Contact() {
                 connect with me on <a href="https://twitter.com/AbbeyPerini">Twitter</a> or <a href="https://www.linkedin.com/in/abigail-perini/">LinkedIn</a>, or fill out the form below to send me an email!</p>
                 <form className="contact-form" onSubmit={handleSubmit}>
                     <p>
-                        <label>
+                        <label className="contact_name">
                             Your Name: <input type="text" name="name" onChange={handleChange} required />   
                         </label>
                     </p>
                     <p>
-                        <label>
+                        <label className="contact_email">
                             Your Email: <input type="email" name="email" onChange={handleChange} required></input>
                         </label>
                     </p>
