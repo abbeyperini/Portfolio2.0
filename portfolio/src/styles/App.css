@@ -704,4 +704,8 @@ a:hover, a:focus, a:active {
   .scroll-cropper {
     width: 98%;
   }
+
+  .caption {
+    max-width: 500px;
+  }
 }

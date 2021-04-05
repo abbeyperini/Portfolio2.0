@@ -8,10 +8,12 @@ import Blog6 from './blog/Blog6';
 import Blog7 from './blog/Blog7';
 import Blog8 from './blog/Blog8';
 import Blog9 from './blog/Blog9';
+import Blog10 from './blog/Blog10';
 
 function FullBlog() {
     return (
         <section className="full-blog">
+            <Blog10 />
             <Blog9 />
             <Blog8 />
             <Blog7 />
