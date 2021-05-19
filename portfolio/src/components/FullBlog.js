@@ -10,7 +10,7 @@ function FullBlog() {
   async function fetchBlogs() {
     const res = await fetch('https://dev.to/api/articles/me', {
       headers: {
-        "Api-Key": "yt5HgRk68fjpAhKu95qjRy3F",
+        "Api-Key": "",
         "Content-Type": 'application/json'
       }
     })
