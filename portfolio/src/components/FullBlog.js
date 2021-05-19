@@ -1,30 +1,81 @@
-import React from 'react';
-import Blog1 from './blog/Blog1';
-import Blog2 from './blog/Blog2';
-import Blog3 from './blog/Blog3';
-import Blog4 from './blog/Blog4';
-import Blog5 from './blog/Blog5';
-import Blog6 from './blog/Blog6';
-import Blog7 from './blog/Blog7';
-import Blog8 from './blog/Blog8';
-import Blog9 from './blog/Blog9';
-import Blog10 from './blog/Blog10';
+import React, { useEffect, useReducer } from 'react';
 
 function FullBlog() {
-    return (
-        <section className="full-blog">
-            <Blog10 />
-            <Blog9 />
-            <Blog8 />
-            <Blog7 />
-            <Blog6 />
-            <Blog5 />
-            <Blog4 />
-            <Blog3 />
-            <Blog2 />
-            <Blog1 />
-        </section>
-    )
+
+  const initialState = {
+    isLoading: false,
+    data: null
+  }
+
+  async function fetchBlogs() {
+    const res = await fetch('https://dev.to/api/articles/me', {
+      headers: {
+        "Api-Key": "yt5HgRk68fjpAhKu95qjRy3F",
+        "Content-Type": 'application/json'
+      }
+    })
+    .then((response) => JSON.parse(response))
+    .catch((error) => dispatch({
+      type: "blogFetchFail",
+      payload: error
+    }))
+    
+    return await res
+  }
+
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "blogLoading":
+        return {
+          ...state,
+          isLoading: true
+        };
+      case "blogFetched":
+        return {
+          ...state,
+          isLoading: false,
+          blogs: action.payload
+        };
+      case "blogFetchFail":
+        return {
+          ...state,
+          isLoading: false,
+          error: action.payload
+        };
+      default:
+        return {
+          ...state,
+          isLoading: false,
+          error: "unknown error"
+        };
+    }
+  }
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
+    async function load() {
+
+      dispatch({
+        type: "blogLoading"
+      })
+      
+      const data = await fetchBlogs()
+
+      dispatch({
+        type: "blogsFetched",
+        payload: data
+      })
+    }
+
+    load()
+  }, [])
+
+  return (
+      <section className="full-blog">
+        <p>{state.data}</p>
+      </section>
+  )
 }
 
 export default FullBlog;
