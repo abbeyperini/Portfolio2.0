@@ -1,26 +1,20 @@
+import axios from 'axios';
 import React, { useEffect, useReducer } from 'react';
+import parse from 'html-react-parser';
 
 function FullBlog() {
 
   const initialState = {
     isLoading: false,
-    data: null
+    blogs: null
   }
 
   async function fetchBlogs() {
-    const res = await fetch('https://dev.to/api/articles/me', {
-      headers: {
-        "Api-Key": "",
-        "Content-Type": 'application/json'
-      }
+    const res = await axios.get('http://localhost:9000/.netlify/functions/blogPosts')
+    dispatch({
+      type: "blogFetched",
+      payload: res.data
     })
-    .then((response) => JSON.parse(response))
-    .catch((error) => dispatch({
-      type: "blogFetchFail",
-      payload: error
-    }))
-    
-    return await res
   }
 
   const reducer = (state, action) => {
@@ -60,22 +54,35 @@ function FullBlog() {
         type: "blogLoading"
       })
       
-      const data = await fetchBlogs()
-
-      dispatch({
-        type: "blogsFetched",
-        payload: data
-      })
+      fetchBlogs()
     }
 
     load()
   }, [])
 
-  return (
+  if (!state.isLoading && state.blogs !== null) {
+    let blogList = state.blogs.data.map((blog) => {
+      let blogBody = parse(blog.body_html)
+      return (
+        <li key={blog.id} className="blog">
+          <h2>{blog.title}</h2>
+          {blogBody}
+        </li>
+      )
+    })
+
+    return (
       <section className="full-blog">
-        <p>{state.data}</p>
+        <ul>
+          {blogList}
+        </ul>
       </section>
   )
+  } else {
+    return (
+      <p>Blogs loading!</p>
+    )
+  }
 }
 
 export default FullBlog;

@@ -10,17 +10,8 @@ import { CSSTransition } from 'react-transition-group';
 import MainFull from './components/MainFullCSS';
 import Single from './components/SingleCSS';
 import { keepTheme } from './utils/themes';
-import Blog1 from './components/blog/Blog1';
-import Blog2 from './components/blog/Blog2';
-import Blog3 from './components/blog/Blog3';
-import Blog4 from './components/blog/Blog4';
-import Blog5 from './components/blog/Blog5';
-import Blog6 from './components/blog/Blog6';
-import Blog7 from './components/blog/Blog7';
-import Blog8 from './components/blog/Blog8';
-import Blog9 from './components/blog/Blog9';
-import Blog10 from './components/blog/Blog10';
 import FullBlog from './components/FullBlog';
+import SingleBlog from './components/SingleBlog';
 
 function App() {
   const [hidden, setHidden] = useState(false);
@@ -65,24 +56,15 @@ function App() {
           <NavBar hideHeader={hideHeader} chooseComponent={chooseComponent}/>
         </CSSTransition>
         <MainFull condition={hidden && !single} component={<Work />}/>
-        <MainFull condition={hidden && !single} component={<Blog chooseComponent={chooseComponent}/>} />
+        <MainFull condition={hidden && !single} component={<Blog chooseComponent={chooseComponent} />} />
         <MainFull condition={hidden && !single} component={<About />}/>
         <MainFull condition={hidden && !single} component={<Contact />}/>
         <Single condition={hidden && single && singleShow === "work"} component={<Work />}/>
-        <Single condition={hidden && single && singleShow === "blog"} component={<Blog chooseComponent={chooseComponent}/>}/>
+        <Single condition={hidden && single && singleShow === "blog"} component={<Blog chooseComponent={chooseComponent} />} />
         <Single condition={hidden && single && singleShow === "about"} component={<About />}/>
         <Single condition={hidden && single && singleShow === "contact"} component={<Contact />}/>
-        <Single condition={hidden && single && singleShow === "Blog1"} component={<Blog1 />}/>
-        <Single condition={hidden && single && singleShow === "Blog2"} component={<Blog2 />}/>
-        <Single condition={hidden && single && singleShow === "Blog3"} component={<Blog3 />}/>
-        <Single condition={hidden && single && singleShow === "Blog4"} component={<Blog4 />}/>
-        <Single condition={hidden && single && singleShow === "Blog5"} component={<Blog5 />}/>
-        <Single condition={hidden && single && singleShow === "Blog6"} component={<Blog6 />}/>
-        <Single condition={hidden && single && singleShow === "Blog7"} component={<Blog7 />}/>
-        <Single condition={hidden && single && singleShow === "Blog8"} component={<Blog8 />}/>
-        <Single condition={hidden && single && singleShow === "Blog9"} component={<Blog9 />}/>
-        <Single condition={hidden && single && singleShow === "Blog10"} component={<Blog10 />}/>
-        <Single condition={hidden && single && singleShow === "FullBlog"} component={<FullBlog />}/>
+        <Single condition={hidden && single && singleShow === "SingleBlog"} component={<SingleBlog />}/>
+        <Single condition={hidden && single && singleShow === "FullBlog"} component={<FullBlog />} />
       </div> }
     </div>
   );

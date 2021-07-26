@@ -370,24 +370,31 @@ nav {
 
 /* full blog */
 
-.blog_image {
+.blog img {
   max-width: 200px;
   margin: 10px;
 }
 
-.blog_title {
+.article-body-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.blog h2:first-of-type {
   font-size: 2em;
 }
 
-.blog_title-secondary {
+.blog h1 {
   font-size: 1.5em;
+  margin: 10px;
 }
 
-.blog-title-tertiary {
+.blog h2 {
   font-size: 1em;
-}
+  margin: 10px;
+} 
 
-.caption {
+.blog em {
   font-style: italic;
   font-size: 1em;
   max-width: 250px;
@@ -426,31 +433,27 @@ nav {
   text-align: left;
 }
 
-.blog_code-block {
-  background-color: #eee;
-  border: 1px solid black;
-  text-align: left;
-  padding: 10px;
-  border-radius: 10px;
+.highlight__panel {
+  display: none;
 }
 
-pre {
+div.highlight {
+  background-color: #eee;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+pre.highlight {
   white-space: pre-wrap;
   max-width: 250px;
   overflow-x: auto;
+  text-align: left;
 }
 
-p code, li code {
-  background-color: #eee;
-  border: 1px solid black;
-  text-align: center;
+code {
   padding: 1px 5px 1px 5px;
-  border-radius: 10px;
-}
-
-.blog_published-heading {
-  font-style: italic;
-  font-size: 1em;
 }
 
 .blog p, .blog blockquote {
@@ -458,14 +461,6 @@ p code, li code {
   margin: 5px;
   text-align: left;
   width: 50%;
-}
-
-#darkLightM {
-  border-radius: 50px;
-}
-
-#blog9DarkCSS {
-  margin-bottom: 5px;
 }
 
 /* button animations */
@@ -573,7 +568,7 @@ a:hover, a:focus, a:active {
     margin: 15px;
   }
 
-  pre {
+  pre.highlight {
     max-width: 300px;
   }
 
@@ -594,11 +589,11 @@ a:hover, a:focus, a:active {
     margin: 15px;
   }
 
-  .blog_image {
+  .blog img {
     max-width: 250px;
   }
 
-  pre {
+  pre.highlight {
     max-width: 500px;
   }
 }
@@ -646,11 +641,11 @@ a:hover, a:focus, a:active {
     overflow-x: scroll;
   }
 
-  .blog_image {
+  .blog img {
     max-width: 300px;
   }
 
-  pre {
+  pre.highlight {
     max-width: 650px;
   }
 
@@ -683,11 +678,11 @@ a:hover, a:focus, a:active {
     flex-direction: row;
   }
 
-  .blog_image {
+  .blog img {
     max-width: 500px;
   }
 
-  pre {
+  pre.highlight {
     max-width: 100%;
   }
 
@@ -705,7 +700,7 @@ a:hover, a:focus, a:active {
     width: 98%;
   }
 
-  .caption {
+  .blog em {
     max-width: 500px;
   }
 }
