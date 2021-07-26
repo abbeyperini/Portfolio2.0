@@ -17,6 +17,7 @@ function App() {
   const [hidden, setHidden] = useState(false);
   const [single, setSingle] = useState(false);
   const [singleShow, setSingleShow] = useState('');
+  const [singleBlogID, setSingleBlogID] = useState(0);
   
   const hideHeader = () => {
     if (hidden) {
@@ -28,8 +29,14 @@ function App() {
   }
 
   const chooseComponent = (component) => {
+    if (component.id) {
+      setSingle(true)
+      setSingleBlogID(component.id)
+      setSingleShow("SingleBlog")
+    } else {
       setSingle(true);
       setSingleShow(component);
+    } 
   }
 
   useEffect(() => {
@@ -63,7 +70,7 @@ function App() {
         <Single condition={hidden && single && singleShow === "blog"} component={<Blog chooseComponent={chooseComponent} />} />
         <Single condition={hidden && single && singleShow === "about"} component={<About />}/>
         <Single condition={hidden && single && singleShow === "contact"} component={<Contact />}/>
-        <Single condition={hidden && single && singleShow === "SingleBlog"} component={<SingleBlog />}/>
+        <Single condition={hidden && single && singleShow === "SingleBlog"} component={<SingleBlog id={singleBlogID} />}/>
         <Single condition={hidden && single && singleShow === "FullBlog"} component={<FullBlog />} />
       </div> }
     </div>
