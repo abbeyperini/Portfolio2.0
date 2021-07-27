@@ -13,10 +13,17 @@ function Blog(props) {
   }
 
   async function fetchBlogs() {
-    const res = await axios.get('http://localhost:9000/.netlify/functions/blogPosts')
-    dispatch({
-      type: "blogFetched",
-      payload: res.data
+    axios.get('http://localhost:9000/.netlify/functions/blogPosts')
+    .then((res) => {
+      dispatch({
+        type: "blogFetched",
+        payload: res.data
+      })
+    }).catch((error) => {
+      dispatch({
+        type: "blogFetchFail",
+        payload: error
+      })
     })
   }
 
@@ -75,9 +82,9 @@ function Blog(props) {
       }
 
       return (
-        <li key={blog.id} className="blog">
-          <h2 onClick={() => chooseComponent({id: blog.id})}>{blog.title}</h2>
-          <img alt={altText} src={blogImage}></img>
+        <li key={blog.id} className="preview">
+          <h2 className="preview_button" onClick={() => chooseComponent({id: blog.id})}>{blog.title}</h2>
+          <img className="preview_image" alt={altText} src={blogImage}></img>
         </li>
       )
     })
@@ -92,6 +99,10 @@ function Blog(props) {
           </div>
       </div>
   )
+  } else if (!state.isLoading && state.error) {
+    return (
+      <p>There was an error! Try again later.</p>
+    )
   } else {
     return (
       <p>Blogs loading!</p>

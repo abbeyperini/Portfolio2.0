@@ -1,25 +1,26 @@
-import React, {useState, useEffect, useReducer} from 'react';
+import React, {useEffect, useReducer} from 'react';
 import axios from 'axios';
 import parse from 'html-react-parser';
 
 function SingleBlog(props) {
-  const [id, setID] = useState(0)
 
   const initialState = {
     isLoading: false,
-    blogs: null
+    blog: null
   }
 
-  async function fetchSingleBlog() {
-    const res = await axios.post('http://localhost:9000/.netlify/functions/singleBlog', {
-      body: {
-        data: id
-      }
-    })
-
-    dispatch({
-      type: "blogFetched",
-      payload: res.data
+  async function fetchSingleBlog(id) {
+    axios.get(`http://localhost:9000/.netlify/functions/singleBlog?id=${id}`)
+    .then((res) => {
+      dispatch({
+        type: "blogFetched",
+        payload: res.data.data
+      })
+    }).catch((err) => {
+      dispatch({
+        type: "blogFetchFail",
+        payload: err
+      })
     })
   }
 
@@ -34,7 +35,7 @@ function SingleBlog(props) {
         return {
           ...state,
           isLoading: false,
-          blogs: action.payload
+          blog: action.payload
         };
       case "blogFetchFail":
         return {
@@ -54,7 +55,6 @@ function SingleBlog(props) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    setID(props.id)
 
     async function load() {
 
@@ -62,30 +62,30 @@ function SingleBlog(props) {
         type: "blogLoading"
       })
       
-      fetchSingleBlog()
+      fetchSingleBlog(props.id)
     }
 
     load()
   }, [])
 
-  if (!state.isLoading && state.blogs !== null) {
-    let blogList = state.blogs.data.map((blog) => {
-      let blogBody = parse(blog.body_html)
-      return (
-        <li key={blog.id} className="blog">
-          <h2>{blog.title}</h2>
-          {blogBody}
-        </li>
-      )
-    })
+  if (!state.isLoading && state.blog !== null) {
+
+    let blogBody = parse(state.blog.body_html)
 
     return (
       <section className="full-blog">
         <ul>
-          {blogList}
+          <li key={state.blog.id} className="blog">
+            <h2>{state.blog.title}</h2>
+            {blogBody}
+          </li>
         </ul>
       </section>
-  )
+    )
+  } else if (!state.isLoading && state.error) {
+    return (
+      <p>There was an error! Try again later.</p>
+    )
   } else {
     return (
       <p>Blogs loading!</p>

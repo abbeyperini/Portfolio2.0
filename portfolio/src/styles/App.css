@@ -338,8 +338,7 @@ nav {
 }
 
 .preview_image {
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 200px;
   margin-bottom: 5px;
 }
 
@@ -558,13 +557,12 @@ a:hover, a:focus, a:active {
   }
 
   .preview_image {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 250px;
   }
   
   .preview {
     width: 300px;
-    height: 300px;
+    height: 200px;
     margin: 15px;
   }
 
@@ -579,13 +577,12 @@ a:hover, a:focus, a:active {
 
 @media screen and (min-width: 525px) {
   .preview_image {
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 400px;
   }
   
   .preview {
     width: 350px;
-    height: 350px;
+    height: 300px;
     margin: 15px;
   }
 
@@ -639,6 +636,10 @@ a:hover, a:focus, a:active {
     height: 99.9%;
     overflow-y: hidden;
     overflow-x: scroll;
+  }
+
+  .preview_image {
+    max-width: 350px;
   }
 
   .blog img {

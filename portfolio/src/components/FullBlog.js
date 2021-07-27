@@ -10,10 +10,17 @@ function FullBlog() {
   }
 
   async function fetchBlogs() {
-    const res = await axios.get('http://localhost:9000/.netlify/functions/blogPosts')
-    dispatch({
-      type: "blogFetched",
-      payload: res.data
+    axios.get('http://localhost:9000/.netlify/functions/blogPosts')
+    .then((res) => {
+      dispatch({
+        type: "blogFetched",
+        payload: res.data
+      })
+    }).catch((error) => {
+      dispatch({
+        type: "blogFetchFail",
+        payload: error
+      })
     })
   }
 
@@ -78,6 +85,10 @@ function FullBlog() {
         </ul>
       </section>
   )
+  } else if (!state.isLoading && state.error) {
+    return (
+      <p>There was an error! Try again later.</p>
+    )
   } else {
     return (
       <p>Blogs loading!</p>
