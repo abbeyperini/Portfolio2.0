@@ -1,6 +1,5 @@
 import React, {useEffect, useReducer} from 'react';
 import axios from 'axios';
-const BASE_URL = process.env.BASE_URL
 
 function Blog(props) {
 
@@ -14,8 +13,7 @@ function Blog(props) {
   }
 
   async function fetchBlogs() {
-    let url = `${BASE_URL}/.netlify/functions/blogPosts`
-    axios.get(url)
+    axios.get('https://abbeyperini.dev//.netlify/functions/blogPosts')
     .then((res) => {
       dispatch({
         type: "blogFetched",
