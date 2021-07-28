@@ -1,4 +1,6 @@
 const axios = require('axios')
+const API_KEY = process.env.API_KEY
+const ORIGIN_URL = process.env.ORIGIN_URL
 
 async function getAllBlogsByID(blogIDs) {
   let blogArray = []
@@ -14,7 +16,7 @@ async function getAllBlogsByID(blogIDs) {
 async function getBlogByID(id) {
   let blog = await axios.get(`https://dev.to/api/articles/${id}`, {
     headers: {
-      "Api-Key": "xr99WgmvHfymuoWoU89huq22",
+      "Api-Key": API_KEY,
       "Content-Type": 'application/json'
     }
   })
@@ -27,7 +29,7 @@ exports.handler = async function (event, context) {
   try {
     articlesByUser = await axios.get('https://dev.to/api/articles/me', {
       headers: {
-        "Api-Key": "xr99WgmvHfymuoWoU89huq22",
+        "Api-Key": API_KEY,
         "Content-Type": 'application/json'
       }
     })
@@ -36,7 +38,7 @@ exports.handler = async function (event, context) {
       statusCode:err.statusCode || 500,
       body: err.message,
       headers: {
-        "Access-Control-Allow-Origin": "http://localhost:3000",
+        "Access-Control-Allow-Origin": ORIGIN_URL,
         "Access-Control-Allow-Methods": "GET"
       }
     }
@@ -51,7 +53,7 @@ exports.handler = async function (event, context) {
       data: allBlogs
     }),
     headers: {
-      "Access-Control-Allow-Origin": "http://localhost:3000",
+      "Access-Control-Allow-Origin": ORIGIN_URL,
       "Access-Control-Allow-Methods": "GET"
     }
   }

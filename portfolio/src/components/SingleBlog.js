@@ -10,7 +10,8 @@ function SingleBlog(props) {
   }
 
   async function fetchSingleBlog(id) {
-    axios.get(`http://localhost:9000/.netlify/functions/singleBlog?id=${id}`)
+    let url = `${process.env.BASE_URL}/.netlify/functions/singleBlog?id=${id}`
+    axios.get(url)
     .then((res) => {
       dispatch({
         type: "blogFetched",

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useReducer } from 'react';
 import parse from 'html-react-parser';
+const BASE_URL = process.env.BASE_URL
 
 function FullBlog() {
 
@@ -10,7 +11,8 @@ function FullBlog() {
   }
 
   async function fetchBlogs() {
-    axios.get('http://localhost:9000/.netlify/functions/blogPosts')
+    let url = `${BASE_URL}/.netlify/functions/blogPosts`
+    axios.get(url)
     .then((res) => {
       dispatch({
         type: "blogFetched",
