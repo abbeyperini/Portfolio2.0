@@ -67,7 +67,7 @@ function SingleBlog(props) {
     }
 
     load()
-  }, [])
+  }, [props.id])
 
   if (!state.isLoading && state.blog !== null) {
 
