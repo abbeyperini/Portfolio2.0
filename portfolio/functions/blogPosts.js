@@ -1,6 +1,5 @@
 const axios = require('axios')
 const API_KEY = process.env.API_KEY
-const ORIGIN_URL = process.env.ORIGIN_URL
 
 async function getAllBlogsByID(blogIDs) {
   let blogArray = []
@@ -38,7 +37,7 @@ exports.handler = async function (event, context) {
       statusCode:err.statusCode || 500,
       body: err.message,
       headers: {
-        "Access-Control-Allow-Origin": ORIGIN_URL,
+        "Access-Control-Allow-Origin": "https://abbeyperini.dev",
         "Access-Control-Allow-Methods": "GET"
       }
     }
@@ -53,7 +52,7 @@ exports.handler = async function (event, context) {
       data: allBlogs
     }),
     headers: {
-      "Access-Control-Allow-Origin": ORIGIN_URL,
+      "Access-Control-Allow-Origin": "https://abbeyperini.dev",
       "Access-Control-Allow-Methods": "GET"
     }
   }
