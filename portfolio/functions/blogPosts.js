@@ -33,6 +33,7 @@ exports.handler = async function (event, context) {
       }
     })
   } catch (err) {
+    console.log(err)
     return {
       statusCode:err.statusCode || 500,
       body: err.message,
