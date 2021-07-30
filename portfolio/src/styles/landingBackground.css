@@ -26,3 +26,9 @@
 .bg3 {
     animation-duration: 5s;
 }
+
+@media (prefers-reduced-motion) {
+  .bg, .bg2, .bg3 {
+    animation-name: dissolve;
+  }
+}
