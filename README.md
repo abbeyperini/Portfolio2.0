@@ -26,6 +26,8 @@ July 2021
 
 ![gif walkthrough of abbeyperini.dev](/portfolioWalkthrough.gif)
 ![gif walkthrough of mobile abbeyperini.dev](/mobilePortfolio.gif)
+
+
 ![gif walkthrough of blog update](/blogWalkthrough.gif)
 
 ## Getting Started
