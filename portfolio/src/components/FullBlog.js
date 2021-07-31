@@ -72,7 +72,7 @@ function FullBlog() {
       let blogBody = parse(blog.body_html)
       return (
         <li key={blog.id} className="blog">
-          <h2>{blog.title}</h2>
+          <h1>{blog.title}</h1>
           {blogBody}
         </li>
       )

@@ -77,7 +77,7 @@ function SingleBlog(props) {
       <section className="full-blog">
         <ul>
           <li key={state.blog.id} className="blog">
-            <h2>{state.blog.title}</h2>
+            <h1>{state.blog.title}</h1>
             {blogBody}
           </li>
         </ul>
