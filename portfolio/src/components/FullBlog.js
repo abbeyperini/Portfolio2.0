@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useReducer } from 'react';
 import parse from 'html-react-parser';
+import Error from '../components/Error';
+import Loading from '../components/Loading';
 
 function FullBlog() {
 
@@ -87,11 +89,11 @@ function FullBlog() {
   )
   } else if (!state.isLoading && state.error) {
     return (
-      <p>There was an error! Try again later.</p>
+      <Error />
     )
   } else {
     return (
-      <p>Blogs loading!</p>
+      <Loading />
     )
   }
 }

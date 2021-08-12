@@ -1,6 +1,8 @@
 import React, {useEffect, useReducer} from 'react';
 import axios from 'axios';
 import parse from 'html-react-parser';
+import Error from '../components/Error';
+import Loading from '../components/Loading';
 
 function SingleBlog(props) {
 
@@ -85,11 +87,11 @@ function SingleBlog(props) {
     )
   } else if (!state.isLoading && state.error) {
     return (
-      <p>There was an error! Try again later.</p>
+      <Error />
     )
   } else {
     return (
-      <p>Blogs loading!</p>
+      <Loading />
     )
   }
 }
