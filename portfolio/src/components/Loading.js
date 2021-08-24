@@ -3,8 +3,8 @@ import {ReactComponent as ConstructionShiba} from '../images/construction-shiba-
 
 function Loading() {
   return (
-    <div>
-      <ConstructionShiba />
+    <div className="container_error">
+      <ConstructionShiba className="loading-graphic"/>
       <p>Blogs loading!</p>
     </div>
   )

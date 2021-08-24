@@ -462,6 +462,28 @@ code {
   width: 50%;
 }
 
+/* error and loading graphics */
+
+.container_error {
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
+  border-radius: 10px;
+  margin: 10px 0px 10px 0px;
+  background: var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-graphic {
+  padding: 20px 20px 0px 20px;
+  max-width: 100px;
+}
+
+.loading-graphic {
+  padding: 20px 20px 0px 20px;
+  max-width: 100px;
+}
+
 /* button animations */
 
 button:hover, button:focus, button:active {
@@ -532,6 +554,10 @@ a:hover, a:focus, a:active {
 /* media queries */
 
 @media screen and (min-width: 350px) {
+  .error-graphic, .loading-graphic {
+    max-width: 150px;
+  }
+
   .about_headshot {
     width: 300px;
   }
@@ -556,6 +582,10 @@ a:hover, a:focus, a:active {
     min-width: 300px;
   }
 
+  .container_error {
+    margin: 30px;
+  }
+
   .preview_image {
     max-width: 250px;
   }
@@ -576,6 +606,10 @@ a:hover, a:focus, a:active {
 }
 
 @media screen and (min-width: 525px) {
+  .error-graphic, .loading-graphic {
+    max-width: 200px;
+  }
+  
   .preview_image {
     max-width: 400px;
   }
@@ -596,6 +630,7 @@ a:hover, a:focus, a:active {
 }
 
 @media screen and (min-width: 700px) {
+
   .subWork_container_image > img, .subwork_image {
     max-width: 200px;
     max-height: 200px;
@@ -657,6 +692,10 @@ a:hover, a:focus, a:active {
   .contact-form {
     min-width: 600px;
     padding: 15px;
+  }
+
+  .container_error {
+    margin: 30px 40px 30px 40px;
   }
 
   .message, .contact_name, .contact_email {
