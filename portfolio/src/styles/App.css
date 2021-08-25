@@ -462,6 +462,170 @@ code {
   width: 50%;
 }
 
+/* error and loading graphics */
+
+.container_error {
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
+  border-radius: 10px;
+  margin: 10px 0px 10px 0px;
+  background: var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-graphic {
+  padding: 20px 20px 0px 20px;
+  max-width: 100px;
+}
+
+.loading-graphic {
+  padding: 20px 20px 0px 20px;
+  max-width: 100px;
+}
+
+.error-graphic-main {
+  fill:#f8a768;
+}
+
+.error-graphic-cream {
+  fill:#fffbde;
+}
+
+.error-graphic-lines {
+  fill:#421d00;
+}
+
+.error-graphic_qm-fill {
+  fill:#a19ece;
+  animation-name: colorRotate-fill-hsla;
+  animation-duration: 3000ms;
+  animation-fill-mode: forwards;
+  transition: all 360ms ease-in;
+  animation-iteration-count: infinite;
+}
+
+.error-graphic_qm-lines {
+  fill:#524f77;
+  animation-name: colorRotate-fill;
+  animation-duration: 3000ms;
+  animation-fill-mode: forwards;
+  transition: all 360ms ease-in;
+  animation-iteration-count: infinite;
+}
+
+.error-graphic_qm_dot {
+  fill:#a19ece;
+  stroke:#524f77;
+  stroke-miterlimit:10;
+  stroke-width:3px;
+  animation-name: colorRotate-stroke, colorRotate-fill-hsla;
+  animation-duration: 3000ms;
+  animation-fill-mode: forwards;
+  transition: all 360ms ease-in;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colorRotate-fill-hsla {
+  0%, 100% {
+    fill: hsla(0,100%,50%,.2);
+  }
+  10% {
+    fill: hsla(36,100%,50%,.2);
+  }
+  20% {
+    fill: hsla(72,100%,50%,.2);
+  }
+  30% {
+    fill: hsla(108,100%,50%,.2);
+  }
+  40% {
+    fill: hsla(144,100%,50%,.2);
+  }
+  50% {
+    fill: hsla(180,100%,50%,.2);
+  }
+  60% {
+    fill: hsla(216,100%,50%,.2);
+  }
+  70% {
+    fill: hsla(252,100%,50%,.2);
+  }
+  80% {
+    fill: hsla(288,100%,50%,.2);
+  }
+  90% {
+    fill: hsla(324,100%,50%,.2);
+  }
+}
+
+@keyframes colorRotate-fill /* Safari and Chrome */ {
+  0%, 100% {
+    fill: hsl(0,100%,50%);
+  }
+  10% {
+    fill: hsl(36,100%,50%);
+  }
+  20% {
+    fill: hsl(72,100%,50%);
+  }
+  30% {
+    fill: hsl(108,100%,50%);
+  }
+  40% {
+    fill: hsl(144,100%,50%);
+  }
+  50% {
+    fill: hsl(180,100%,50%);
+  }
+  60% {
+    fill: hsl(216,100%,50%);
+  }
+  70% {
+    fill: hsl(252,100%,50%);
+  }
+  80% {
+    fill: hsl(288,100%,50%);
+  }
+  90% {
+    fill: hsl(324,100%,50%);
+  }
+}
+
+@keyframes colorRotate-stroke /* Safari and Chrome */ {
+  0%, 100% {
+    stroke: hsl(0,100%,50%);
+  }
+  10% {
+    stroke: hsl(36,100%,50%);
+  }
+  20% {
+    stroke: hsl(72,100%,50%);
+  }
+  30% {
+    stroke: hsl(108,100%,50%);
+  }
+  40% {
+    stroke: hsl(144,100%,50%);
+  }
+  50% {
+    stroke: hsl(180,100%,50%);
+  }
+  60% {
+    stroke: hsl(216,100%,50%);
+  }
+  70% {
+    stroke: hsl(252,100%,50%);
+  }
+  80% {
+    stroke: hsl(288,100%,50%);
+  }
+  90% {
+    stroke: hsl(324,100%,50%);
+  }
+}
+
+
 /* button animations */
 
 button:hover, button:focus, button:active {
@@ -532,6 +696,10 @@ a:hover, a:focus, a:active {
 /* media queries */
 
 @media screen and (min-width: 350px) {
+  .error-graphic, .loading-graphic {
+    max-width: 150px;
+  }
+
   .about_headshot {
     width: 300px;
   }
@@ -556,6 +724,10 @@ a:hover, a:focus, a:active {
     min-width: 300px;
   }
 
+  .container_error {
+    margin: 30px;
+  }
+
   .preview_image {
     max-width: 250px;
   }
@@ -576,6 +748,10 @@ a:hover, a:focus, a:active {
 }
 
 @media screen and (min-width: 525px) {
+  .error-graphic, .loading-graphic {
+    max-width: 200px;
+  }
+  
   .preview_image {
     max-width: 400px;
   }
@@ -596,6 +772,7 @@ a:hover, a:focus, a:active {
 }
 
 @media screen and (min-width: 700px) {
+
   .subWork_container_image > img, .subwork_image {
     max-width: 200px;
     max-height: 200px;
@@ -659,6 +836,10 @@ a:hover, a:focus, a:active {
     padding: 15px;
   }
 
+  .container_error {
+    margin: 30px 40px 30px 40px;
+  }
+
   .message, .contact_name, .contact_email {
     flex-direction: row;
   }
@@ -703,5 +884,11 @@ a:hover, a:focus, a:active {
 
   .blog em {
     max-width: 500px;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .error-graphic_qm-fill, .error-graphic_qm-lines, .error-graphic_qm-lines {
+    animation-name: dissolve;
   }
 }
