@@ -484,6 +484,148 @@ code {
   max-width: 100px;
 }
 
+.error-graphic-main {
+  fill:#f8a768;
+}
+
+.error-graphic-cream {
+  fill:#fffbde;
+}
+
+.error-graphic-lines {
+  fill:#421d00;
+}
+
+.error-graphic_qm-fill {
+  fill:#a19ece;
+  animation-name: colorRotate-fill-hsla;
+  animation-duration: 3000ms;
+  animation-fill-mode: forwards;
+  transition: all 360ms ease-in;
+  animation-iteration-count: infinite;
+}
+
+.error-graphic_qm-lines {
+  fill:#524f77;
+  animation-name: colorRotate-fill;
+  animation-duration: 3000ms;
+  animation-fill-mode: forwards;
+  transition: all 360ms ease-in;
+  animation-iteration-count: infinite;
+}
+
+.error-graphic_qm_dot {
+  fill:#a19ece;
+  stroke:#524f77;
+  stroke-miterlimit:10;
+  stroke-width:3px;
+  animation-name: colorRotate-stroke, colorRotate-fill-hsla;
+  animation-duration: 3000ms;
+  animation-fill-mode: forwards;
+  transition: all 360ms ease-in;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colorRotate-fill-hsla {
+  0%, 100% {
+    fill: hsla(0,100%,50%,.2);
+  }
+  10% {
+    fill: hsla(36,100%,50%,.2);
+  }
+  20% {
+    fill: hsla(72,100%,50%,.2);
+  }
+  30% {
+    fill: hsla(108,100%,50%,.2);
+  }
+  40% {
+    fill: hsla(144,100%,50%,.2);
+  }
+  50% {
+    fill: hsla(180,100%,50%,.2);
+  }
+  60% {
+    fill: hsla(216,100%,50%,.2);
+  }
+  70% {
+    fill: hsla(252,100%,50%,.2);
+  }
+  80% {
+    fill: hsla(288,100%,50%,.2);
+  }
+  90% {
+    fill: hsla(324,100%,50%,.2);
+  }
+}
+
+@keyframes colorRotate-fill /* Safari and Chrome */ {
+  0%, 100% {
+    fill: hsl(0,100%,50%);
+  }
+  10% {
+    fill: hsl(36,100%,50%);
+  }
+  20% {
+    fill: hsl(72,100%,50%);
+  }
+  30% {
+    fill: hsl(108,100%,50%);
+  }
+  40% {
+    fill: hsl(144,100%,50%);
+  }
+  50% {
+    fill: hsl(180,100%,50%);
+  }
+  60% {
+    fill: hsl(216,100%,50%);
+  }
+  70% {
+    fill: hsl(252,100%,50%);
+  }
+  80% {
+    fill: hsl(288,100%,50%);
+  }
+  90% {
+    fill: hsl(324,100%,50%);
+  }
+}
+
+@keyframes colorRotate-stroke /* Safari and Chrome */ {
+  0%, 100% {
+    stroke: hsl(0,100%,50%);
+  }
+  10% {
+    stroke: hsl(36,100%,50%);
+  }
+  20% {
+    stroke: hsl(72,100%,50%);
+  }
+  30% {
+    stroke: hsl(108,100%,50%);
+  }
+  40% {
+    stroke: hsl(144,100%,50%);
+  }
+  50% {
+    stroke: hsl(180,100%,50%);
+  }
+  60% {
+    stroke: hsl(216,100%,50%);
+  }
+  70% {
+    stroke: hsl(252,100%,50%);
+  }
+  80% {
+    stroke: hsl(288,100%,50%);
+  }
+  90% {
+    stroke: hsl(324,100%,50%);
+  }
+}
+
+
 /* button animations */
 
 button:hover, button:focus, button:active {
@@ -742,5 +884,11 @@ a:hover, a:focus, a:active {
 
   .blog em {
     max-width: 500px;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .error-graphic_qm-fill, .error-graphic_qm-lines, .error-graphic_qm-lines {
+    animation-name: dissolve;
   }
 }
