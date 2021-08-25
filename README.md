@@ -18,6 +18,9 @@ March 2021
 July 2021
 - I've updated the blog portion of my site to pull my posts from https://dev.to/abbeyperini using Netlify AWS Lambda Functions.
 
+August 2021
+- I designed, made, and added Shiba Inu loading and error SVGs and animated one of them.
+
 ## Usage
 
 - Visit [abbeyperini.dev](https://abbeyperini.dev)
