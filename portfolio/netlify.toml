@@ -1,4 +1,4 @@
 [build]
-  Command = "npm run NetlifyStart && npm run NetlifyFunctions"
+  Command = "CI= npm run build && npm run build:lambda"
   Functions = "netlify"
   Publish = "build"
