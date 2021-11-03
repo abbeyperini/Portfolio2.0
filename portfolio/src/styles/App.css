@@ -248,6 +248,7 @@ nav {
 
 .about_headshot {
   width: 150px;
+  border-radius: 10px;
 }
 
 /* contact */

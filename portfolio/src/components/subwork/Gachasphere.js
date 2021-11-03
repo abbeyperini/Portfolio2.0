@@ -14,8 +14,8 @@ function Gachasphere() {
                 most players are actively playing multiple games at the same time. Unfortunately, the communities for each individual game remain isolated. 
                 Gachasphere hopes bridge the gap between existing communities and connect players from all over the world together.</p>
             <span className="subwork_links">
-                <a href="https://github.com/brodri4/Gachasphere-client" target="_blank" rel="noreferrer"><Github className="work_icon"/></a>
-                <a href="http://gachasphere.surge.sh/" target="_blank" rel="noreferrer"><Chrome className="work_icon"/></a>
+                <a href="https://github.com/brodri4/Gachasphere-client" target="_blank" rel="noreferrer"><Github id="GachasphereGithub" aria-labelledby="link to Gachasphere Github repo" focusable="true" className="work_icon"/></a>
+                <a href="http://gachasphere.surge.sh/" target="_blank" rel="noreferrer"><Chrome id="GachasphereChrome" aria-labelledby="link to Gachasphere live site" focusable="true" className="work_icon"/></a>
             </span>
         </div>
     )

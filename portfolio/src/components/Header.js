@@ -16,7 +16,7 @@ function Header(props) {
             <div className="header_text">
                 <h1 className="header_name">Abbey Perini</h1>
                 <h2 className="header_title">Full Stack Web Developer</h2>
-                <button className="header_button" onClick={handleOnClick}>View my work <Arrow className="button_arrow"/></button>
+                <button className="header_button" onClick={handleOnClick}>View my work <Arrow className="button_arrow" focusable="false"/></button>
             </div>
       </header>
     )

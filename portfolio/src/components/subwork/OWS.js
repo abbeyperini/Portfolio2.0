@@ -9,14 +9,14 @@ function OWS() {
             <h2 className="subwork_title--primary">Old Wall Site</h2>
             <h3 className="subwork_title--secondary">Front End Hobby Project</h3>
             <div className="subWork_container_image">
-                <img className="old-wall_image" src={OWS1} alt="Old Wall Site mobile screenshot"/>
-                <img className="old-wall_image" src={OWS2} alt="Old Wall Site mobile screenshot"/>
+                <img className="old-wall_image" src={OWS1} alt="Old Wall Site mobile screenshot showing the nav, header, and welcome message"/>
+                <img className="old-wall_image" src={OWS2} alt="Old Wall Site mobile screenshot showing the popular posts, announcements, and footer"/>
             </div>
             <p className="subwork_text">During week 3 of the DigitalCrafts Full Stack Web Development course, we were given the optional "hardmode" prompt to copy a site from the 90's
-                    (written in XML1) and make it responsive. The screenshots above are the new mobile layout I designed. Click below to see more screenshots 
-                in my github repo, including the desktop view I matched as close as possible to the original.</p>
+                    (written in XML1) and make it responsive. The screenshots above are the new mobile layout I designed. Click the Github link to see more screenshots 
+                in my repo, including the desktop view I matched as close as possible to the original.</p>
             <span className="subwork_links">
-                <a href="https://github.com/abbeyperini/OldWallSite" target="_blank" rel="noreferrer"><Github className="work_icon" /></a>
+                <a href="https://github.com/abbeyperini/OldWallSite" target="_blank" rel="noreferrer"><Github id="OWSGithub" aria-labelledby="link to Old Wall Site Github repo" focusable="true" className="work_icon" /></a>
             </span>
         </div>
     )
