@@ -16,7 +16,7 @@ function OWS() {
                     (written in XML1) and make it responsive. The screenshots above are the new mobile layout I designed. Click the Github link to see more screenshots 
                 in my repo, including the desktop view I matched as close as possible to the original.</p>
             <span className="subwork_links">
-                <a href="https://github.com/abbeyperini/OldWallSite" target="_blank" rel="noreferrer"><Github id="OWSGithub" aria-labelledby="link to Old Wall Site Github repo" focusable="true" className="work_icon" /></a>
+                <a className="link-new-tab" href="https://github.com/abbeyperini/OldWallSite" target="_blank" rel="noreferrer"><Github id="OWSGithub" aria-label="open Old Wall Site Github repository in a new tab" focusable="true" className="work_icon" /></a>
             </span>
         </div>
     )

@@ -13,7 +13,7 @@ function ThisSite() {
              loaded. I enjoyed learning about CSS variables to create the dark and light themes, including getting the svgs to switch colors! This was the first project I deployed with Netlify, and setting up a serverless
              contact form was a breeze!</p>
             <span className="subwork_links">
-                <a href="https://github.com/abbeyperini/Portfolio2.0" target="_blank" rel="noreferrer"><Github id="ThisSiteGithub" aria-labelledby="link to the Github repo for this site" focusable="true" className="work_icon"/></a>
+                <a className="link-new-tab" href="https://github.com/abbeyperini/Portfolio2.0" target="_blank" rel="noreferrer"><Github id="ThisSiteGithub" aria-label="open Github repository for this site in a new tab" focusable="true" className="work_icon"/></a>
             </span>
         </div>
     )

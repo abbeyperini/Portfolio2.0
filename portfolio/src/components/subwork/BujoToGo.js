@@ -16,8 +16,8 @@ function BujoToGo() {
                 complete later or backward because they were completed early). View your bullets in monthly, weekly, and daily spreads - traditional 
                 or calendar style. Bullets are stored with date time strings and returned in chronological order based on the time range of the view.</p>
             <span className="subwork_links">
-                <a href="https://github.com/abbeyperini/BujoToGo" target="_blank" rel="noreferrer"><Github id="BujoToGoGithub" aria-labelledby="link to BujoToGo Github repo" focusable="true" className="work_icon"/></a>
-                <a href="http://bujo-to-go.surge.sh/#/index" target="_blank" rel="noreferrer"><Chrome id="BujoToGoChrome" aria-labelledby="link to BujoToGo live site" focusable="true" className="work_icon"/></a>
+                <a className="link-new-tab" href="https://github.com/abbeyperini/BujoToGo" target="_blank" rel="noreferrer"><Github id="BujoToGoGithub" aria-label="open BujoToGo Github repository in a new tab" focusable="true" className="work_icon"/></a>
+                <a className="link-new-tab" href="http://bujo-to-go.surge.sh/#/index" target="_blank" rel="noreferrer"><Chrome id="BujoToGoChrome" aria-label="open BujoToGo website in a new tab" focusable="true" className="work_icon"/></a>
             </span>
         </div>
     )
