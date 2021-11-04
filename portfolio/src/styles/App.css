@@ -363,7 +363,7 @@ nav {
   background: none;
   padding: 10px;
   border: solid 2px transparent;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: bold;
   color: var(--light-text);
 }
