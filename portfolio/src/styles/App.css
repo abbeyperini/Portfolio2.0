@@ -248,6 +248,7 @@ nav {
 
 .about_headshot {
   width: 150px;
+  border-radius: 10px;
 }
 
 /* contact */
@@ -362,7 +363,7 @@ nav {
   background: none;
   padding: 10px;
   border: solid 2px transparent;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: bold;
   color: var(--light-text);
 }
@@ -682,6 +683,20 @@ button:hover, button:focus, button:active {
 }
 
 /* links */
+
+.external-link {
+  height: 1em;
+  width: 1em;
+  top: .15em;
+  position: relative;
+}
+
+.download-file {
+  height: 1em;
+  width: 1em;
+  top: .2em;
+  position: relative;
+}
 
 a:link, a:visited {
   color: var(--dark-text);

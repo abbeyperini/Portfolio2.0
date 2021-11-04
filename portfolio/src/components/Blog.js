@@ -92,8 +92,8 @@ function Blog(props) {
     })
 
     return (
-      <div className="container_blog">
-          <button className="blog-section_title" onClick={() => chooseComponent("FullBlog")}>Blog</button>
+      <div aria-label="Blog Previews" className="container_blog">
+          <h1 aria-label="button to open full blog page" ><button className="blog-section_title" onClick={() => chooseComponent("FullBlog")}>Blog</button></h1>
           <div className="scroll-cropper">
               <ul className="blog-preview">
                 {blogPreviewList}

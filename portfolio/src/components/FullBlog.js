@@ -81,7 +81,7 @@ function FullBlog() {
     })
 
     return (
-      <section className="full-blog">
+      <section aria-label="Full list of Abbey's blog posts" className="full-blog">
         <ul>
           {blogList}
         </ul>
