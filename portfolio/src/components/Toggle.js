@@ -26,7 +26,9 @@ function Toggle() {
     }
 
     const handleKeypress = e => {
-      changeThemeAndToggle()
+      if (e.code === "Enter") {
+        changeThemeAndToggle()
+      }
     }
 
     useEffect(() => {
