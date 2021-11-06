@@ -3,39 +3,44 @@ import '../styles/toggle.css';
 import { setTheme } from '../utils/themes';
 
 function Toggle() {
-    const [togClass, setTogClass] = useState('dark');
+    // false = dark mode because of the way I wrote the CSS
+    const [active, setActive] = useState(false)
     let theme = localStorage.getItem('theme');
 
+    const changeThemeAndToggle = () => {
+      if (localStorage.getItem('theme') === 'theme-dark') {
+        setTheme('theme-light');
+        setActive(true)
+      } else {
+        setTheme('theme-dark');
+        setActive(false)
+      }
+    }
+
     const handleOnClick = () => {
-        if (localStorage.getItem('theme') === 'theme-dark') {
-            setTheme('theme-light');
-            setTogClass('light')
-        } else {
-            setTheme('theme-dark');
-            setTogClass('dark')
-        }
+      changeThemeAndToggle()
+    }
+
+    const handleKeypress = e => {
+      changeThemeAndToggle()
     }
 
     useEffect(() => {
-        if (localStorage.getItem('theme') === 'theme-dark') {
-            setTogClass('dark')
-        } else if (localStorage.getItem('theme') === 'theme-light') {
-            setTogClass('light')
-        }
+      if (localStorage.getItem('theme') === 'theme-dark') {
+        setActive(false)
+      } else if (localStorage.getItem('theme') === 'theme-light') {
+        setActive(true)
+      }
     }, [theme])
 
     return (
-        <div className="container--toggle">
-            {
-                togClass === "light" ?
-                <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} checked />
-                :
-                <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} />
-            }
-            <label htmlFor="toggle" className="toggle--label">
-                <span className="toggle--label-background"></span>
-            </label>
-        </div>
+      <div className="container--toggle">
+        <input aria-label="dark mode toggle" role="switch" aria-checked="false" onKeyPress={handleKeypress} type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} checked={active} readOnly />
+        <label htmlFor="toggle" className="toggle--label">
+          <span className="toggle--label-background"></span>
+          dark mode toggle
+        </label>
+      </div>
     )
 }
 

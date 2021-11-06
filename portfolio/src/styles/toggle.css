@@ -42,9 +42,13 @@
 }
 
 .toggle--checkbox {
-    display: none;
+    opacity: 0;
 }
-  
+
+.toggle--checkbox:focus + .toggle--label {
+    outline: solid 3px var(--button-border);
+}
+
 .container--toggle {
     display: grid;
     place-items: center;
@@ -64,10 +68,12 @@
     display: flex;
     position: relative;
     transition: all 350ms ease-in;
+    color: var(--indigo-color);
 }
 
 .toggle--checkbox:checked + .toggle--label {
     background: var(--blue-color);
+    color: var(--blue-color);
     border-color: var(--blue-border);
 }
 
@@ -144,7 +150,7 @@
     position: relative;
     background: white;
     left: 32px;
-    width: 4px;
+    width: 6px;
     transition: all 150ms ease-in;
     top: 25px;
     height: 4px;
