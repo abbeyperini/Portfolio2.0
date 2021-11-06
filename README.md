@@ -17,10 +17,13 @@ March 2021
 - I wasn't happy with my professional portfolio being a template attached to the static personal site I built before starting my full-stack web development classes. While I've been job hunting, I've been building this site as a side project, and diving into aspects of front-end I love. It's built in React and CSS, incorporating react-transition-group. The landing page has the first svg I coded myself, and I've learned a lot about keyframes! I spent a lot of time on the light/dark mode - building the toggle, flipping it, adjusting its size, and making sure it shows the correct side no matter which theme is loaded. I enjoyed learning about CSS variables to create the dark and light themes, including getting the svgs to switch colors! This was the first project I deployed with Netlify, and setting up a serverless contact form was a breeze!
 
 July 2021
-- I've updated the blog portion of my site to pull my posts from https://dev.to/abbeyperini using Netlify AWS Lambda Functions.
+- I've updated the blog portion of my site to pull my posts from https://dev.to/abbeyperini using Netlify AWS Lambda Functions. [Read the walkthrough.](https://dev.to/abbeyperini/a-walkthrough-of-updating-my-portfolio-site-with-netlify-functions-and-the-dev-to-api-dd2)
 
 August 2021
-- I designed, made, and added Shiba Inu loading and error SVGs and animated one of them.
+- I designed, made, and added Shiba Inu loading and error SVGs and animated one of them. [Read about how I did it.](https://dev.to/abbeyperini/adding-shiba-inu-loading-and-error-svgs-to-my-react-site-lnj)
+
+November 2021
+- I accessibility audited my site and have [written a series of blogs](https://dev.to/abbeyperini/accessibility-auditing-my-portfolio-site-part-1-2k8k) on the audit and the fixes.
 
 ## Usage
 
