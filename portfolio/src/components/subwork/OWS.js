@@ -13,7 +13,7 @@ function OWS() {
                 <img className="old-wall_image" src={OWS2} alt="Old Wall Site mobile screenshot showing the popular posts, announcements, and footer"/>
             </div>
             <p className="subwork_text">During week 3 of the DigitalCrafts Full Stack Web Development course, we were given the optional "hardmode" prompt to copy a site from the 90's
-                    (written in XML1) and make it responsive. The screenshots above are the new mobile layout I designed. Click the Github link to see more screenshots 
+                    (written in XML1) and make it responsive. The screenshots here show the new mobile layout I designed. Click the Github link to see more screenshots 
                 in my repo, including the desktop view I matched as close as possible to the original.</p>
             <span className="subwork_links">
                 <a className="link-new-tab" href="https://github.com/abbeyperini/OldWallSite" target="_blank" rel="noreferrer"><Github id="OWSGithub" aria-label="open Old Wall Site Github repository in a new tab" focusable="true" className="work_icon" /></a>

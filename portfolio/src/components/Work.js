@@ -7,14 +7,14 @@ import ThisSite from './subwork/ThisSite';
 
 function Work() {
     return (
-        <div aria-label="Portfolio project descriptions" className="container_work" name="work">
+        <section aria-label="Portfolio project descriptions" className="container_work" name="work">
             <h1 className="section_title">Portfolio</h1>
             <ThisSite />
             <Gachasphere />
             <BujoToGo />
             <Knitworthy />
             <OWS />
-        </div>
+        </section>
     )
 }
 

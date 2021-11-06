@@ -14,8 +14,8 @@ import resume from '../assets/abbeyperiniresume.pdf';
 function About() {
 
     return (
-        <div className="container_about">
-            <h2 className="section_title">About Abbey</h2>
+        <section aria-labelledby="about" className="container_about">
+            <h1 id="about" className="section_title">About Abbey</h1>
             <div className="subAbout">
                 <img alt="headshot of Abbey Perini wearing a red collared shirt with white polka dots and red lipstick" src={headshot} className="about_headshot" />
                 <p className="about_text">My name is Abbey Perini, but my friends call me Abbey Normal. I've always been an out of the box thinker 
@@ -25,7 +25,7 @@ function About() {
                     Outside of work, I am a person of many hobbies. I'm a certified yoga teacher. I love creating fiber arts projects 
                     and costumes, but I also dabble in video games, embroidery, baking, cooking, and art of many kinds. I live just
                     outside Atlanta with my husband and dog.</p>
-                <div aria-label="About Abbey" className="container_skills-icon">
+                <div className="container_skills-icon">
                     <JSLogo className="skills-icon" focusable="false" />
                     <PythonLogo className="skills-icon" focusable="false" />
                     <HTMLLogo className="skills-icon" focusable="false" />
@@ -36,7 +36,7 @@ function About() {
                     <PostgreSQLLogo className="skills-icon" focusable="false" />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
