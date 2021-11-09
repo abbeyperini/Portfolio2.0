@@ -763,6 +763,7 @@ a:hover, a:focus, a:active {
 
   .scroll-cropper {
     width: 95%;
+    margin-top: 20px;
   }
 }
 
@@ -800,6 +801,10 @@ a:hover, a:focus, a:active {
   .container_error {
     width: 92%;
     margin-top: 20px;
+  }
+
+  .scroll-cropper {
+    width: 92%;
   }
 }
 
@@ -844,8 +849,8 @@ a:hover, a:focus, a:active {
   }
 
   .scroll-cropper {
-    width: 95%;
-    margin: 20px;
+    width: 90%;
+    margin: 40px;
   }
 
   .blog-preview {
@@ -912,12 +917,8 @@ a:hover, a:focus, a:active {
     width: 98%
   }
 
-  .container_error {
+  .container_error, .scroll-cropper {
     width: 92%;
-  }
-
-  .scroll-cropper {
-    width: 96%;
   }
 }
 
@@ -926,11 +927,11 @@ a:hover, a:focus, a:active {
     width: 98%;
   }
 
-  .subContact, .container_error {
+  .subContact, .container_error, .scroll-cropper {
     width: 95%;
   }
 
-  .container_error {
+  .container_error, .scroll-cropper {
     margin-top: 30px;
   }
 
