@@ -103,11 +103,11 @@ function Blog(props) {
   )
   } else if (!state.isLoading && state.error) {
     return (
-      <Error />
+      <Error chooseComponent={chooseComponent} />
     )
   } else {
     return (
-      <Loading />
+      <Loading chooseComponent={chooseComponent} />
     )
   }
 }
