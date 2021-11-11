@@ -74,7 +74,6 @@ function Blog(props) {
 
   if (!state.isLoading && state.blogs !== null) {
     let blogPreviewList = state.blogs.data.map((blog) => {
-      let altText = `cover image for ${blog.title}`
       let blogImage = '';
 
       if (blog.cover_image) {
@@ -85,8 +84,8 @@ function Blog(props) {
 
       return (
         <li key={blog.id} className="preview">
-          <h2 className="preview_button" onClick={() => chooseComponent({id: blog.id})}>{blog.title}</h2>
-          <img className="preview_image" alt={altText} src={blogImage}></img>
+          <button className="preview_button" onClick={() => chooseComponent({id: blog.id})}>{blog.title}</button>
+          <img className="preview_image" alt="" src={blogImage}></img>
         </li>
       )
     })
@@ -95,7 +94,7 @@ function Blog(props) {
       <section aria-label="Blog Previews" className="container_blog">
           <h1 aria-label="button to open full blog page" ><button className="blog-section_title" onClick={() => chooseComponent("FullBlog")}>Blog</button></h1>
           <div className="scroll-cropper">
-              <ul className="blog-preview">
+              <ul aria-label="previews of Abbey's blog posts" className="blog-preview">
                 {blogPreviewList}
               </ul>
           </div>
@@ -103,11 +102,11 @@ function Blog(props) {
   )
   } else if (!state.isLoading && state.error) {
     return (
-      <Error />
+      <Error chooseComponent={chooseComponent} />
     )
   } else {
     return (
-      <Loading />
+      <Loading chooseComponent={chooseComponent} />
     )
   }
 }

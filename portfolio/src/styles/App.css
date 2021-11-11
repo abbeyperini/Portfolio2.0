@@ -130,7 +130,7 @@ nav {
   grid-template-columns: 1fr;
   margin: 10px 0px 10px 0px;
   row-gap: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   border-radius: 10px;
 }
 
@@ -230,7 +230,7 @@ nav {
   background: var(--accent);
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
-  margin: 10px 0px 10px 0px;
+  margin: 20px 0px 10px 0px;
   padding: 20px;
 }
 
@@ -256,7 +256,7 @@ nav {
 .subContact {
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
-  margin: 10px 0px 10px 0px;
+  margin: 20px 0px 10px 0px;
   background: var(--accent);
   display: flex;
   flex-direction: column;
@@ -363,7 +363,7 @@ nav {
   background: none;
   padding: 10px;
   border: solid 2px transparent;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
   color: var(--light-text);
 }
@@ -723,11 +723,19 @@ a:hover, a:focus, a:active {
     max-width: 300px;
   }
 
-  .subWork, .subAbout, .scroll-cropper, .this-subWork {
+  .subWork, .scroll-cropper, .this-subWork {
     margin: 10px;
   }
 
-  .container_about, .container_blog, .container_contact, .container_work {
+  .subAbout, .subContact {
+    margin: 30px 10px 10px 10px; 
+  }
+
+  .container_error {
+    margin: 10px;
+  }
+
+  .container_about {
     margin: 20px;
   }
   
@@ -737,10 +745,6 @@ a:hover, a:focus, a:active {
 
   .contact-form {
     min-width: 300px;
-  }
-
-  .container_error {
-    margin: 30px;
   }
 
   .preview_image {
@@ -759,6 +763,7 @@ a:hover, a:focus, a:active {
 
   .scroll-cropper {
     width: 95%;
+    margin-top: 20px;
   }
 }
 
@@ -784,6 +789,23 @@ a:hover, a:focus, a:active {
   pre.highlight {
     max-width: 500px;
   }
+
+  .subWork, .this-subWork, .container_about, .subContact {
+    margin: 20px;
+  }
+
+  .subAbout, .subContact {
+    margin-top: 30px;
+  }
+
+  .container_error {
+    width: 92%;
+    margin-top: 20px;
+  }
+
+  .scroll-cropper {
+    width: 92%;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -801,7 +823,7 @@ a:hover, a:focus, a:active {
     "icons text";
     grid-template-rows: 1fr;
     grid-template-columns: .25fr 1fr;
-    margin: 20px;
+    margin: 40px;
   }
 
   .this-subWork {
@@ -811,16 +833,24 @@ a:hover, a:focus, a:active {
     "icons text";
     grid-template-rows: .5fr .1fr 1fr;
     grid-template-columns: .25fr 1fr;
+    margin: 40px;
+  }
+
+  .blog {
     margin: 20px;
   }
 
-  .subAbout, .subContact, .blog {
-    margin: 20px;
+  .subAbout {
+    margin: 40px 20px 20px 20px;
+  }
+
+  .subContact {
+    margin: 40px;
   }
 
   .scroll-cropper {
-    width: 95%;
-    margin: 20px;
+    width: 90%;
+    margin: 40px;
   }
 
   .blog-preview {
@@ -851,12 +881,12 @@ a:hover, a:focus, a:active {
     padding: 15px;
   }
 
-  .container_error {
-    margin: 30px 40px 30px 40px;
-  }
-
   .message, .contact_name, .contact_email {
     flex-direction: row;
+  }
+
+  .container_error {
+    width: 90%;
   }
 }
 
@@ -887,14 +917,22 @@ a:hover, a:focus, a:active {
     width: 98%
   }
 
-  .scroll-cropper {
-    width: 96%;
+  .container_error, .scroll-cropper {
+    width: 92%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .scroll-cropper {
     width: 98%;
+  }
+
+  .subContact, .container_error, .scroll-cropper {
+    width: 95%;
+  }
+
+  .container_error, .scroll-cropper {
+    margin-top: 30px;
   }
 
   .blog em {
