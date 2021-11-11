@@ -84,7 +84,7 @@ function Blog(props) {
 
       return (
         <li key={blog.id} className="preview">
-          <h2><button className="preview_button" onClick={() => chooseComponent({id: blog.id})}>{blog.title}</button></h2>
+          <button className="preview_button" onClick={() => chooseComponent({id: blog.id})}>{blog.title}</button>
           <img className="preview_image" alt="" src={blogImage}></img>
         </li>
       )
