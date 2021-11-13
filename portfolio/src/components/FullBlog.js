@@ -4,7 +4,7 @@ import parse from 'html-react-parser';
 import Error from '../components/Error';
 import Loading from '../components/Loading';
 
-function FullBlog() {
+function FullBlog(props) {
 
   const initialState = {
     isLoading: false,
@@ -16,12 +16,28 @@ function FullBlog() {
     .then((res) => {
       dispatch({
         type: "blogFetched",
-        payload: res.data
+        payload: res.data.data
       })
     }).catch((error) => {
       dispatch({
         type: "blogFetchFail",
         payload: error
+      })
+    })
+  }
+
+  async function fetchSingleBlog(id) {
+    let url = `https://abbeyperini.dev/.netlify/functions/singleBlog?id=${id}`
+    axios.get(url)
+    .then((res) => {
+      dispatch({
+        type: "blogFetched",
+        payload: res.data.data
+      })
+    }).catch((err) => {
+      dispatch({
+        type: "blogFetchFail",
+        payload: err
       })
     })
   }
@@ -62,23 +78,36 @@ function FullBlog() {
       dispatch({
         type: "blogLoading"
       })
-      
-      fetchBlogs()
+      if (props.id !== 0) {
+        fetchSingleBlog(props.id)
+      } else {
+        fetchBlogs()
+      }
     }
 
     load()
-  }, [])
+  }, [props.id])
 
   if (!state.isLoading && state.blogs !== null) {
-    let blogList = state.blogs.data.map((blog) => {
-      let blogBody = parse(blog.body_html)
-      return (
-        <li key={blog.id} className="blog">
-          <h1>{blog.title}</h1>
-          {blogBody}
-        </li>
-      )
-    })
+    let blogList
+    if (state.blogs.length > 1) {
+      blogList = state.blogs.map((blog) => {
+        let blogBody = parse(blog.body_html)
+        return (
+          <li key={blog.id} className="blog">
+            <h1>{blog.title}</h1>
+            {blogBody}
+          </li>
+        )
+      })
+    } else {
+      let blogBody = parse(state.blogs.body_html)
+      blogList = 
+      <li key={state.blogs.id} className="blog">
+        <h1>{state.blogs.title}</h1>
+        {blogBody}
+      </li>
+    }
 
     return (
       <section aria-label="Full list of Abbey's blog posts" className="full-blog">

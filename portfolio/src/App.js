@@ -11,7 +11,6 @@ import MainFull from './components/MainFullCSS';
 import Single from './components/SingleCSS';
 import { keepTheme } from './utils/themes';
 import FullBlog from './components/FullBlog';
-import SingleBlog from './components/SingleBlog';
 
 function App() {
   const [hidden, setHidden] = useState(false);
@@ -29,13 +28,17 @@ function App() {
   }
 
   const chooseComponent = (component) => {
-    if (component.id) {
+    if (component.component === "SingleBlog") {
       setSingle(true)
       setSingleBlogID(component.id)
-      setSingleShow("SingleBlog")
+      setSingleShow("FullBlog")
+    } else if (component === "FullBlog") {
+      setSingle(true)
+      setSingleBlogID(0)
+      setSingleShow(component)
     } else {
-      setSingle(true);
-      setSingleShow(component);
+      setSingle(true)
+      setSingleShow(component)
     } 
   }
 
@@ -70,8 +73,7 @@ function App() {
         <Single condition={hidden && single && singleShow === "blog"} component={<Blog chooseComponent={chooseComponent} />} />
         <Single condition={hidden && single && singleShow === "about"} component={<About />}/>
         <Single condition={hidden && single && singleShow === "contact"} component={<Contact />}/>
-        <Single condition={hidden && single && singleShow === "SingleBlog"} component={<SingleBlog id={singleBlogID} />}/>
-        <Single condition={hidden && single && singleShow === "FullBlog"} component={<FullBlog />} />
+        <Single condition={hidden && single && singleShow === "FullBlog"} component={<FullBlog id={singleBlogID} />} />
       </div> }
     </div>
   );
