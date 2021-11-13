@@ -4,8 +4,8 @@ import { ReactComponent as Github } from '../../images/github.svg';
 function ThisSite() {
     return (
         <div id="this" className="this-subWork">
-            <h2 className="subwork_title--primary">AbbeyPerini.dev</h2>
-            <h3 className="subwork_title--secondary">Professional Website</h3>
+            <h3 className="subwork_title--primary">AbbeyPerini.dev</h3>
+            <h4 className="subwork_title--secondary">Professional Website</h4>
             <p className="subwork_text">I wasn't happy with my professional portfolio being a template attached to the static personal site
             I built before starting my full-stack web development classes. While I've been job hunting, I've been building this site as a side project,
             and diving into aspects of front-end I love. It's built in React and CSS, incorporating react-transition-group. The landing page has the first svg I coded myself, and I've learned

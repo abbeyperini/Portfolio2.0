@@ -6,8 +6,8 @@ import OWS2 from '../../images/OWSmobile2.png';
 function OWS() {
     return (
         <div id="OWS" className="subWork">
-            <h2 className="subwork_title--primary">Old Wall Site</h2>
-            <h3 className="subwork_title--secondary">Front End Hobby Project</h3>
+            <h3 className="subwork_title--primary">Old Wall Site</h3>
+            <h4 className="subwork_title--secondary">Front End Hobby Project</h4>
             <div className="subWork_container_image">
                 <img className="old-wall_image" src={OWS1} alt="Old Wall Site mobile screenshot showing the nav, header, and welcome message"/>
                 <img className="old-wall_image" src={OWS2} alt="Old Wall Site mobile screenshot showing the popular posts, announcements, and footer"/>

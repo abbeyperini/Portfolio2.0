@@ -9,7 +9,7 @@ function Error(props) {
 
   return (
     <section className="container_blog">
-      <h1 aria-label="button to open full blog page" ><button className="blog-section_title" onClick={() => chooseComponent("FullBlog")}>Blog</button></h1>
+      <h2 aria-label="button to open full blog page" ><button className="blog-section_title" onClick={() => chooseComponent("FullBlog")}>Blog</button></h2>
       <div className="container_error">
         <ConfusedShiba className="error-graphic"/>
         <p>There was an error! Try again later.</p>

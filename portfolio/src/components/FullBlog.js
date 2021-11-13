@@ -95,26 +95,24 @@ function FullBlog(props) {
       blogList = state.blogs.map((blog) => {
         let markdown = blog.body_markdown
         return (
-          <li key={blog.id} className="blog">
-            <h1>{blog.title}</h1>
+          <article key={blog.id} className="blog">
+            <h2>{blog.title}</h2>
             <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]}></ReactMarkdown>
-          </li>
+          </article>
         )
       })
     } else {
       let markdown = state.blogs.body_markdown
       blogList = 
-      <li key={state.blogs.id} className="blog">
-        <h1>{state.blogs.title}</h1>
+      <article key={state.blogs.id} className="blog">
+        <h2>{state.blogs.title}</h2>
         <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]}></ReactMarkdown>
-      </li>
+      </article>
     }
 
     return (
       <section aria-label="Full list of Abbey's blog posts" className="full-blog">
-        <ul>
-          {blogList}
-        </ul>
+        {blogList}
       </section>
   )
   } else if (!state.isLoading && state.error) {

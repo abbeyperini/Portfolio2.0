@@ -92,7 +92,7 @@ function Blog(props) {
 
     return (
       <section aria-label="Blog Previews" className="container_blog">
-          <h1 aria-label="button to open full blog page" ><button className="blog-section_title" onClick={() => chooseComponent("FullBlog")}>Blog</button></h1>
+          <h2 aria-label="button to open full blog page" ><button className="blog-section_title" onClick={() => chooseComponent("FullBlog")}>Blog</button></h2>
           <div className="scroll-cropper">
               <ul aria-label="previews of Abbey's blog posts" className="blog-preview">
                 {blogPreviewList}
