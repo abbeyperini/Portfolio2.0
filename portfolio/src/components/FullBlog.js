@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useReducer } from 'react';
-import parse from 'html-react-parser';
 import Error from '../components/Error';
 import Loading from '../components/Loading';
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 function FullBlog(props) {
 
@@ -92,20 +93,20 @@ function FullBlog(props) {
     let blogList
     if (state.blogs.length > 1) {
       blogList = state.blogs.map((blog) => {
-        let blogBody = parse(blog.body_html)
+        let markdown = blog.body_markdown
         return (
           <li key={blog.id} className="blog">
             <h1>{blog.title}</h1>
-            {blogBody}
+            <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]}></ReactMarkdown>
           </li>
         )
       })
     } else {
-      let blogBody = parse(state.blogs.body_html)
+      let markdown = state.blogs.body_markdown
       blogList = 
       <li key={state.blogs.id} className="blog">
         <h1>{state.blogs.title}</h1>
-        {blogBody}
+        <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]}></ReactMarkdown>
       </li>
     }
 
