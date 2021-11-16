@@ -43,6 +43,16 @@ function FullBlog(props) {
     })
   }
 
+  function replaceHeadings(markdown) {
+    let newHeadings 
+    newHeadings = markdown.replace(/\s#{5}\s/g, "\n###### ")
+    newHeadings = newHeadings.replace(/\s#{4}\s/g, "\n##### ")
+    newHeadings = newHeadings.replace(/\s#{3}\s/g, "\n#### ")
+    newHeadings = newHeadings.replace(/\s#{2}\s/g, "\n### ")
+
+    return newHeadings
+  }
+
   const reducer = (state, action) => {
     switch (action.type) {
       case "blogLoading":
@@ -94,19 +104,23 @@ function FullBlog(props) {
     if (state.blogs.length > 1) {
       blogList = state.blogs.map((blog) => {
         let markdown = blog.body_markdown
+        let replaced = replaceHeadings(markdown)
         return (
           <article key={blog.id} className="blog">
             <h2>{blog.title}</h2>
-            <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]}></ReactMarkdown>
+            <a href={blog.url} target="_blank" rel="noreferrer"><button className="preview_button">Share</button></a>
+            <ReactMarkdown children={replaced} remarkPlugins={[remarkGfm]}></ReactMarkdown>
           </article>
         )
       })
     } else {
       let markdown = state.blogs.body_markdown
-      blogList = 
+      let replaced = replaceHeadings(markdown)
+      blogList =
       <article key={state.blogs.id} className="blog">
         <h2>{state.blogs.title}</h2>
-        <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]}></ReactMarkdown>
+        <a href={state.blogs.url} target="_blank" rel="noreferrer"><button className="preview_button">Share</button></a>
+        <ReactMarkdown children={replaced} remarkPlugins={[remarkGfm]}></ReactMarkdown>
       </article>
     }
 

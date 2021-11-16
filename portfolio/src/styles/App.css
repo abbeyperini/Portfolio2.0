@@ -372,27 +372,25 @@ nav {
 
 .blog img {
   max-width: 200px;
-  margin: 10px;
-}
-
-.article-body-image-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.blog h1:first-of-type {
-  font-size: 2em;
-}
-
-.blog h1 {
-  font-size: 1.5em;
-  margin: 10px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .blog h2 {
-  font-size: 1em;
+  font-size: 2em;
+  margin: 10px;
+}
+
+.blog h3 {
+  font-size: 1.5em;
   margin: 10px;
 } 
+
+.blog h4 {
+  margin: 10px;
+}
 
 .blog em {
   font-style: italic;
@@ -412,6 +410,7 @@ nav {
 .blog {
   margin: 10px 0px 10px 0px;
   padding: 20px;
+  padding-bottom: 40px;
   border-radius: 10px;
   background: var(--accent);
   display: flex;
@@ -420,11 +419,12 @@ nav {
   justify-content: center;
 }
 
-.blog ul {
+.blog ol, .blog ul {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   width: 50%;
+  margin-left: 15px;
 }
 
 .blog li {
@@ -437,23 +437,28 @@ nav {
   display: none;
 }
 
-div.highlight {
-  background-color: #eee;
-  border: 1px solid black;
+.blog code {
   padding: 10px;
-  border-radius: 10px;
   margin: 10px;
 }
 
-pre.highlight {
+.blog pre {
+  background-color: #eee;
+  border: 1px solid black;
   white-space: pre-wrap;
   max-width: 250px;
   overflow-x: auto;
   text-align: left;
+  margin: 10px;
+  padding: 10px;
 }
 
-code {
+.blog p code, .blog li code {
+  border-radius: 10px;
+  background-color: #eee;
+  border: 1px solid black;
   padding: 1px 5px 1px 5px;
+  margin: 0;
 }
 
 .blog p, .blog blockquote {
@@ -757,7 +762,7 @@ a:hover, a:focus, a:active {
     margin: 15px;
   }
 
-  pre.highlight {
+  .blog pre {
     max-width: 300px;
   }
 
@@ -786,7 +791,7 @@ a:hover, a:focus, a:active {
     max-width: 250px;
   }
 
-  pre.highlight {
+  .blog pre {
     max-width: 500px;
   }
 
@@ -868,7 +873,7 @@ a:hover, a:focus, a:active {
     max-width: 300px;
   }
 
-  pre.highlight {
+  .blog pre {
     max-width: 650px;
   }
 
@@ -909,7 +914,7 @@ a:hover, a:focus, a:active {
     max-width: 500px;
   }
 
-  pre.highlight {
+  .blog pre {
     max-width: 100%;
   }
 
