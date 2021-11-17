@@ -417,13 +417,13 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-width: 280px;
 }
 
 .blog ol, .blog ul {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  width: 50%;
   margin-left: 15px;
 }
 
@@ -431,10 +431,6 @@ nav {
   list-style-type: disc;
   margin: 10px;
   text-align: left;
-}
-
-.highlight__panel {
-  display: none;
 }
 
 .blog code {
@@ -446,7 +442,6 @@ nav {
   background-color: #eee;
   border: 1px solid black;
   white-space: pre-wrap;
-  max-width: 250px;
   overflow-x: auto;
   text-align: left;
   margin: 10px;
@@ -458,6 +453,7 @@ nav {
   background-color: #eee;
   border: 1px solid black;
   padding: 1px 5px 1px 5px;
+  display: inline-block;
   margin: 0;
 }
 
@@ -465,8 +461,16 @@ nav {
   padding: 0px;
   margin: 5px;
   text-align: left;
-  width: 50%;
 }
+
+.blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
+  max-width: 250px;
+}
+
+.blog ul, .blog ol {
+  width: 150px;
+}
+
 
 /* error and loading graphics */
 
@@ -703,6 +707,11 @@ button:hover, button:focus, button:active {
   position: relative;
 }
 
+a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 a:link, a:visited {
   color: var(--dark-text);
   text-decoration: underline dotted;
@@ -762,8 +771,16 @@ a:hover, a:focus, a:active {
     margin: 15px;
   }
 
-  .blog pre {
+  .blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
     max-width: 300px;
+  }
+
+  .blog ul, .blog ol {
+    width: 250px;
+  }
+
+  .blog {
+    min-width: 330px;
   }
 
   .scroll-cropper {
@@ -791,8 +808,16 @@ a:hover, a:focus, a:active {
     max-width: 250px;
   }
 
-  .blog pre {
+  .blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
     max-width: 500px;
+  }
+
+  .blog ul, .blog ol {
+    width: 400px;
+  }
+
+  .blog {
+    min-width: 530px;
   }
 
   .subWork, .this-subWork, .container_about, .subContact {
@@ -843,6 +868,7 @@ a:hover, a:focus, a:active {
 
   .blog {
     margin: 20px;
+    min-width: 680px;
   }
 
   .subAbout {
@@ -873,8 +899,16 @@ a:hover, a:focus, a:active {
     max-width: 300px;
   }
 
-  .blog pre {
+  .blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
     max-width: 650px;
+  }
+
+  .blog ul, .blog ol {
+    width: 550px;
+  }
+
+  .blog {
+    min-width: 680px;
   }
 
   .work_icon {
@@ -914,8 +948,16 @@ a:hover, a:focus, a:active {
     max-width: 500px;
   }
 
-  .blog pre {
-    max-width: 100%;
+  .blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
+    max-width: 850px;
+  }
+
+  .blog ul, .blog ol {
+    width: 750px;
+  }
+
+  .blog {
+    min-width: 880px;
   }
 
   .subContact {
@@ -942,6 +984,18 @@ a:hover, a:focus, a:active {
 
   .blog em {
     max-width: 500px;
+  }
+
+  .blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
+    max-width: 1150px;
+  }
+
+  .blog ul, .blog ol {
+    width: 1050px;
+  }
+
+  .blog {
+    min-width: 1180px;
   }
 }
 
