@@ -133,7 +133,7 @@ function FullBlog(props) {
       return (
         <section aria-label="Full list of Abbey's blog posts" className="full-blog">
           <div className="screenreader-text">
-            <p tabIndex="0">Skip directly to a blog:</p>
+            <p tabIndex="0" role="navigation">Skip directly to a blog:</p>
             <ol>
               {skipLinks}
             </ol>

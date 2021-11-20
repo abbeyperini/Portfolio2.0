@@ -378,6 +378,11 @@ nav {
   margin-bottom: 10px;
 }
 
+.blog p em {
+  display: block;
+  margin: auto;
+}
+
 .blog h2 {
   font-size: 2em;
   margin: 10px;
@@ -473,7 +478,6 @@ nav {
 .blog ul, .blog ol {
   width: 150px;
 }
-
 
 /* error and loading graphics */
 
