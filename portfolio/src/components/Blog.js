@@ -84,7 +84,7 @@ function Blog(props) {
 
       return (
         <li key={blog.id} className="preview">
-          <button className="preview_button" onClick={() => chooseComponent({id: blog.id})}>{blog.title}</button>
+          <button className="preview_button" onClick={() => chooseComponent({component: "SingleBlog", id: blog.id})}>{blog.title}</button>
           <img className="preview_image" alt="" src={blogImage}></img>
         </li>
       )
@@ -92,7 +92,8 @@ function Blog(props) {
 
     return (
       <section aria-label="Blog Previews" className="container_blog">
-          <h1 aria-label="button to open full blog page" ><button className="blog-section_title" onClick={() => chooseComponent("FullBlog")}>Blog</button></h1>
+          <h2 aria-label="button to open full blog page" ><button className="blog-section_title" onClick={() => chooseComponent("FullBlog")}>Blog</button></h2>
+          <a className="screenreader-text" href='#about'>Skip directly to the next section.</a>
           <div className="scroll-cropper">
               <ul aria-label="previews of Abbey's blog posts" className="blog-preview">
                 {blogPreviewList}

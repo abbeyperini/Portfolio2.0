@@ -8,7 +8,7 @@ import ThisSite from './subwork/ThisSite';
 function Work() {
     return (
         <section aria-label="Portfolio project descriptions" className="container_work" name="work">
-            <h1 className="section_title">Portfolio</h1>
+            <h2 className="section_title">Portfolio</h2>
             <ThisSite />
             <Gachasphere />
             <BujoToGo />
