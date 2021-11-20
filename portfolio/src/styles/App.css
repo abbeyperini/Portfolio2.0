@@ -427,8 +427,11 @@ nav {
   margin-left: 15px;
 }
 
-.blog li {
+.blog ul {
   list-style-type: disc;
+}
+
+.blog li {
   margin: 10px;
   text-align: left;
 }
@@ -534,6 +537,23 @@ nav {
   animation-fill-mode: forwards;
   transition: all 360ms ease-in;
   animation-iteration-count: infinite;
+}
+
+.screenreader-text {
+  position: absolute;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+}
+
+.screenreader-text:focus, .screenreader-text:focus-within {
+  color: black;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  position: static;
+  margin: auto;
 }
 
 @keyframes colorRotate-fill-hsla {

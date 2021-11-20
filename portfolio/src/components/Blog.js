@@ -93,6 +93,7 @@ function Blog(props) {
     return (
       <section aria-label="Blog Previews" className="container_blog">
           <h2 aria-label="button to open full blog page" ><button className="blog-section_title" onClick={() => chooseComponent("FullBlog")}>Blog</button></h2>
+          <a className="screenreader-text" href='#about'>Skip directly to the next section.</a>
           <div className="scroll-cropper">
               <ul aria-label="previews of Abbey's blog posts" className="blog-preview">
                 {blogPreviewList}

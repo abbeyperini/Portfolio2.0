@@ -2,8 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useReducer } from 'react';
 import Error from '../components/Error';
 import Loading from '../components/Loading';
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { ReactComponent as ExternalLink } from '../images/external-link.svg';
 
 function FullBlog(props) {
 
@@ -49,8 +50,17 @@ function FullBlog(props) {
     newHeadings = newHeadings.replace(/\s#{4}\s/g, "\n##### ")
     newHeadings = newHeadings.replace(/\s#{3}\s/g, "\n#### ")
     newHeadings = newHeadings.replace(/\s#{2}\s/g, "\n### ")
+    newHeadings = newHeadings.replace(/<kbd>/g, "")
+    newHeadings = newHeadings.replace(/<\/kbd>/g, "")
 
     return newHeadings
+  }
+
+  function makeID(title) {
+    title = title.toLowerCase()
+    let replaced = title.replace(/\s+/g, "-")
+    replaced = replaced.replace(/#/g, "")
+    return replaced
   }
 
   const reducer = (state, action) => {
@@ -101,34 +111,49 @@ function FullBlog(props) {
 
   if (!state.isLoading && state.blogs !== null) {
     let blogList
+    let skipLinks = []
     if (state.blogs.length > 1) {
       blogList = state.blogs.map((blog) => {
+        let SVGID = "ShareExternalLink" + Math.random().toString(16).slice(2)
         let markdown = blog.body_markdown
         let replaced = replaceHeadings(markdown)
+        let blogID = makeID(blog.title)
+        let Href = `#${blogID}`
+        let skipLinkID = blogID + Math.random().toString(16).slice(2)
+        let skipLink = <li className="screenreader-text" id={skipLinkID}><a className="screenreader-text" href={Href}>{blog.title}</a></li>
+        skipLinks.push(skipLink)
         return (
-          <article key={blog.id} className="blog">
-            <h2>{blog.title}</h2>
-            <a href={blog.url} target="_blank" rel="noreferrer"><button className="preview_button">Share</button></a>
+          <article className="blog">
+            <h2 id={blogID}>{blog.title}</h2>
+            <a href={blog.url} target="_blank" rel="noreferrer"><button className="preview_button">Share <ExternalLink className="external-link" id={SVGID} focusable="false"/></button></a>
             <ReactMarkdown children={replaced} remarkPlugins={[remarkGfm]}></ReactMarkdown>
           </article>
         )
       })
+      return (
+        <section aria-label="Full list of Abbey's blog posts" className="full-blog">
+          <div className="screenreader-text">
+            <p tabIndex="0">Skip directly to a blog:</p>
+            <ol>
+              {skipLinks}
+            </ol>
+          </div>
+          {blogList}
+        </section>
+      )
     } else {
       let markdown = state.blogs.body_markdown
       let replaced = replaceHeadings(markdown)
-      blogList =
-      <article key={state.blogs.id} className="blog">
-        <h2>{state.blogs.title}</h2>
-        <a href={state.blogs.url} target="_blank" rel="noreferrer"><button className="preview_button">Share</button></a>
-        <ReactMarkdown children={replaced} remarkPlugins={[remarkGfm]}></ReactMarkdown>
-      </article>
+      return (
+        <section aria-label="Full list of Abbey's blog posts" className="full-blog">
+          <article key={state.blogs.id} className="blog">
+            <h2>{state.blogs.title}</h2>
+            <a href={state.blogs.url} target="_blank" rel="noreferrer"><button className="preview_button">Share <ExternalLink className="external-link" id="ShareExternalLink" focusable="false"/></button></a>
+            <ReactMarkdown children={replaced} remarkPlugins={[remarkGfm]}></ReactMarkdown>
+          </article>
+        </section>
+      )
     }
-
-    return (
-      <section aria-label="Full list of Abbey's blog posts" className="full-blog">
-        {blogList}
-      </section>
-  )
   } else if (!state.isLoading && state.error) {
     return (
       <Error />

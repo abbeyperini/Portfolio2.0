@@ -8,7 +8,7 @@ function BujoToGo() {
         <div id="BujoToGo" className="subWork">
             <h3 className="subwork_title--primary">BujoToGo</h3>
             <h4 className="subwork_title--secondary">Solo Full-Stack Project</h4>
-            <img className="subwork_image" src={Bujogif} alt="BujoToGo walkthrough gif"/>
+            <img className="subwork_image" src={Bujogif} alt="BujoToGo walkthrough"/>
             <p className="subwork_text">BujoToGo is a to do list app based on Ryder Carroll's Bullet Journal system. At its most basic, Bullet Journal is about highly 
                 customizable rapid logging, a method of capturing information as bulleted lists. In addition to normal to do list functions, this 
                 app allows users to view their bullets in views analogous to popular handwritten traditional and calendar Bullet Journal spreads.
