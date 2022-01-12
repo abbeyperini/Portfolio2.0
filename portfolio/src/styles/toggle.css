@@ -1,13 +1,13 @@
 :root {
     /** sunny side **/
     --blue-background: #c2e9f6;
-    --blue-border: #72cce3;
+    --blue-border: #108DAD;
     --blue-color: #96dcee;
     --yellow-background: #fffaa8;
     --yellow-border: #f5eb71;
     /** dark side **/
     --indigo-background: #808fc7;
-    --indigo-border: #5d6baa;
+    --indigo-border: #808BBC;
     --indigo-color: #6b7abb;
     --gray-border: #e8e8ea;
     --gray-dots: #e8e8ea;
@@ -47,6 +47,7 @@
 
 .toggle--checkbox:focus + .toggle--label {
     outline: solid 3px var(--button-border);
+    transition: outline 100ms ease-in;
 }
 
 .container--toggle {

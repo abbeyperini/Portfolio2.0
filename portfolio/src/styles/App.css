@@ -130,7 +130,7 @@ nav {
   grid-template-columns: 1fr;
   margin: 10px 0px 10px 0px;
   row-gap: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   border-radius: 10px;
 }
 
@@ -230,7 +230,7 @@ nav {
   background: var(--accent);
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
-  margin: 10px 0px 10px 0px;
+  margin: 20px 0px 10px 0px;
   padding: 20px;
 }
 
@@ -256,7 +256,7 @@ nav {
 .subContact {
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
-  margin: 10px 0px 10px 0px;
+  margin: 20px 0px 10px 0px;
   background: var(--accent);
   display: flex;
   flex-direction: column;
@@ -363,7 +363,7 @@ nav {
   background: none;
   padding: 10px;
   border: solid 2px transparent;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
   color: var(--light-text);
 }
@@ -372,27 +372,30 @@ nav {
 
 .blog img {
   max-width: 200px;
-  margin: 10px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.article-body-image-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.blog h1:first-of-type {
-  font-size: 2em;
-}
-
-.blog h1 {
-  font-size: 1.5em;
-  margin: 10px;
+.blog p em {
+  display: block;
+  margin: auto;
 }
 
 .blog h2 {
-  font-size: 1em;
+  font-size: 2em;
+  margin: 10px;
+}
+
+.blog h3 {
+  font-size: 1.5em;
   margin: 10px;
 } 
+
+.blog h4 {
+  margin: 10px;
+}
 
 .blog em {
   font-style: italic;
@@ -412,55 +415,68 @@ nav {
 .blog {
   margin: 10px 0px 10px 0px;
   padding: 20px;
+  padding-bottom: 40px;
   border-radius: 10px;
   background: var(--accent);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-width: 280px;
 }
 
-.blog ul {
+.blog ol, .blog ul {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  width: 50%;
+  margin-left: 15px;
+}
+
+.blog ul {
+  list-style-type: disc;
 }
 
 .blog li {
-  list-style-type: disc;
   margin: 10px;
   text-align: left;
 }
 
-.highlight__panel {
-  display: none;
+.blog code {
+  padding: 10px;
+  margin: 10px;
 }
 
-div.highlight {
+.blog pre {
   background-color: #eee;
   border: 1px solid black;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 10px;
-}
-
-pre.highlight {
   white-space: pre-wrap;
-  max-width: 250px;
   overflow-x: auto;
   text-align: left;
+  margin: 10px;
+  padding: 10px;
 }
 
-code {
+.blog p code, .blog li code {
+  border-radius: 10px;
+  background-color: #eee;
+  border: 1px solid black;
   padding: 1px 5px 1px 5px;
+  display: inline-block;
+  margin: 0;
 }
 
 .blog p, .blog blockquote {
   padding: 0px;
   margin: 5px;
   text-align: left;
-  width: 50%;
+}
+
+.blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
+  max-width: 250px;
+}
+
+.blog ul, .blog ol {
+  width: 150px;
 }
 
 /* error and loading graphics */
@@ -525,6 +541,23 @@ code {
   animation-fill-mode: forwards;
   transition: all 360ms ease-in;
   animation-iteration-count: infinite;
+}
+
+.screenreader-text {
+  position: absolute;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+}
+
+.screenreader-text:focus, .screenreader-text:focus-within {
+  color: black;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  position: static;
+  margin: auto;
 }
 
 @keyframes colorRotate-fill-hsla {
@@ -698,6 +731,11 @@ button:hover, button:focus, button:active {
   position: relative;
 }
 
+a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 a:link, a:visited {
   color: var(--dark-text);
   text-decoration: underline dotted;
@@ -723,11 +761,19 @@ a:hover, a:focus, a:active {
     max-width: 300px;
   }
 
-  .subWork, .subAbout, .scroll-cropper, .this-subWork {
+  .subWork, .scroll-cropper, .this-subWork {
     margin: 10px;
   }
 
-  .container_about, .container_blog, .container_contact, .container_work {
+  .subAbout, .subContact {
+    margin: 30px 10px 10px 10px; 
+  }
+
+  .container_error {
+    margin: 10px;
+  }
+
+  .container_about {
     margin: 20px;
   }
   
@@ -737,10 +783,6 @@ a:hover, a:focus, a:active {
 
   .contact-form {
     min-width: 300px;
-  }
-
-  .container_error {
-    margin: 30px;
   }
 
   .preview_image {
@@ -753,12 +795,21 @@ a:hover, a:focus, a:active {
     margin: 15px;
   }
 
-  pre.highlight {
+  .blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
     max-width: 300px;
+  }
+
+  .blog ul, .blog ol {
+    width: 250px;
+  }
+
+  .blog {
+    min-width: 330px;
   }
 
   .scroll-cropper {
     width: 95%;
+    margin-top: 20px;
   }
 }
 
@@ -781,8 +832,33 @@ a:hover, a:focus, a:active {
     max-width: 250px;
   }
 
-  pre.highlight {
+  .blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
     max-width: 500px;
+  }
+
+  .blog ul, .blog ol {
+    width: 400px;
+  }
+
+  .blog {
+    min-width: 530px;
+  }
+
+  .subWork, .this-subWork, .container_about, .subContact {
+    margin: 20px;
+  }
+
+  .subAbout, .subContact {
+    margin-top: 30px;
+  }
+
+  .container_error {
+    width: 92%;
+    margin-top: 20px;
+  }
+
+  .scroll-cropper {
+    width: 92%;
   }
 }
 
@@ -801,7 +877,7 @@ a:hover, a:focus, a:active {
     "icons text";
     grid-template-rows: 1fr;
     grid-template-columns: .25fr 1fr;
-    margin: 20px;
+    margin: 40px;
   }
 
   .this-subWork {
@@ -811,16 +887,25 @@ a:hover, a:focus, a:active {
     "icons text";
     grid-template-rows: .5fr .1fr 1fr;
     grid-template-columns: .25fr 1fr;
-    margin: 20px;
+    margin: 40px;
   }
 
-  .subAbout, .subContact, .blog {
+  .blog {
     margin: 20px;
+    min-width: 680px;
+  }
+
+  .subAbout {
+    margin: 40px 20px 20px 20px;
+  }
+
+  .subContact {
+    margin: 40px;
   }
 
   .scroll-cropper {
-    width: 95%;
-    margin: 20px;
+    width: 90%;
+    margin: 40px;
   }
 
   .blog-preview {
@@ -838,8 +923,16 @@ a:hover, a:focus, a:active {
     max-width: 300px;
   }
 
-  pre.highlight {
+  .blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
     max-width: 650px;
+  }
+
+  .blog ul, .blog ol {
+    width: 550px;
+  }
+
+  .blog {
+    min-width: 680px;
   }
 
   .work_icon {
@@ -851,12 +944,12 @@ a:hover, a:focus, a:active {
     padding: 15px;
   }
 
-  .container_error {
-    margin: 30px 40px 30px 40px;
-  }
-
   .message, .contact_name, .contact_email {
     flex-direction: row;
+  }
+
+  .container_error {
+    width: 90%;
   }
 }
 
@@ -879,16 +972,24 @@ a:hover, a:focus, a:active {
     max-width: 500px;
   }
 
-  pre.highlight {
-    max-width: 100%;
+  .blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
+    max-width: 850px;
+  }
+
+  .blog ul, .blog ol {
+    width: 750px;
+  }
+
+  .blog {
+    min-width: 880px;
   }
 
   .subContact {
     width: 98%
   }
 
-  .scroll-cropper {
-    width: 96%;
+  .container_error, .scroll-cropper {
+    width: 92%;
   }
 }
 
@@ -897,8 +998,28 @@ a:hover, a:focus, a:active {
     width: 98%;
   }
 
+  .subContact, .container_error, .scroll-cropper {
+    width: 95%;
+  }
+
+  .container_error, .scroll-cropper {
+    margin-top: 30px;
+  }
+
   .blog em {
     max-width: 500px;
+  }
+
+  .blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
+    max-width: 1150px;
+  }
+
+  .blog ul, .blog ol {
+    width: 1050px;
+  }
+
+  .blog {
+    min-width: 1180px;
   }
 }
 

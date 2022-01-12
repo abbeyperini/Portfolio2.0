@@ -6,9 +6,9 @@ import Knitgif from '../../images/knitworthygif.gif';
 function Knitworthy() {
     return (
         <div id="knitworthy" className="subWork">
-            <h2 className="subwork_title--primary">Knitworthy</h2>
-            <h3 className="subwork_title--secondary">Front End Project</h3>
-            <img className="subwork_image" src={Knitgif} alt="gif of a user navigating Knitworthy"/>
+            <h3 className="subwork_title--primary">Knitworthy</h3>
+            <h4 className="subwork_title--secondary">Front End Project</h4>
+            <img className="subwork_image" src={Knitgif} alt="Knitworthy walkthrough"/>
             <p className="subwork_text">In the knitting/crochet/fiber arts community, someone who appreciates a handmade gift and takes care of it is considered "knitworthy." 
                 Ravelry, a fiber arts website with over 9 million users, created a hub for sharing information about materials and techniques and a 
                 way to exchange and sell patterns in pdf form. Users can keep track of their yarn and their projects, entering stats about when they 
