@@ -25,6 +25,9 @@ August 2021
 November 2021
 - I accessibility audited my site and have [written a series of blogs](https://dev.to/abbeyperini/accessibility-auditing-my-portfolio-site-part-1-2k8k) on the audit and the fixes.
 
+May 2022
+- I updated my favicons and [wrote about it](https://dev.to/abbeyperini/what-are-favicons-2e9d).
+
 ## Usage
 
 - Visit [abbeyperini.dev](https://abbeyperini.dev)
