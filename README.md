@@ -1,6 +1,6 @@
-<h1> Portfolio 2.0 </h1>
+# Portfolio 2.0
 
-<h2> Summary </h2>
+## Summary
 
   - [About the Project](#about-the-project)
   - [Usage](#usage)
@@ -44,14 +44,14 @@ May 2022
 
 To set up a local copy of the project follow the steps below.
 
-# Prerequisites
+## Prerequisites
 
 * In an empty folder initialize a new Node.js project.
 ```sh
 npm init
 ```
 
-# Installation
+## Installation
 
 1. Clone to local machine
 ```sh
