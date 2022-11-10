@@ -1,5 +1,4 @@
 import React from 'react';
-import { ReactComponent as Chrome } from '../../images/chrome.svg';
 import { ReactComponent as Github } from '../../images/github.svg';
 import Knitgif from '../../images/knitworthygif.gif';
 
@@ -17,7 +16,6 @@ function Knitworthy() {
                 someone who does not knit or crochet.</p>
             <span className="subwork_links">
                 <a className="link-new-tab" href="https://github.com/abbeyperini/Knitworthy" target="_blank" rel="noreferrer"><Github id="KnitworthyGithub" aria-label="open Knitworthy Github repository in a new tab" focusable="true" className="work_icon"/></a>
-                <a className="link-new-tab" href="http://knitworthy.net/" target="_blank" rel="noreferrer"><Chrome id="KnitworthyChrome" aria-label="open Knitworthy website in a new tab" focusable="true" className="work_icon"/></a>
             </span>
         </div>
     )
