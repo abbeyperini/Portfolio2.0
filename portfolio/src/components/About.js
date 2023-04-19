@@ -8,6 +8,12 @@ import { ReactComponent as NodeLogo } from '../images/node.svg';
 import { ReactComponent as ReactLogo } from '../images/react.svg';
 import { ReactComponent as ReduxLogo } from '../images/redux.svg';
 import { ReactComponent as PostgreSQLLogo } from '../images/postgresql.svg';
+import { ReactComponent as DockerLogo } from '../images/docker.svg';
+import { ReactComponent as NextLogo } from '../images/nextjs.svg';
+import { ReactComponent as TSLogo } from '../images/typescript.svg';
+import { ReactComponent as AngularLogo } from '../images/angularjs.svg';
+import { ReactComponent as GCLogo } from '../images/google-cloud.svg';
+import { ReactComponent as AWSLogo } from '../images/aws-amplify.svg';
 
 function About() {
 
@@ -31,6 +37,12 @@ function About() {
                     <ReactLogo className="skills-icon" focusable="false" />
                     <ReduxLogo className="skills-icon" focusable="false" />
                     <PostgreSQLLogo className="skills-icon" focusable="false" />
+                    <DockerLogo className="skills-icon" focusable="false" />
+                    <NextLogo className="skills-icon" focusable="false" />
+                    <AngularLogo className="skills-icon" focusable="false" />
+                    <TSLogo className="skills-icon" focusable="false" />
+                    <GCLogo className="skills-icon" focusable="false" />
+                    <AWSLogo className="skills-icon" focusable="false" />
                 </div>
             </div>
         </section>
