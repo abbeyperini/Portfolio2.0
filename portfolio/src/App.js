@@ -11,16 +11,12 @@ import MainFull from './components/MainFullCSS';
 import Single from './components/SingleCSS';
 import { keepTheme } from './utils/themes';
 import FullBlog from './components/FullBlog';
-import * as Panelbear from "@panelbear/panelbear-js";
 
 function App() {
   const [hidden, setHidden] = useState(false);
   const [single, setSingle] = useState(false);
   const [singleShow, setSingleShow] = useState('');
   const [singleBlogID, setSingleBlogID] = useState(0);
-
-  Panelbear.load('9Bnlk03vncA');
-  Panelbear.trackPageview();
   
   const hideHeader = () => {
     if (hidden) {
