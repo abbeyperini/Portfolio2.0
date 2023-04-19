@@ -28,6 +28,9 @@ November 2021
 May 2022
 - I updated my favicons and [wrote about it](https://dev.to/abbeyperini/what-are-favicons-2e9d).
 
+April 2023
+- I've made some content updates and added site analytics in the last year. Most recently, I've updated some packages, removed some deprecated things, and added checking `prefers-color-scheme` to my theme utilities.
+
 ## Usage
 
 - Visit [abbeyperini.dev](https://abbeyperini.dev)
