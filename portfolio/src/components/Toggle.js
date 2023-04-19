@@ -7,7 +7,7 @@ function Toggle() {
     const [active, setActive] = useState(false)
     // the opposite, for screenreaders
     const [ariaActive, setAriaActive] = useState(true)
-    let theme = localStorage.getItem('theme')
+    const theme = localStorage.getItem('theme')
 
     const changeThemeAndToggle = () => {
       if (localStorage.getItem('theme') === 'theme-dark') {
@@ -32,10 +32,10 @@ function Toggle() {
     }
 
     useEffect(() => {
-      if (localStorage.getItem('theme') === 'theme-dark') {
+      if (theme === 'theme-dark') {
         setActive(false)
         setAriaActive(true)
-      } else if (localStorage.getItem('theme') === 'theme-light') {
+      } else if (theme === 'theme-light') {
         setActive(true)
         setAriaActive(false)
       }

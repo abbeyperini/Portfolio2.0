@@ -4,15 +4,31 @@ function setTheme(themeName) {
 }
 
 function keepTheme() {
-  if (localStorage.getItem('theme')) {
-    if (localStorage.getItem('theme') === 'theme-dark') {
+  const theme = localStorage.getItem('theme');
+  if (theme) {
+    if (theme === 'theme-dark') {
       setTheme('theme-dark');
-    } else if (localStorage.getItem('theme') === 'theme-light') {
+    } 
+    
+    if (theme === 'theme-light') {
       setTheme('theme-light')
     }
-  } else {
-    setTheme('theme-dark')
+    return
   }
+
+  const prefersDarkTheme = window.matchMedia('(prefers-color-scheme: dark)');
+  if (prefersDarkTheme.matches) {
+    setTheme('theme-dark')
+    return
+  } 
+
+  const prefersLightTheme = window.matchMedia('(prefers-color-scheme: light)');
+  if (prefersLightTheme.matches) {
+    setTheme('theme-light')
+    return
+  }
+
+  setTheme('theme-dark')
 }
 
 module.exports = {
