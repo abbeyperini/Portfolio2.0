@@ -17,7 +17,7 @@ function NavBar(props) {
             <button className="nav_button" onClick={() => chooseComponent("blog")}>Blog</button>
             <button className="nav_button" onClick={() => chooseComponent("about")}>About</button>
             <button className="nav_button" onClick={() => chooseComponent("contact")}>Contact</button>
-            <Toggle />
+            <Toggle setClassName={props.setClassName} />
         </nav>
     )
 }

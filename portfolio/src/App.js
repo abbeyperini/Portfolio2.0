@@ -17,6 +17,7 @@ function App() {
   const [single, setSingle] = useState(false);
   const [singleShow, setSingleShow] = useState('');
   const [singleBlogID, setSingleBlogID] = useState(0);
+  const [className, setClassName] = useState("theme-dark");
   
   const hideHeader = () => {
     if (hidden) {
@@ -43,11 +44,11 @@ function App() {
   }
 
   useEffect(() => {
-    keepTheme()
-  })
+    keepTheme(setClassName)
+  }, [setClassName])
 
   return (
-    <div className="App">
+    <div className={`App ${className}`}>
       <CSSTransition
         classNames="header"
         in={!hidden}
@@ -63,7 +64,7 @@ function App() {
           timein={500}
           timeout={300}
           unmountOnExit>
-          <NavBar hideHeader={hideHeader} chooseComponent={chooseComponent}/>
+          <NavBar hideHeader={hideHeader} chooseComponent={chooseComponent} setClassName={setClassName}/>
         </CSSTransition>
         <MainFull condition={hidden && !single} component={<Work />}/>
         <MainFull condition={hidden && !single} component={<Blog chooseComponent={chooseComponent} />} />

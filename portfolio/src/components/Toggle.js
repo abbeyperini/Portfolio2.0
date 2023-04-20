@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../styles/toggle.css';
 import { setTheme } from '../utils/themes';
 
-function Toggle() {
+function Toggle({setClassName}) {
     // false = dark mode because of the way I wrote the CSS
     const [active, setActive] = useState(false)
     // the opposite, for screenreaders
@@ -11,11 +11,11 @@ function Toggle() {
 
     const changeThemeAndToggle = () => {
       if (localStorage.getItem('theme') === 'theme-dark') {
-        setTheme('theme-light')
+        setTheme('theme-light', setClassName)
         setActive(true)
         setAriaActive(false)
       } else {
-        setTheme('theme-dark')
+        setTheme('theme-dark', setClassName)
         setActive(false)
         setAriaActive(true)
       }

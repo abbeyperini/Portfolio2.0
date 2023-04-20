@@ -1,34 +1,26 @@
-function setTheme(themeName) {
+function setTheme(themeName, setClassName) {
     localStorage.setItem('theme', themeName);
-    document.documentElement.className = themeName;
+    setClassName(themeName);
 }
 
-function keepTheme() {
-  const theme = localStorage.getItem('theme');
-  if (theme) {
-    if (theme === 'theme-dark') {
-      setTheme('theme-dark');
-    } 
-    
-    if (theme === 'theme-light') {
-      setTheme('theme-light')
-    }
-    return
-  }
+function themeIsInStorage(theme) {
+  return theme === 'theme-dark' || theme === 'theme-light';
+}
 
-  const prefersDarkTheme = window.matchMedia('(prefers-color-scheme: dark)');
-  if (prefersDarkTheme.matches) {
-    setTheme('theme-dark')
-    return
-  } 
+function keepTheme(setClassName) {
+  const theme = localStorage.getItem('theme');
+  if (themeIsInStorage(theme)) {
+    setTheme(theme, setClassName);
+    return;
+  }
 
   const prefersLightTheme = window.matchMedia('(prefers-color-scheme: light)');
   if (prefersLightTheme.matches) {
-    setTheme('theme-light')
-    return
+    setTheme('theme-light', setClassName);
+    return;
   }
 
-  setTheme('theme-dark')
+  setTheme('theme-dark', setClassName);
 }
 
 module.exports = {
