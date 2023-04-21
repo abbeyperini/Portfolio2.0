@@ -14,7 +14,6 @@ function NavBar(props) {
         <nav>
             <button className="nav_button" onClick={handleOnClick}>Home</button>
             <button className="nav_button" onClick={() => chooseComponent("work")} >Portfolio</button>
-            <button className="nav_button" onClick={() => chooseComponent("blog")}>Blog</button>
             <button className="nav_button" onClick={() => chooseComponent("about")}>About</button>
             <button className="nav_button" onClick={() => chooseComponent("contact")}>Contact</button>
             <Toggle setClassName={props.setClassName} />
