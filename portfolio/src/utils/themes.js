@@ -3,13 +3,9 @@ function setTheme(themeName, setClassName) {
     setClassName(themeName);
 }
 
-function themeIsInStorage(theme) {
-  return theme === 'theme-dark' || theme === 'theme-light';
-}
-
 function keepTheme(setClassName) {
   const theme = localStorage.getItem('theme');
-  if (themeIsInStorage(theme)) {
+  if (theme) {
     setTheme(theme, setClassName);
     return;
   }
