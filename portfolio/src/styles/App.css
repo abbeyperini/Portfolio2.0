@@ -1,3 +1,8 @@
+.App {
+  height: 100%;
+  background-color: var(--light-background);
+}
+
 p, h2, h3 {
   padding: 10px;
   margin: 10px;
@@ -90,7 +95,6 @@ nav {
 .main-container {
   background-color: var(--light-background);
   padding-bottom: 100px;
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
 }
 
 .container_about, .container_blog, .container_contact {
