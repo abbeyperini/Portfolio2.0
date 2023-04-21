@@ -14,7 +14,6 @@ header {
   text-align: center;
   width: 100%;
   height: 100%;
-  position: absolute;
 }
 
 .header_text {
@@ -46,7 +45,7 @@ header {
   width: 150px;
   border: solid 3px #292929;
   margin: auto;
-  padding: 15px 10px 15px 10px;
+  padding: 15px 10px;
   color: #292929;
   background: rgba(255, 255, 255, 0.1);
   display: flex;
@@ -70,6 +69,7 @@ nav {
   background-color: var(--dark-background);
   padding: 20px;
   outline: none;
+  grid-area: header;
 }
 
 .nav_button {
@@ -94,14 +94,29 @@ nav {
 
 .main-container {
   background-color: var(--light-background);
-  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: .05fr 1fr .05fr;
+  grid-template-rows: .25fr auto;
+  grid-template-areas:
+  "header header header"
+  ". work ."
+  ". about ."
+  ". contact .";
+  padding-bottom: 2%;
 }
 
-.container_about, .container_blog, .container_contact {
+.container_about {
+  grid-area: about;
+}
+
+.container_contact {
+  grid-area: contact;
+}
+
+.container_about, .container_contact {
   display: flex;
   flex-direction: column;
   place-items: center;
-  margin: 10px 0px 10px 0px;
 }
 
 .section_title {
@@ -132,10 +147,10 @@ nav {
   "knitworthy"
   "OWS";
   grid-template-columns: 1fr;
-  margin: 10px 0px 10px 0px;
   row-gap: 20px;
   padding-bottom: 10px;
   border-radius: 10px;
+  grid-area: work;
 }
 
 #this {
@@ -187,7 +202,6 @@ nav {
   background: var(--accent);
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
-  margin: 10px 0px 10px 0px;  
 }
 
 .subwork_title--primary {
@@ -234,7 +248,6 @@ nav {
   background: var(--accent);
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
-  margin: 20px 0px 10px 0px;
   padding: 20px;
 }
 
@@ -247,7 +260,7 @@ nav {
   background: rgba(255, 255, 255, .55);
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
-  margin: 0 20% 0 20%;
+  margin: 0 5%;
 }
 
 .about_headshot {
@@ -260,15 +273,15 @@ nav {
 .subContact {
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
-  margin: 20px 0px 10px 0px;
   background: var(--accent);
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .subContact_text {
-  margin: 20px 10px 10px 10px;
+  margin: 20px auto;
 }
 
 .contact-form {
@@ -277,7 +290,7 @@ nav {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  margin: 10px 10px 30px 10px;
+  margin-bottom: 30px;
 }
 
 .contact-form p {
@@ -297,7 +310,7 @@ nav {
 }
 
 .message_input {
-  padding: 30px 0px 30px 0px;
+  padding: 30px 0px;
 }
 
 .contact_button {
@@ -308,187 +321,6 @@ nav {
   border: solid 2px transparent;
   margin: 3px;
 }
-
-/* error and loading graphics */
-
-.container_error {
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
-  border-radius: 10px;
-  margin: 10px 0px 10px 0px;
-  background: var(--accent);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.error-graphic {
-  padding: 20px 20px 0px 20px;
-  max-width: 100px;
-}
-
-.loading-graphic {
-  padding: 20px 20px 0px 20px;
-  max-width: 100px;
-}
-
-.error-graphic-main {
-  fill:#f8a768;
-}
-
-.error-graphic-cream {
-  fill:#fffbde;
-}
-
-.error-graphic-lines {
-  fill:#421d00;
-}
-
-.error-graphic_qm-fill {
-  fill:#a19ece;
-  animation-name: colorRotate-fill-hsla;
-  animation-duration: 3000ms;
-  animation-fill-mode: forwards;
-  transition: all 360ms ease-in;
-  animation-iteration-count: infinite;
-}
-
-.error-graphic_qm-lines {
-  fill:#524f77;
-  animation-name: colorRotate-fill;
-  animation-duration: 3000ms;
-  animation-fill-mode: forwards;
-  transition: all 360ms ease-in;
-  animation-iteration-count: infinite;
-}
-
-.error-graphic_qm_dot {
-  fill:#a19ece;
-  stroke:#524f77;
-  stroke-miterlimit:10;
-  stroke-width:3px;
-  animation-name: colorRotate-stroke, colorRotate-fill-hsla;
-  animation-duration: 3000ms;
-  animation-fill-mode: forwards;
-  transition: all 360ms ease-in;
-  animation-iteration-count: infinite;
-}
-
-.screenreader-text {
-  position: absolute;
-  left: -999px;
-  width: 1px;
-  height: 1px;
-  top: auto;
-}
-
-.screenreader-text:focus, .screenreader-text:focus-within {
-  color: black;
-  display: inline-block;
-  height: auto;
-  width: auto;
-  position: static;
-  margin: auto;
-}
-
-@keyframes colorRotate-fill-hsla {
-  0%, 100% {
-    fill: hsla(0,100%,50%,.2);
-  }
-  10% {
-    fill: hsla(36,100%,50%,.2);
-  }
-  20% {
-    fill: hsla(72,100%,50%,.2);
-  }
-  30% {
-    fill: hsla(108,100%,50%,.2);
-  }
-  40% {
-    fill: hsla(144,100%,50%,.2);
-  }
-  50% {
-    fill: hsla(180,100%,50%,.2);
-  }
-  60% {
-    fill: hsla(216,100%,50%,.2);
-  }
-  70% {
-    fill: hsla(252,100%,50%,.2);
-  }
-  80% {
-    fill: hsla(288,100%,50%,.2);
-  }
-  90% {
-    fill: hsla(324,100%,50%,.2);
-  }
-}
-
-@keyframes colorRotate-fill /* Safari and Chrome */ {
-  0%, 100% {
-    fill: hsl(0,100%,50%);
-  }
-  10% {
-    fill: hsl(36,100%,50%);
-  }
-  20% {
-    fill: hsl(72,100%,50%);
-  }
-  30% {
-    fill: hsl(108,100%,50%);
-  }
-  40% {
-    fill: hsl(144,100%,50%);
-  }
-  50% {
-    fill: hsl(180,100%,50%);
-  }
-  60% {
-    fill: hsl(216,100%,50%);
-  }
-  70% {
-    fill: hsl(252,100%,50%);
-  }
-  80% {
-    fill: hsl(288,100%,50%);
-  }
-  90% {
-    fill: hsl(324,100%,50%);
-  }
-}
-
-@keyframes colorRotate-stroke /* Safari and Chrome */ {
-  0%, 100% {
-    stroke: hsl(0,100%,50%);
-  }
-  10% {
-    stroke: hsl(36,100%,50%);
-  }
-  20% {
-    stroke: hsl(72,100%,50%);
-  }
-  30% {
-    stroke: hsl(108,100%,50%);
-  }
-  40% {
-    stroke: hsl(144,100%,50%);
-  }
-  50% {
-    stroke: hsl(180,100%,50%);
-  }
-  60% {
-    stroke: hsl(216,100%,50%);
-  }
-  70% {
-    stroke: hsl(252,100%,50%);
-  }
-  80% {
-    stroke: hsl(288,100%,50%);
-  }
-  90% {
-    stroke: hsl(324,100%,50%);
-  }
-}
-
 
 /* button animations */
 
@@ -515,14 +347,9 @@ button:hover, button:focus, button:active {
   border: solid 2px var(--button-border);
 }
 
-.contact_button:hover, .contact_button:focus, .contact_button:active, .preview_button:hover, .preview_button:focus, .preview_button:active {
+.contact_button:hover, .contact_button:focus, .contact_button:active {
   cursor: pointer;
   border: solid 2px var(--dark-text);
-}
-
-.blog-section_title:hover, .blog-section_title:focus, .blog-section_title:active {
-  cursor: pointer;
-  border: solid 2px var(--button-border);
 }
 
 /* react transition group animations */
@@ -579,9 +406,6 @@ a:hover, a:focus, a:active {
 /* media queries */
 
 @media screen and (min-width: 350px) {
-  .error-graphic, .loading-graphic {
-    max-width: 150px;
-  }
 
   .about_headshot {
     width: 300px;
@@ -591,104 +415,14 @@ a:hover, a:focus, a:active {
     max-width: 300px;
   }
 
-  .subWork, .scroll-cropper, .this-subWork {
-    margin: 10px;
-  }
-
-  .subAbout, .subContact {
-    margin: 30px 10px 10px 10px; 
-  }
-
-  .container_error {
-    margin: 10px;
-  }
-
-  .container_about {
-    margin: 20px;
-  }
-  
-  .message_input {
-    margin-left: 5px;
-  }
-
   .contact-form {
     min-width: 300px;
   }
-
-  .preview_image {
-    max-width: 250px;
-  }
-  
-  .preview {
-    width: 300px;
-    height: 200px;
-    margin: 15px;
-  }
-
-  .blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
-    max-width: 300px;
-  }
-
-  .blog ul, .blog ol {
-    width: 250px;
-  }
-
-  .blog {
-    min-width: 330px;
-  }
-
-  .scroll-cropper {
-    width: 95%;
-    margin-top: 20px;
-  }
 }
 
-@media screen and (min-width: 525px) {
-  .error-graphic, .loading-graphic {
-    max-width: 200px;
-  }
-  
-  .preview_image {
-    max-width: 400px;
-  }
-  
-  .preview {
-    width: 350px;
-    height: 300px;
-    margin: 15px;
-  }
-
-  .blog img {
-    max-width: 250px;
-  }
-
-  .blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
-    max-width: 500px;
-  }
-
-  .blog ul, .blog ol {
-    width: 400px;
-  }
-
-  .blog {
-    min-width: 530px;
-  }
-
-  .subWork, .this-subWork, .container_about, .subContact {
-    margin: 20px;
-  }
-
-  .subAbout, .subContact {
-    margin-top: 30px;
-  }
-
-  .container_error {
-    width: 92%;
-    margin-top: 20px;
-  }
-
-  .scroll-cropper {
-    width: 92%;
+@media screen and (min-width: 550px) {
+  nav {
+    flex-direction: row;
   }
 }
 
@@ -707,7 +441,6 @@ a:hover, a:focus, a:active {
     "icons text";
     grid-template-rows: 1fr;
     grid-template-columns: .25fr 1fr;
-    margin: 40px;
   }
 
   .this-subWork {
@@ -717,52 +450,6 @@ a:hover, a:focus, a:active {
     "icons text";
     grid-template-rows: .5fr .1fr 1fr;
     grid-template-columns: .25fr 1fr;
-    margin: 40px;
-  }
-
-  .blog {
-    margin: 20px;
-    min-width: 680px;
-  }
-
-  .subAbout {
-    margin: 40px 20px 20px 20px;
-  }
-
-  .subContact {
-    margin: 40px;
-  }
-
-  .scroll-cropper {
-    width: 90%;
-    margin: 40px;
-  }
-
-  .blog-preview {
-    flex-direction: row;
-    height: 99.9%;
-    overflow-y: hidden;
-    overflow-x: scroll;
-  }
-
-  .preview_image {
-    max-width: 350px;
-  }
-
-  .blog img {
-    max-width: 300px;
-  }
-
-  .blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
-    max-width: 650px;
-  }
-
-  .blog ul, .blog ol {
-    width: 550px;
-  }
-
-  .blog {
-    min-width: 680px;
   }
 
   .work_icon {
@@ -770,16 +457,12 @@ a:hover, a:focus, a:active {
   }
 
   .contact-form {
-    min-width: 600px;
+    min-width: 500px;
     padding: 15px;
   }
 
   .message, .contact_name, .contact_email {
     flex-direction: row;
-  }
-
-  .container_error {
-    width: 90%;
   }
 }
 
@@ -792,69 +475,5 @@ a:hover, a:focus, a:active {
 @media screen and (min-width: 900px) {
   .subWork_container_image > img, .subwork_image {
     max-width: 400px;
-  }
-
-  nav {
-    flex-direction: row;
-  }
-
-  .blog img {
-    max-width: 500px;
-  }
-
-  .blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
-    max-width: 850px;
-  }
-
-  .blog ul, .blog ol {
-    width: 750px;
-  }
-
-  .blog {
-    min-width: 880px;
-  }
-
-  .subContact {
-    width: 98%
-  }
-
-  .container_error, .scroll-cropper {
-    width: 92%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .scroll-cropper {
-    width: 98%;
-  }
-
-  .subContact, .container_error, .scroll-cropper {
-    width: 95%;
-  }
-
-  .container_error, .scroll-cropper {
-    margin-top: 30px;
-  }
-
-  .blog em {
-    max-width: 500px;
-  }
-
-  .blog pre, .blog p, .blog blockquote, .blog h2, .blog h3, .blog h4 {
-    max-width: 1150px;
-  }
-
-  .blog ul, .blog ol {
-    width: 1050px;
-  }
-
-  .blog {
-    min-width: 1180px;
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .error-graphic_qm-fill, .error-graphic_qm-lines, .error-graphic_qm-lines {
-    animation-name: dissolve;
   }
 }
