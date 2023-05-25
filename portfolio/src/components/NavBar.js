@@ -3,7 +3,7 @@ import Toggle from './Toggle';
 
 function NavBar(props) {
     const handleOnClick = () => {
-        props.hideHeader();
+        props.hideLanding();
     }
 
     const chooseComponent = (component) => {
@@ -13,6 +13,8 @@ function NavBar(props) {
     return (
         <nav>
             <button className="nav_button" onClick={handleOnClick}>Home</button>
+            <button className="nav_button" onClick={() => chooseComponent("blog")} >Blog</button>
+            <button className="nav_button" onClick={() => chooseComponent("speaking")} >Speaking</button>
             <button className="nav_button" onClick={() => chooseComponent("work")} >Portfolio</button>
             <button className="nav_button" onClick={() => chooseComponent("about")}>About</button>
             <button className="nav_button" onClick={() => chooseComponent("contact")}>Contact</button>

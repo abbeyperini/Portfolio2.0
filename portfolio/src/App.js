@@ -1,7 +1,9 @@
 import './styles/App.css';
 import React, { useEffect, useState } from 'react';
-import Header from './components/Header';
+import LandingPage from './components/LandingPage';
 import NavBar from './components/NavBar';
+import Blog from './components/Blog';
+import Speaking from './components/Speaking';
 import Work from './components/Work';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -16,7 +18,7 @@ function App() {
   const [singleShow, setSingleShow] = useState('');
   const [className, setClassName] = useState("theme-dark");
   
-  const hideHeader = () => {
+  const hideLanding = () => {
     if (hidden) {
       setHidden(false);
     } else if (!hidden) {
@@ -42,7 +44,7 @@ function App() {
         timein={500}
         timeout={300}
         unmountOnExit>
-        <Header key="1" hideHeader={hideHeader}/>
+        <LandingPage key="1" hideLanding={hideLanding}/>
       </CSSTransition>
       { hidden && <div className="main-container">
         <CSSTransition
@@ -51,11 +53,15 @@ function App() {
           timein={500}
           timeout={300}
           unmountOnExit>
-          <NavBar hideHeader={hideHeader} chooseComponent={chooseComponent} setClassName={setClassName}/>
+          <NavBar hideLanding={hideLanding} chooseComponent={chooseComponent} setClassName={setClassName}/>
         </CSSTransition>
+        <MainFull condition={hidden && !single} component={<Blog />}/>
+        <MainFull condition={hidden && !single} component={<Speaking />}/>
         <MainFull condition={hidden && !single} component={<Work />}/>
         <MainFull condition={hidden && !single} component={<About />}/>
         <MainFull condition={hidden && !single} component={<Contact />}/>
+        <Single condition={hidden && single && singleShow === "blog"} component={<Blog />}/>
+        <Single condition={hidden && single && singleShow === "speaking"} component={<Speaking />}/>
         <Single condition={hidden && single && singleShow === "work"} component={<Work />}/>
         <Single condition={hidden && single && singleShow === "about"} component={<About />}/>
         <Single condition={hidden && single && singleShow === "contact"} component={<Contact />}/>

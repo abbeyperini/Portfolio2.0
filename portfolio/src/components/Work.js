@@ -1,9 +1,9 @@
 import React from 'react';
-import Gachasphere from './subwork/Gachasphere';
-import BujoToGo from './subwork/BujoToGo';
-import Knitworthy from './subwork/Knitworthy';
-import OWS from './subwork/OWS';
-import ThisSite from './subwork/ThisSite';
+import Gachasphere from './work/Gachasphere';
+import BujoToGo from './work/BujoToGo';
+import Knitworthy from './work/Knitworthy';
+import OWS from './work/OWS';
+import ThisSite from './work/ThisSite';
 
 function Work() {
     return (

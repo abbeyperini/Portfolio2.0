@@ -18,9 +18,9 @@ import { ReactComponent as AWSLogo } from '../images/aws-amplify.svg';
 function About() {
 
     return (
-        <section aria-labelledby="about" className="container_about">
+        <section aria-labelledby="about" className="container_about flex-container">
             <h2 id="about" className="section_title">About Abbey</h2>
-            <div className="subAbout">
+            <div className="about">
                 <img alt="headshot of Abbey Perini wearing a red collared shirt with white polka dots and red lipstick" src={headshot} className="about_headshot" />
                 <p className="about_text">My name is Abbey Perini, but my friends call me Abbey Normal. I've always been an out of the box thinker 
                     and worked in multiple industries before falling in love with coding. My organization and attention to detail

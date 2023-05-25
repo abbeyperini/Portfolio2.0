@@ -8,15 +8,15 @@ p, h2, h3 {
   margin: 10px;
 }
 
-/* header/landing page */
+/* landing page */
 
-header {
+.landing {
   text-align: center;
   width: 100%;
   height: 100%;
 }
 
-.header_text {
+.landing_text {
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
@@ -29,18 +29,18 @@ header {
   color: #292929;
 }
 
-.header_name {
+.landing_name {
   padding: 20px 20px 0px 20px;
   font-weight: 700;
 }
 
-.header_title {
+.landing_title {
   padding: 10px;
   margin-top: 0px;
   font-weight: 500;
 }
 
-.header_button {
+.landing_button {
   grid-area: button;
   width: 150px;
   border: solid 3px #292929;
@@ -69,14 +69,14 @@ nav {
   background-color: var(--dark-background);
   padding: 20px;
   outline: none;
-  grid-area: header;
+  grid-area: landing;
 }
 
 .nav_button {
   background-color: var(--dark-background);
   color: var(--light-text);
   padding: 10px;
-  font-size: 16px;
+  font-size: 1em;
   border: solid 2px transparent;
   margin: 3px;
 }
@@ -90,6 +90,15 @@ nav {
   }
 }
 
+@keyframes spin-speaking {
+  0% {
+    transform: rotate(0deg);
+  } 100% {
+    top: 3px;
+    transform: rotate(90deg);
+  }
+}
+
 /* base container styling */
 
 .main-container {
@@ -98,7 +107,9 @@ nav {
   grid-template-columns: .05fr 1fr .05fr;
   grid-template-rows: .25fr auto;
   grid-template-areas:
-  "header header header"
+  "landing landing landing"
+  ". blog ."
+  ". speaking ."
   ". work ."
   ". about ."
   ". contact .";
@@ -113,7 +124,7 @@ nav {
   grid-area: contact;
 }
 
-.container_about, .container_contact {
+.flex-container {
   display: flex;
   flex-direction: column;
   place-items: center;
@@ -127,9 +138,68 @@ nav {
   color: var(--light-text);
 }
 
+.secondary-container {
+  color: var(--dark-text);
+  background: var(--accent);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
+  border-radius: 10px;
+}
+
+/* blog */
+
+.container_blog {
+  grid-area: blog;
+}
+
+.blog-content {
+  width: 100%;
+  margin: 0;
+  padding: 2%;
+}
+
+/* speaking */
+
+.container_speaking {
+  grid-area: speaking
+}
+
+.talks h3 {
+  margin: 0;
+}
+
+.talks {
+  padding-top: .25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.talk-list {
+  list-style-type: none;
+}
+
+.talk-list li {
+  padding: 3px;
+}
+
+.speaking_CTA {
+  display: block;
+  width: 230px;
+  border: solid 3px #292929;
+  margin: 2%;
+  padding: 10px 10px;
+  color: #292929;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.speaking_CTA .button_arrow {
+  padding-left: 0;
+  top: 2px;
+}
+
 /* work */
 
-.subwork_image {
+.work_image {
   max-height: 200px;
   max-width: 200px;
   margin: 10px;
@@ -173,7 +243,7 @@ nav {
   grid-area: OWS;
 }
 
-.subWork {
+.work {
   display: grid;
   grid-template-areas: 
     "title"
@@ -189,7 +259,7 @@ nav {
   border-radius: 10px;
 }
 
-.this-subWork {
+.work_this {
   display: grid;
   grid-template-areas: 
     "title"
@@ -204,29 +274,29 @@ nav {
   border-radius: 10px;
 }
 
-.subwork_title--primary {
+.work_title--primary {
   grid-area: title;
 }
 
-.subwork_title--secondary {
+.work_title--secondary {
   grid-area: type;
 }
 
-.subwork_text {
+.work_text {
   grid-area: text;
 }
 
-.subwork_links {
+.work_links {
   grid-area: icons;
 }
 
-.subWork_container_image {
+.work_container_image {
   grid-area: pic;
   display: flex;
   justify-content: space-around;
 }
 
-.subWork_container_image > img {
+.work_container_image > img {
   max-height: 200px;
   max-width: 200px;
   margin: 5px;
@@ -244,7 +314,7 @@ nav {
 
 /* about */
 
-.subAbout {
+.about {
   background: var(--accent);
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
@@ -270,7 +340,7 @@ nav {
 
 /* contact */
 
-.subContact {
+.contact {
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
   border-radius: 10px;
   background: var(--accent);
@@ -280,7 +350,7 @@ nav {
   width: 100%;
 }
 
-.subContact_text {
+.contact_text {
   margin: 20px auto;
 }
 
@@ -317,7 +387,7 @@ nav {
   background: none;
   color: var(--dark-text);
   padding: 10px;
-  font-size: 16px;
+  font-size: 1em;
   border: solid 2px transparent;
   margin: 3px;
 }
@@ -329,18 +399,22 @@ button:hover, button:focus, button:active {
   cursor: pointer;
 }
 
-.header_button:hover, .header_button:focus {
+.landing_button:hover, .landing_button:focus, .speaking_CTA:hover, .speaking_CTA:focus, .speaking_CTA:active {
   background-color: #292929;
   color: #F9F8F8;
 }
 
-.header_button:hover .button_arrow, .header_button:focus .button_arrow {
+.landing_button:hover .button_arrow, .landing_button:focus .button_arrow, .speaking_CTA:hover .button_arrow, .speaking_CTA:focus .button_arrow {
   stroke: #F9F8F8;
   animation-name: spin;
   animation-duration: .5s;
   animation-fill-mode: forwards;
   transition-delay: 0ms;
   transition: all 200ms ease-in;
+}
+
+.speaking_CTA:hover .button_arrow, .speaking_CTA:focus .button_arrow {
+  animation-name: spin-speaking;
 }
 
 .nav_button:hover, .nav_button:focus, .nav_button:active {
@@ -354,20 +428,20 @@ button:hover, button:focus, button:active {
 
 /* react transition group animations */
 
-.header-enter, .navBar-enter, .mainFull-enter, .single-enter {
+.landing-enter, .navBar-enter, .mainFull-enter, .single-enter {
   opacity: 0.01;
 }
 
-.header-enter-active, .navBar-enter-active, .mainFull-enter-active, .single-enter-active {
+.landing-enter-active, .navBar-enter-active, .mainFull-enter-active, .single-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
 
-.header-exit, .navBar-exit, .mainFull-exit, .single-exit {
+.landing-exit, .navBar-exit, .mainFull-exit, .single-exit {
   opacity: 1;
 }
 
-.header-exit-active, .navBar-exit-active, .mainFull-exit-active, .single-exit-active {
+.landing-exit-active, .navBar-exit-active, .mainFull-exit-active, .single-exit-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
@@ -395,12 +469,19 @@ a {
 
 a:link, a:visited {
   color: var(--dark-text);
-  text-decoration: underline dotted;
   cursor: pointer;
 }
 
 a:hover, a:focus, a:active {
   color: var(--light-background);
+}
+
+.speaking_CTA:link, .speaking_CTA:visited {
+  text-decoration: none;
+}
+
+.speaking_CTA:hover, .speaking_CTA:focus, .speaking_CTA:active {
+  text-decoration: none;
 }
 
 /* media queries */
@@ -411,7 +492,7 @@ a:hover, a:focus, a:active {
     width: 300px;
   }
 
-  .subWork_container_image > img, .subwork_image {
+  .work_container_image > img, .work_image {
     max-width: 300px;
   }
 
@@ -428,12 +509,12 @@ a:hover, a:focus, a:active {
 
 @media screen and (min-width: 700px) {
 
-  .subWork_container_image > img, .subwork_image {
+  .work_container_image > img, .work_image {
     max-width: 200px;
     max-height: 200px;
   }
 
-  .subWork {
+  .work {
     grid-template-areas: 
     "title text"
     "type text"
@@ -443,7 +524,7 @@ a:hover, a:focus, a:active {
     grid-template-columns: .25fr 1fr;
   }
 
-  .this-subWork {
+  .work_this {
     grid-template-areas: 
     "title text"
     "type text"
@@ -467,13 +548,13 @@ a:hover, a:focus, a:active {
 }
 
 @media screen and (min-width: 800px) {
-  .subWork_container_image > img, .subwork_image {
+  .work_container_image > img, .work_image {
     max-width: 300px;
   }
 }
 
 @media screen and (min-width: 900px) {
-  .subWork_container_image > img, .subwork_image {
+  .work_container_image > img, .work_image {
     max-width: 400px;
   }
 }
