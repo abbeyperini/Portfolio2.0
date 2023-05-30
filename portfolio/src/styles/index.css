@@ -26,13 +26,13 @@
 
 html, #root {
   font-family: 'Roboto Mono', monospace;
-  background-color: var(--dark-background);
   color: var(--dark-text);
   height: 100%;
 }
 
 body {
   height: 100%;
+  background-color: var(--light-background);
 }
 
 button {
