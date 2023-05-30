@@ -1,3 +1,6 @@
 [build]
   Command = "CI= npm run build"
   Publish = "build"
+
+[[redirects]]
+  /* /index.html 200
