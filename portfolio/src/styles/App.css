@@ -154,7 +154,7 @@ nav {
 .blog-content {
   width: 100%;
   margin: 0;
-  padding: 2%;
+  padding: 7%;
 }
 
 /* speaking */
@@ -168,7 +168,7 @@ nav {
 }
 
 .talks {
-  padding-top: .25%;
+  padding: 7%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -176,6 +176,7 @@ nav {
 
 .talk-list {
   list-style-type: none;
+  padding: 5px;
 }
 
 .talk-list li {
@@ -186,7 +187,7 @@ nav {
   display: block;
   width: 230px;
   border: solid 3px #292929;
-  margin: 2%;
+  margin: 5%;
   padding: 10px 10px;
   color: #292929;
   background: rgba(255, 255, 255, 0.1);
@@ -499,6 +500,14 @@ a:hover, a:focus, a:active {
   .contact-form {
     min-width: 300px;
   }
+
+  .blog-content, .talks {
+    padding: 5%;
+  }
+
+  .speaking_CTA {
+    margin: 5%;
+  }
 }
 
 @media screen and (min-width: 550px) {
@@ -544,6 +553,14 @@ a:hover, a:focus, a:active {
 
   .message, .contact_name, .contact_email {
     flex-direction: row;
+  }
+
+  .blog-content, .talks {
+    padding: 3%;
+  }
+  
+  .speaking_CTA {
+    margin: 3%;
   }
 }
 
