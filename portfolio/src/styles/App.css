@@ -113,7 +113,6 @@ nav {
   ". about ."
   ". contact .";
   padding-bottom: 2%;
-  height: 100%;
 }
 
 .error-container {
@@ -125,7 +124,6 @@ nav {
   "nav nav nav"
   ". error .";
   padding-bottom: 2%;
-  height: 100%;
 }
 
 .container_about {
