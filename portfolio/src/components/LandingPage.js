@@ -2,12 +2,9 @@ import React from 'react';
 import '../styles/App.css';
 import '../styles/landingBackground.css';
 import { ReactComponent as Arrow } from '../images/arrow.svg';
+import { Link } from "react-router-dom";
 
 function LandingPage(props) {
-    const handleOnClick = () => {
-        props.hideLanding()
-    }
-
     return (
         <header>
             <div className="bg"></div>
@@ -16,7 +13,7 @@ function LandingPage(props) {
             <div className="landing_text">
                 <h1 className="landing_name">Abbey Perini</h1>
                 <h2 className="landing_title">Full Stack Web Developer</h2>
-                <button className="landing_button" onClick={handleOnClick}>View my work <Arrow className="button_arrow" focusable="false"/></button>
+                <Link className="landing_button" to="/home">View my work <Arrow className="button_arrow" focusable="false"/></Link>
             </div>
       </header>
     )

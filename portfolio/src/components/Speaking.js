@@ -1,9 +1,11 @@
 import React from 'react';
+import SingleWrapper from "./SingleWrapper";
 import { ReactComponent as ExternalLink } from '../images/external-link.svg';
 import { ReactComponent as Arrow } from '../images/arrow.svg';
 
-function Speaking() {
+function Speaking({home}) {
     return (
+      <SingleWrapper home={home}>
         <section aria-label="Speaking" className="container_speaking" name="Speaking">
             <h2 className="section_title">Speaking</h2>
             <div className="talks secondary-container">
@@ -21,9 +23,10 @@ function Speaking() {
               <li><a href="https://virtualcoffee.io/podcast/0302-abbey-perini" target="_blank" rel="noreferrer">Finding Confidence and Opportunities</a><ExternalLink className="external-link" id="ConfidenceTalkLink" focusable="false"/></li>
               <li><a href="https://www.youtube.com/watch?v=NVaZu8--4p0&list=PLh9uT23TA65idCyc_orC85RefgY_-fKsG&index=18&ab_channel=VirtualCoffee" target="_blank" rel="noreferrer">Promoting Yourself to Potential Employers</a><ExternalLink className="external-link" id="PromotingTalkLink" focusable="false"/></li>
             </ul>
-            <a href="#Contact" className="speaking_CTA">Invite Me to Speak <Arrow className="button_arrow" focusable="false"/></a>
+            <a href="/contact" className="speaking_CTA">Invite Me to Speak <Arrow className="button_arrow" focusable="false"/></a>
             </div>
         </section>
+    </SingleWrapper>
     )
 }
 

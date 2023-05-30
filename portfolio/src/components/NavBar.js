@@ -1,25 +1,19 @@
 import React from 'react';
 import Toggle from './Toggle';
+import { Link } from "react-router-dom";
+
 
 function NavBar(props) {
-    const handleOnClick = () => {
-        props.hideLanding();
-    }
-
-    const chooseComponent = (component) => {
-        props.chooseComponent(component);
-    }
-
     return (
-        <nav>
-            <button className="nav_button" onClick={handleOnClick}>Home</button>
-            <button className="nav_button" onClick={() => chooseComponent("blog")} >Blog</button>
-            <button className="nav_button" onClick={() => chooseComponent("speaking")} >Speaking</button>
-            <button className="nav_button" onClick={() => chooseComponent("work")} >Portfolio</button>
-            <button className="nav_button" onClick={() => chooseComponent("about")}>About</button>
-            <button className="nav_button" onClick={() => chooseComponent("contact")}>Contact</button>
-            <Toggle setClassName={props.setClassName} />
-        </nav>
+      <nav>
+        <Link to="/home" className="nav_button">Home</Link>
+        <Link to="/blog" className="nav_button" >Blog</Link>
+        <Link to="/speaking" className="nav_button" >Speaking</Link>
+        <Link to="/portfolio" className="nav_button" >Portfolio</Link>
+        <Link to="/about" className="nav_button">About</Link>
+        <Link to="/contact" className="nav_button">Contact</Link>
+        <Toggle setClassName={props.setClassName} />
+      </nav>
     )
 }
 

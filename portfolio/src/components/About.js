@@ -1,4 +1,5 @@
 import React from 'react';
+import SingleWrapper from "./SingleWrapper";
 import headshot from '../images/headshot.jpg';
 import { ReactComponent as JSLogo } from '../images/javascript.svg';
 import { ReactComponent as PythonLogo } from '../images/python.svg';
@@ -15,9 +16,10 @@ import { ReactComponent as AngularLogo } from '../images/angularjs.svg';
 import { ReactComponent as GCLogo } from '../images/google-cloud.svg';
 import { ReactComponent as AWSLogo } from '../images/aws-amplify.svg';
 
-function About() {
+function About({home}) {
 
     return (
+      <SingleWrapper home={home}>
         <section aria-labelledby="about" className="container_about flex-container">
             <h2 id="about" className="section_title">About Abbey</h2>
             <div className="about">
@@ -46,6 +48,7 @@ function About() {
                 </div>
             </div>
         </section>
+      </SingleWrapper>
     )
 }
 

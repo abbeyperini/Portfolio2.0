@@ -1,20 +1,27 @@
-import React from 'react';
+import '../styles/errorAndLoading.css';
+import React, { useState, useEffect } from 'react';
 import {ReactComponent as ConfusedShiba} from '../images/confused-shiba-inu.svg'
+import { keepTheme } from '../utils/themes';
+import NavBar from './NavBar';
 
-function Error(props) {
+function Error() {
 
-  const chooseComponent = (component) => {
-    props.chooseComponent(component);
-  }
+  const [className, setClassName] = useState("theme-dark");
+
+  useEffect(() => {
+    keepTheme(setClassName)
+  }, [setClassName])
 
   return (
-    <section className="container_blog">
-      <h2 aria-label="button to open full blog page" ><button className="blog-section_title" onClick={() => chooseComponent("FullBlog")}>Blog</button></h2>
-      <div className="container_error">
-        <ConfusedShiba className="error-graphic"/>
-        <p>There was an error! Try again later.</p>
+    <div className={`App ${className}`}>
+      <div className="error-container">
+      <NavBar setClassName={setClassName}/>
+        <div className="container_shiba">
+          <ConfusedShiba className="error-graphic"/>
+          <p>Page Not Found</p>
+        </div>
       </div>
-    </section>
+    </div>
   )
 }
 

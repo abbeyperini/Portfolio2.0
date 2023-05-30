@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import SingleWrapper from "./SingleWrapper";
 import { ReactComponent as ExternalLink } from '../images/external-link.svg';
 
-function Contact() {
+function Contact({home}) {
     const [message, setMessage] = useState({});
 
     const encode = (data) => {
@@ -30,6 +31,7 @@ function Contact() {
     }
 
     return (
+      <SingleWrapper home={home}>
         <section aria-label="Contact links and form" className="flex-container container_contact">
             <h2 className="section_title" id="Contact">Contact</h2>
             <div className="contact">
@@ -56,6 +58,7 @@ function Contact() {
                 </form>
             </div>
         </section>
+      </SingleWrapper>
     )
 }
 

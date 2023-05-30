@@ -1,20 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {ReactComponent as ConstructionShiba} from '../images/construction-shiba-inu.svg'
+import { keepTheme } from '../utils/themes';
+import NavBar from './NavBar';
 
 function Loading(props) {
   
-  const chooseComponent = (component) => {
-    props.chooseComponent(component);
-  }
+  const [className, setClassName] = useState("theme-dark");
+
+  useEffect(() => {
+    keepTheme(setClassName)
+  }, [setClassName])
 
   return (
-    <section className="container_blog">
-      <h2 aria-label="button to open full blog page" ><button className="blog-section_title" onClick={() => chooseComponent("FullBlog")}>Blog</button></h2>
-      <div className="container_error">
-        <ConstructionShiba className="loading-graphic"/>
-        <p>Blogs loading!</p>
+    <div className={`App ${className}`}>
+      <div className="loading-container">
+        <NavBar setClassName={setClassName}/>
+        <div className="container_shiba">
+          <ConstructionShiba className="loading-graphic"/>
+          <p>Blogs loading!</p>
+        </div>
       </div>
-    </section>
+    </div>
   )
 }
 

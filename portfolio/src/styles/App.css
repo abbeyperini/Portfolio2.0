@@ -41,15 +41,15 @@ p, h2, h3 {
 }
 
 .landing_button {
-  grid-area: button;
-  width: 150px;
+  width: 180px;
   border: solid 3px #292929;
   margin: auto;
   padding: 15px 10px;
   color: #292929;
   background: rgba(255, 255, 255, 0.1);
   display: flex;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .button_arrow {
@@ -69,7 +69,6 @@ nav {
   background-color: var(--dark-background);
   padding: 20px;
   outline: none;
-  grid-area: landing;
 }
 
 .nav_button {
@@ -107,12 +106,23 @@ nav {
   grid-template-columns: .05fr 1fr .05fr;
   grid-template-rows: .25fr auto;
   grid-template-areas:
-  "landing landing landing"
+  "nav nav nav"
   ". blog ."
   ". speaking ."
   ". work ."
   ". about ."
   ". contact .";
+  padding-bottom: 2%;
+}
+
+.error-container {
+  background-color: var(--light-background);
+  display: grid;
+  grid-template-columns: .05fr 1fr .05fr;
+  grid-template-rows: .25fr auto;
+  grid-template-areas:
+  "nav nav nav"
+  ". error .";
   padding-bottom: 2%;
 }
 
@@ -397,7 +407,6 @@ nav {
 
 button:hover, button:focus, button:active {
   outline: none;
-  cursor: pointer;
 }
 
 .landing_button:hover, .landing_button:focus, .speaking_CTA:hover, .speaking_CTA:focus, .speaking_CTA:active {
@@ -412,19 +421,6 @@ button:hover, button:focus, button:active {
   animation-fill-mode: forwards;
   transition-delay: 0ms;
   transition: all 200ms ease-in;
-}
-
-.speaking_CTA:hover .button_arrow, .speaking_CTA:focus .button_arrow {
-  animation-name: spin-speaking;
-}
-
-.nav_button:hover, .nav_button:focus, .nav_button:active {
-  border: solid 2px var(--button-border);
-}
-
-.contact_button:hover, .contact_button:focus, .contact_button:active {
-  cursor: pointer;
-  border: solid 2px var(--dark-text);
 }
 
 /* react transition group animations */
@@ -463,25 +459,34 @@ button:hover, button:focus, button:active {
   position: relative;
 }
 
-a {
+a:not(.nav_button, .speaking_CTA, .landing_button) {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
 
-a:link, a:visited {
+a:link:not(.nav_button, .speaking_CTA, .landing_button), a:visited:not(.nav_button, .speaking_CTA, .landing_button) {
   color: var(--dark-text);
-  cursor: pointer;
 }
 
 a:hover, a:focus, a:active {
   color: var(--light-background);
 }
 
-.speaking_CTA:link, .speaking_CTA:visited {
-  text-decoration: none;
+.speaking_CTA:hover .button_arrow, .speaking_CTA:focus .button_arrow {
+  animation-name: spin-speaking;
 }
 
-.speaking_CTA:hover, .speaking_CTA:focus, .speaking_CTA:active {
+.nav_button:hover, .nav_button:focus, .nav_button:active {
+  color: var(--light-text);
+  border: solid 2px var(--button-border);
+}
+
+.contact_button:hover, .contact_button:focus, .contact_button:active {
+  cursor: pointer;
+  border: solid 2px var(--dark-text);
+}
+
+.speaking_CTA, .nav_button, .landing_button {
   text-decoration: none;
 }
 
