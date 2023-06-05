@@ -10,7 +10,7 @@ import About from './components/About';
 import Contact from "./components/Contact";
 import reportWebVitals from './reportWebVitals';
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, ScrollRestoration } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -47,10 +47,7 @@ const router = createBrowserRouter([
 
 const container = document.getElementById('root');
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
-root.render(<RouterProvider router={router} >
-  <ScrollRestoration />
-</RouterProvider>
-);
+root.render(<RouterProvider router={router} />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
