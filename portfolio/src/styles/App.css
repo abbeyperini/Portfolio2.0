@@ -159,6 +159,7 @@ nav {
 
 .container_blog {
   grid-area: blog;
+  height: 100%;
 }
 
 .blog-content {
