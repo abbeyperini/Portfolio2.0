@@ -27,11 +27,11 @@
 html, #root {
   font-family: 'Roboto Mono', monospace;
   color: var(--dark-text);
-  height: 100%;
+  height: 100vh;
 }
 
 body {
-  height: 100%;
+  height: 100vh;
   background-color: var(--light-background);
 }
 
