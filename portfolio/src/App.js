@@ -7,10 +7,12 @@ import Work from './components/Work';
 import About from './components/About';
 import Contact from './components/Contact';
 import { keepTheme } from './utils/themes';
+import { useScrollToTop } from './utils/scrollToTop';
 
 function App() {
   const [className, setClassName] = useState("theme-dark");
 
+  useScrollToTop();
   useEffect(() => {
     keepTheme(setClassName)
   }, [setClassName])
