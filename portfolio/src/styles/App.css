@@ -8,6 +8,10 @@ p, h2, h3 {
   margin: 10px;
 }
 
+li {
+  list-style-type: none;
+}
+
 /* landing page */
 
 .landing {
@@ -185,7 +189,6 @@ nav {
 }
 
 .talk-list {
-  list-style-type: none;
   padding: 5px;
 }
 
@@ -362,7 +365,24 @@ nav {
 }
 
 .contact_text {
-  margin: 20px auto;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+.contact_list li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contact-logo {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+.linked-in {
+  width: 35px;
 }
 
 .contact-form {

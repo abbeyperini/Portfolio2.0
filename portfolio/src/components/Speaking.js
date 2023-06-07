@@ -11,7 +11,7 @@ function Speaking({home}) {
             <div className="talks secondary-container">
             <h3>Upcoming</h3>
             <ul className="talk-list">
-              <li><a href="https://dropjs.com/" target="_blank" rel="noreferrer">JSDrops</a><ExternalLink className="external-link" id="HTMLLink" focusable="false"/></li>
+              <li><a href="https://dropjs.com/" target="_blank" rel="noreferrer">JSDrops</a><ExternalLink className="external-link" id="HTMLLink" focusable="false"/> July 2023</li>
               <li><a href="https://women-in-tech.thisdotmedia.com/" target="_blank" rel="noreferrer">Women in Tech Monthly Mentoring</a><ExternalLink className="external-link" id="HTMLLink" focusable="false"/> July 2023</li>
               <li><a href="https://www.magnoliajs.com/" target="_blank" rel="noreferrer">MagnoliaJS</a><ExternalLink className="external-link" id="HTMLLink" focusable="false"/> October 2023</li>
             </ul>
