@@ -1,5 +1,4 @@
 import React from 'react';
-import { ReactComponent as Chrome } from '../../images/chrome.svg';
 import { ReactComponent as Github } from '../../images/github.svg';
 import Bujogif from '../../images/BujoToGo.gif';
 
@@ -17,7 +16,6 @@ function BujoToGo() {
                 or calendar style. Bullets are stored with date time strings and returned in chronological order based on the time range of the view.</p>
             <span className="work_links">
                 <a className="link-new-tab" href="https://github.com/abbeyperini/BujoToGo" target="_blank" rel="noreferrer"><Github id="BujoToGoGithub" aria-label="open BujoToGo Github repository in a new tab" focusable="true" className="work_icon"/></a>
-                <a className="link-new-tab" href="http://bujo-to-go.surge.sh/#/index" target="_blank" rel="noreferrer"><Chrome id="BujoToGoChrome" aria-label="open BujoToGo website in a new tab" focusable="true" className="work_icon"/></a>
             </span>
         </div>
     )
