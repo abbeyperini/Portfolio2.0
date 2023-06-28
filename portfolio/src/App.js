@@ -20,6 +20,7 @@ function App() {
   return (
     <div className={`App ${className}`}>
       <div className="main-container">
+        <h1 className="offscreen">Abbey Perini's Portfolio</h1>
         <NavBar setClassName={setClassName}/>
         <Blog home={true} />
         <Speaking home={true} />

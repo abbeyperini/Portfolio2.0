@@ -6,14 +6,15 @@ import { ReactComponent as Arrow } from '../images/arrow.svg';
 function Speaking({home}) {
     return (
       <SingleWrapper home={home}>
+        {!home && <h1 className="offscreen">Abbey Perini's Portfolio | Speaking</h1>}
         <section aria-label="Speaking" className="container_speaking" name="Speaking">
             <h2 className="section_title">Speaking</h2>
             <div className="talks secondary-container">
             <h3>Upcoming</h3>
             <ul className="talk-list">
-              <li><a href="https://dropjs.com/" target="_blank" rel="noreferrer">JSDrops</a><ExternalLink className="external-link" id="HTMLLink" focusable="false"/> July 2023</li>
-              <li><a href="https://women-in-tech.thisdotmedia.com/" target="_blank" rel="noreferrer">Women in Tech Monthly Mentoring</a><ExternalLink className="external-link" id="HTMLLink" focusable="false"/> July 2023</li>
-              <li><a href="https://www.magnoliajs.com/" target="_blank" rel="noreferrer">MagnoliaJS</a><ExternalLink className="external-link" id="HTMLLink" focusable="false"/> October 2023</li>
+              <li><a href="https://dropjs.com/" target="_blank" rel="noreferrer">JSDrops</a><ExternalLink className="external-link" id="JSDropsLink" focusable="false"/> July 2023</li>
+              <li><a href="https://women-in-tech.thisdotmedia.com/" target="_blank" rel="noreferrer">Women in Tech Monthly Mentoring</a><ExternalLink className="external-link" id="WITLink" focusable="false"/> July 2023</li>
+              <li><a href="https://www.magnoliajs.com/" target="_blank" rel="noreferrer">MagnoliaJS</a><ExternalLink className="external-link" id="MagnoliaLink" focusable="false"/> October 2023</li>
             </ul>
             <h3>Past</h3>
             <ul className="talk-list">

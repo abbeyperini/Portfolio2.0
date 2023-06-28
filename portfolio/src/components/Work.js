@@ -9,6 +9,7 @@ import ThisSite from './work/ThisSite';
 function Work({home}) {
     return (
       <SingleWrapper home={home}>
+        {!home && <h1 className="offscreen">Abbey Perini's Portfolio | Work</h1>}
         <section aria-label="Portfolio project descriptions" className="container_work" name="work">
             <h2 className="section_title">Portfolio</h2>
             <ThisSite />

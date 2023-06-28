@@ -12,6 +12,15 @@ li {
   list-style-type: none;
 }
 
+.offscreen {
+  position: relative;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  margin-top: -1px;
+}
+
 /* landing page */
 
 .landing {

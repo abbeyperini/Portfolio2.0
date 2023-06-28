@@ -36,6 +36,7 @@ function Contact({home}) {
 
     return (
       <SingleWrapper home={home}>
+        {!home && <h1 className="offscreen">Abbey Perini's Contact Info</h1>}
         <section aria-label="Contact links and form" className="flex-container container_contact">
             <h2 className="section_title" id="Contact">Contact</h2>
             <div className="contact">
