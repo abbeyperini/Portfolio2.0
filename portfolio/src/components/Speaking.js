@@ -12,12 +12,12 @@ function Speaking({home}) {
             <div className="talks secondary-container">
             <h3>Upcoming</h3>
             <ul className="talk-list">
-              <li><a href="https://dropjs.com/" target="_blank" rel="noreferrer">JSDrops</a><ExternalLink className="external-link" id="JSDropsLink" focusable="false"/> July 2023</li>
               <li><a href="https://women-in-tech.thisdotmedia.com/" target="_blank" rel="noreferrer">Women in Tech Monthly Mentoring</a><ExternalLink className="external-link" id="WITLink" focusable="false"/> July 2023</li>
               <li><a href="https://www.magnoliajs.com/" target="_blank" rel="noreferrer">MagnoliaJS</a><ExternalLink className="external-link" id="MagnoliaLink" focusable="false"/> October 2023</li>
             </ul>
             <h3>Past</h3>
             <ul className="talk-list">
+              <li><a href="https://dropjs.com/from-idea-to-design-for-non-designers-with-abbey-perini" target="_blank" rel="noreferrer">From Idea to Design for Non-Designers on JSDrops</a><ExternalLink className="external-link" id="JSDropsLink" focusable="false"/></li>
               <li><a href="https://cfe.dev/sessions/fefd2022-semantic-html/" target="_blank" rel="noreferrer">Front-end Foxes Day - Semantic HTML: What, Why, and How</a><ExternalLink className="external-link" id="HTMLLink" focusable="false"/></li>
               <li><a href="https://www.youtube.com/watch?v=qYPq9Fd-SE4&list=PLh9uT23TA65gwNgoeeZ21XWlxLOwxs3Ls&index=8&ab_channel=VirtualCoffee" target="_blank" rel="noreferrer">Lightning Talk - Semantic HTML: What, Why, and How</a><ExternalLink className="external-link" id="LightningHTMLLink" focusable="false"/></li>
               <li><a href="https://www.youtube.com/watch?v=XwPVZNvP_IM&list=PLh9uT23TA65idCyc_orC85RefgY_-fKsG&index=6&ab_channel=VirtualCoffee" target="_blank" rel="noreferrer">Optimize Your Resume For Both A Hiring Manager And An ATS</a><ExternalLink className="external-link" id="OptimizeLink" focusable="false"/></li>
