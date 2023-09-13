@@ -12,6 +12,7 @@ function NavBar(props) {
         <Link to="/portfolio" className="nav_button" >Portfolio</Link>
         <Link to="/about" className="nav_button">About</Link>
         <Link to="/contact" className="nav_button">Contact</Link>
+        <Link to="https://abbey-perinis-stickers.printify.me/products" className="nav_button">Stickers</Link>
         <Toggle setClassName={props.setClassName} />
       </nav>
     )
