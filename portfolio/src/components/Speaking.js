@@ -10,13 +10,8 @@ function Speaking({home}) {
         <section aria-label="Speaking" className="container_speaking" name="Speaking">
             <h2 className="section_title">Speaking</h2>
             <div className="talks secondary-container">
-            <h3>Upcoming</h3>
             <ul className="talk-list">
-              <li><a href="https://women-in-tech.thisdotmedia.com/" target="_blank" rel="noreferrer">Women in Tech Monthly Mentoring</a><ExternalLink className="external-link" id="WITLink" focusable="false"/> July 2023</li>
-              <li><a href="https://www.magnoliajs.com/" target="_blank" rel="noreferrer">MagnoliaJS</a><ExternalLink className="external-link" id="MagnoliaLink" focusable="false"/> October 2023</li>
-            </ul>
-            <h3>Past</h3>
-            <ul className="talk-list">
+              <li><a href="https://youtu.be/mr6rWFgh_1E?t=20463" target="_blank" rel="noreferrer">MagnoliaJS 2023 Day 2</a><ExternalLink className="external-link" id="MagnoliaLink" focusable="false"/></li>
               <li><a href="https://dropjs.com/from-idea-to-design-for-non-designers-with-abbey-perini" target="_blank" rel="noreferrer">From Idea to Design for Non-Designers on JSDrops</a><ExternalLink className="external-link" id="JSDropsLink" focusable="false"/></li>
               <li><a href="https://cfe.dev/sessions/fefd2022-semantic-html/" target="_blank" rel="noreferrer">Front-end Foxes Day - Semantic HTML: What, Why, and How</a><ExternalLink className="external-link" id="HTMLLink" focusable="false"/></li>
               <li><a href="https://www.youtube.com/watch?v=qYPq9Fd-SE4&list=PLh9uT23TA65gwNgoeeZ21XWlxLOwxs3Ls&index=8&ab_channel=VirtualCoffee" target="_blank" rel="noreferrer">Lightning Talk - Semantic HTML: What, Why, and How</a><ExternalLink className="external-link" id="LightningHTMLLink" focusable="false"/></li>

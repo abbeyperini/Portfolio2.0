@@ -234,6 +234,7 @@ nav {
   place-items: center;
   grid-template-areas: 
   "sectionTitle"
+  "digitalGarden"
   "thisSite"
   "gachasphere"
   "bujo"
@@ -244,6 +245,10 @@ nav {
   padding-bottom: 10px;
   border-radius: 10px;
   grid-area: work;
+}
+
+#digitalGarden {
+  grid-area: digitalGarden;
 }
 
 #this {
