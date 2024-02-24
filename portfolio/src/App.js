@@ -1,7 +1,7 @@
 import './styles/App.css';
 import React, { useEffect, useState } from 'react';
 import NavBar from './components/NavBar';
-import Blog from './components/Blog';
+import Content from './components/Content';
 import Speaking from './components/Speaking';
 import Work from './components/Work';
 import About from './components/About';
@@ -22,7 +22,7 @@ function App() {
       <div className="main-container">
         <h1 className="offscreen">Abbey Perini's Portfolio</h1>
         <NavBar setClassName={setClassName}/>
-        <Blog home={true} />
+        <Content home={true} />
         <Speaking home={true} />
         <Work home={true} />
         <About home={true} />

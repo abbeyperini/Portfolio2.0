@@ -168,16 +168,21 @@ nav {
   border-radius: 10px;
 }
 
-/* blog */
+/* content */
 
-.container_blog {
+.container_content {
   grid-area: blog;
 }
 
-.blog-content {
+.content-content {
   width: 100%;
   margin: 0;
-  padding: 7%;
+  padding: 4%;
+}
+
+.content-graphic {
+    padding: 0px 20px 0px 80px;
+    max-width: 300px;
 }
 
 /* speaking */

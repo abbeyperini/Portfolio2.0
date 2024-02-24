@@ -3,7 +3,7 @@ import './styles/index.css';
 import LandingPage from "./components/LandingPage";
 import Error from "./components/Error";
 import App from './App';
-import Blog from './components/Blog';
+import Content from './components/Content';
 import Speaking from './components/Speaking';
 import Portfolio from './components/Work';
 import About from './components/About';
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
     element: <App />
   },
   {
-    path: "/blog",
-    element: <Blog />
+    path: "/content",
+    element: <Content />
   },
   {
     path: "/speaking",
