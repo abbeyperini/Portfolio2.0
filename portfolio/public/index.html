@@ -6,11 +6,32 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <title>Abbey Perini's Portfolio</title>
     <meta
       name="description"
-      content="Abbey Perini's portfolio and blog"
+      content="Abbey Perini's Full-stack Web Development Portfolio"
     />
-    <meta name="keywords" content="Abbey, Perini, Abbey Perini, portfolio, web developer, full stack web developer" />
+    <meta property="og:title" content="Abbey Perini's Portfolio" />
+    <meta property="og:url" content="https://abbeyperini.dev/" />
+    <meta property="og:type" content="portfolio" />
+    <meta property="og:description" content="Abbey Perini's full-stack web development portfolio" />
+    <meta property="og:image" content="./open-graph-preview.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary"></meta>
+    <meta name="twitter:site" content="@AbbeyPerini" />
+    <script type="application/ld+json">
+      {
+        "@context" : "https://abbeyperini.dev",
+        "@type" : "Portfolio",
+        "headline" : "Abbey Perini's Full-stack Web Development Portfolio",
+        "author" : {
+          "@type" : "Person",
+          "name" : "Abbey Perini"
+        },
+        "image" : "./open-graph-preview.png"
+      }
+    </script>
+    
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -33,7 +54,6 @@
         window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
         cronitor('config', { clientKey: '563337860df437c3a43baa52ce88a1e1' });
     </script>
-    <title>Abbey Perini</title>
   </head>
   <body>
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
