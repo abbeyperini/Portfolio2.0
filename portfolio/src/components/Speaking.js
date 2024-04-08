@@ -13,6 +13,7 @@ function Speaking({home}) {
               <h3>Upcoming</h3>
               <ul className="talk-list">
                 <li><a href="https://stirtrek.com/speakers/2024/Abbey-Perini.html" target="_blank" rel="noreferrer">StirTrek May 3, 2024</a><ExternalLink className="external-link" id="StirTrekLink" focusable="false"/></li>
+                <li><a href="https://thatconference.com/activities/Kol7lX7IoKykdx4xv6jR" target="_blank" rel="noreferrer">THAT WI July 31, 2024</a><ExternalLink className="external-link" id="StirTrekLink" focusable="false"/></li>
               </ul>
               <h3>Past</h3>
               <ul className="talk-list">
