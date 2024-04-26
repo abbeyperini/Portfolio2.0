@@ -10,12 +10,14 @@ function Speaking({home}) {
         <section aria-label="Speaking" className="container_speaking" name="Speaking">
             <h2 className="section_title">Speaking</h2>
             <div className="talks secondary-container">
-              <h3>Upcoming</h3>
+              <h3>Upcoming Talks</h3>
               <ul className="talk-list">
                 <li><a href="https://stirtrek.com/speakers/2024/Abbey-Perini.html" target="_blank" rel="noreferrer">StirTrek May 3, 2024</a><ExternalLink className="external-link" id="StirTrekLink" focusable="false"/></li>
+                <li><a href="https://www.meetup.com/gundotio/events/300660906" target="_blank" rel="noreferrer">Gun.io meetup May 30, 2024</a><ExternalLink className="external-link" id="GunMeetupLink" focusable="false"/></li>
                 <li><a href="https://thatconference.com/activities/Kol7lX7IoKykdx4xv6jR" target="_blank" rel="noreferrer">THAT WI July 31, 2024</a><ExternalLink className="external-link" id="StirTrekLink" focusable="false"/></li>
+                <li><a href="https://javascript-conference.com/general-web-development/beginners-guide-http/" target="_blank" rel="noreferrer">iJS October 8, 2024</a><ExternalLink className="external-link" id="iJsLink" focusable="false"/></li>
               </ul>
-              <h3>Past</h3>
+              <h3>Recordings of Past Talks</h3>
               <ul className="talk-list">
                 <li><a href="https://youtu.be/mr6rWFgh_1E?t=20463" target="_blank" rel="noreferrer">MagnoliaJS 2023 Day 2</a><ExternalLink className="external-link" id="MagnoliaLink" focusable="false"/></li>
                 <li><a href="https://dropjs.com/from-idea-to-design-for-non-designers-with-abbey-perini" target="_blank" rel="noreferrer">From Idea to Design for Non-Designers on JSDrops</a><ExternalLink className="external-link" id="JSDropsLink" focusable="false"/></li>
