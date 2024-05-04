@@ -12,8 +12,8 @@ function Speaking({home}) {
             <div className="talks secondary-container">
               <h3>Upcoming Talks</h3>
               <ul className="talk-list">
-                <li><a href="https://stirtrek.com/speakers/2024/Abbey-Perini.html" target="_blank" rel="noreferrer">StirTrek May 3, 2024</a><ExternalLink className="external-link" id="StirTrekLink" focusable="false"/></li>
-                <li><a href="https://www.meetup.com/gundotio/events/300660906" target="_blank" rel="noreferrer">Gun.io meetup May 30, 2024</a><ExternalLink className="external-link" id="GunMeetupLink" focusable="false"/></li>
+                <li><a href="https://www.meetup.com/gundotio/events/300660906" target="_blank" rel="noreferrer">Gun.io Meetup May 30, 2024</a><ExternalLink className="external-link" id="GunMeetupLink" focusable="false"/></li>
+                <li><a href="https://portal.gitnation.org/person/abbey_perini" traget="_blank" rel="noreferrer">TechLead Conference June 14, 2024<ExternalLink className="external-link" id="GunMeetupLink" focusable="false"/></a></li>
                 <li><a href="https://thatconference.com/activities/Kol7lX7IoKykdx4xv6jR" target="_blank" rel="noreferrer">THAT WI July 31, 2024</a><ExternalLink className="external-link" id="StirTrekLink" focusable="false"/></li>
                 <li><a href="https://javascript-conference.com/general-web-development/beginners-guide-http/" target="_blank" rel="noreferrer">iJS October 8, 2024</a><ExternalLink className="external-link" id="iJsLink" focusable="false"/></li>
               </ul>
