@@ -12,10 +12,11 @@ function Speaking({home}) {
             <div className="talks secondary-container">
               <h3>Upcoming Talks</h3>
               <ul className="talk-list">
-                <li><a href="https://www.meetup.com/gundotio/events/300660906" target="_blank" rel="noreferrer">Gun.io Meetup May 30, 2024</a><ExternalLink className="external-link" id="GunMeetupLink" focusable="false"/></li>
-                <li><a href="https://portal.gitnation.org/person/abbey_perini" traget="_blank" rel="noreferrer">TechLead Conference June 14, 2024<ExternalLink className="external-link" id="GunMeetupLink" focusable="false"/></a></li>
-                <li><a href="https://thatconference.com/activities/Kol7lX7IoKykdx4xv6jR" target="_blank" rel="noreferrer">THAT WI July 31, 2024</a><ExternalLink className="external-link" id="StirTrekLink" focusable="false"/></li>
+                <li><a href="https://cfe.dev/events/git-merging-and-rebasing/" target="_blank" rel="noreferrer">CFE.dev June 11, 2024</a><ExternalLink className="external-link" id="CFELink" focusable="false"/></li>
+                <li><a href="https://portal.gitnation.org/person/abbey_perini" target="_blank" rel="noreferrer">TechLead Conference June 15, 2024<ExternalLink className="external-link" id="TechLeadLink" focusable="false"/></a></li>
+                <li><a href="https://thatconference.com/activities/Kol7lX7IoKykdx4xv6jR" target="_blank" rel="noreferrer">THAT WI July 31, 2024</a><ExternalLink className="external-link" id="THATLink" focusable="false"/></li>
                 <li><a href="https://javascript-conference.com/general-web-development/beginners-guide-http/" target="_blank" rel="noreferrer">iJS October 8, 2024</a><ExternalLink className="external-link" id="iJsLink" focusable="false"/></li>
+                <li><a href="https://2024.allthingsopen.org/speakers/abbey-perini" target="_blank" rel="noreferrer">All Things Open October 2024</a><ExternalLink className="external-link" id="ATOLink" focusable="false"/></li>
               </ul>
               <h3>Recordings of Past Talks</h3>
               <ul className="talk-list">
