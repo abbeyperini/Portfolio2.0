@@ -8,6 +8,11 @@ p, h2, h3 {
   margin: 10px;
 }
 
+h3 {
+  font-size: 1.5em;
+  color: var(--dark-text);
+}
+
 li {
   list-style-type: none;
 }
@@ -207,7 +212,12 @@ nav {
 }
 
 .talk-list li {
-  padding: 3px;
+  padding: 5px;
+}
+
+.talk-list li p {
+  padding: 0;
+  margin: 5px;
 }
 
 .speaking_CTA {
@@ -223,6 +233,21 @@ nav {
 .speaking_CTA .button_arrow {
   padding-left: 0;
   top: 2px;
+}
+
+.talk_link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.talk_link svg {
+  margin-bottom: 3px
+}
+
+.event_title {
+  font-size: 1.25em;
 }
 
 /* work */

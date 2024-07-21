@@ -25,12 +25,7 @@ function About({home}) {
             <h2 id="about" className="section_title">About Abbey</h2>
             <div className="about">
                 <img alt="headshot of Abbey Perini wearing a red collared shirt with white polka dots and red lipstick" src={headshot} className="about_headshot" />
-                <p className="about_text">My name is Abbey Perini, but my friends call me Abbey Normal. I've always been an out of the box thinker 
-                    and worked in multiple industries before falling in love with coding. My organization and attention to detail
-                    are outstanding, but my main strength is in spotting problems and solving them. You can see some of my more
-                    creative problem solving in my work. Outside of work, I am a person of many hobbies. I'm a certified yoga teacher. I love creating fiber arts projects 
-                    and costumes, but I also dabble in video games, embroidery, baking, cooking, and art of many kinds. I live just
-                    outside Atlanta with my husband and dog.</p>
+                <p className="about_text">Abbey Perini is many things - a metro Atlanta native, a person of many hobbies, and a full-stack web developer. Passionate about accessibility, she's worked in Vue, React, and even AngularJS (2013). She's happiest problem solving in the front-end, back-end, and all the APIs and microservices in between. She's spent her development career rectifying tech debt in existing codebases. She loves blogging and speaking about fun and useful things about programming, especially if it helps other developers.</p>
                 <div className="container_skills-icon">
                     <JSLogo className="skills-icon" focusable="false" />
                     <PythonLogo className="skills-icon" focusable="false" />
