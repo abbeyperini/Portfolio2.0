@@ -42,11 +42,10 @@ function Toggle({setClassName}) {
     }, [theme])
 
     return (
-      <div className="container--toggle">
+      <div className="container--toggle" title="dark mode toggle">
         <input role="switch" aria-checked={ariaActive} onKeyDown={handleKeypress} type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} checked={active} readOnly />
-        <label htmlFor="toggle" className="toggle--label">
+        <label htmlFor="toggle" className="toggle--label" aria-label="dark mode toggle">
           <span className="toggle--label-background"></span>
-          <p className="offscreen">dark mode toggle</p>
         </label>
       </div>
     )
