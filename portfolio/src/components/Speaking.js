@@ -11,15 +11,14 @@ function Speaking({home}) {
             <div className="talks secondary-container">
               <h3>Upcoming Talks</h3>
               <ul className="talk-list">
-                <li><a href="https://thatconference.com/activities/Kol7lX7IoKykdx4xv6jR" rel="noreferrer" className="talk_link"><p className="event_title">THAT WI</p></a><p>July 31, 2024</p></li>
                 <li><a href="https://www.meetup.com/modernwebatl/events/302355679" className="talk_link"><p className="event_title">Modern Web + ATLJS event</p></a><p>August 13, 2024</p></li>
                 <li><a href="https://www.netlify.com/compose/" rel="noreferrer" className="talk_link"><p className="event_title">Netlify Compose</p></a><p>October 3, 2024</p></li>
-                <li><a href="https://javascript-conference.com/general-web-development/beginners-guide-http/" rel="noreferrer" className="talk_link"><p className="event_title">iJS</p></a><p>October 8, 2024</p></li>
-                <li><a href="https://2024.allthingsopen.org/speakers/abbey-perini" rel="noreferrer" className="talk_link"><p className="event_title">All Things Open</p></a><p>October 27-29, 2024</p></li>
+                <li><a href="https://2024.allthingsopen.org/speakers/abbey-perini" rel="noreferrer" className="talk_link"><p className="event_title">All Things Open</p></a><p>October 29, 2024</p></li>
                 <li><a href="https://2024.connect.tech/session/682054" rel="noreferrer" className="talk_link"><p className="event_title">Connect.Tech</p></a><p>November 18-20, 2024</p></li>
               </ul>
               <h3>Recordings of Past Talks</h3>
               <ul className="talk-list">
+                <li><p className="event_title">VueConf US 2024</p><a href="https://www.vuemastery.com/conferences/vueconf-us-2024/slots-slots-slots-everybody/" rel="noreferrer" className="talk_link"><p>Slots, Slots, Slots, Everybody!</p></a></li>
                 <li><p className="event_title">TechLead Conference 2024</p><a href="https://portal.gitnation.org/contents/cognitive-load-and-your-development-environment" rel="noreferrer" className="talk_link"><p>Cognitive Load and Your Developent Environment</p></a></li>
                 <li><p className="event_title">StirTrek 2024</p><a href="https://www.youtube.com/watch?v=jghWtOIYP54&t=6s&ab_channel=StirTrek" rel="noreferrer" className="talk_link"><p>#gitPanic - Merging and Rebasing</p></a></li>
                 <li><p className="event_title">MagnoliaJS 2023</p><a href="https://youtu.be/mr6rWFgh_1E?t=20463" rel="noreferrer" className="talk_link"><p>Cognitive Load and Your Development Environment</p></a></li>
