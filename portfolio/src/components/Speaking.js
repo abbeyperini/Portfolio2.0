@@ -11,10 +11,8 @@ function Speaking({home}) {
             <div className="talks secondary-container">
               <h3>Upcoming Talks</h3>
               <ul className="talk-list">
-                <li><a href="https://www.meetup.com/modernwebatl/events/302355679" className="talk_link"><p className="event_title">Modern Web + ATLJS event</p></a><p>August 13, 2024</p></li>
                 <li><a href="https://www.netlify.com/compose/" rel="noreferrer" className="talk_link"><p className="event_title">Netlify Compose</p></a><p>October 3, 2024</p></li>
                 <li><a href="https://2024.allthingsopen.org/speakers/abbey-perini" rel="noreferrer" className="talk_link"><p className="event_title">All Things Open</p></a><p>October 29, 2024</p></li>
-                <li><a href="https://2024.connect.tech/session/682054" rel="noreferrer" className="talk_link"><p className="event_title">Connect.Tech</p></a><p>November 18-20, 2024</p></li>
               </ul>
               <h3>Recordings of Past Talks</h3>
               <ul className="talk-list">
