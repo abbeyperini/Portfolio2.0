@@ -186,8 +186,24 @@ nav {
 }
 
 .content-graphic {
-    padding: 0px 20px 0px 80px;
-    max-width: 300px;
+  padding: 0px 20px 0px 80px;
+  max-width: 300px;
+}
+
+.content_link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_link p {
+  margin-right: 0;
+  padding-top: 0;
+}
+
+.content_link a {
+  margin: 0 0 10px 0;
 }
 
 /* speaking */
@@ -634,6 +650,10 @@ a:hover, a:focus, a:active {
   
   .speaking_CTA {
     margin: 3%;
+  }
+
+  .content_link {
+    flex-direction: row;
   }
 }
 

@@ -9,15 +9,22 @@ function Speaking({home}) {
         <section aria-label="Speaking" className="container_speaking" name="Speaking">
             <h2 className="section_title">Speaking</h2>
             <div className="talks secondary-container">
+              <h3>Testimonials</h3>
+              <ul>
+                <li><p>"Should be a voice actor"</p></li>
+                <li><p>"A big deal" - Danny Thompson</p></li>
+                <li><p>"Intimidatingly good" - James Q. Quick</p></li>
+                <li><p>"A wonderful talk, and ...brilliant at the event" - Phil Hawksworth</p></li>
+              </ul>
               <h3>Upcoming Talks</h3>
               <ul className="talk-list">
-                <li><a href="https://www.netlify.com/compose/" rel="noreferrer" className="talk_link"><p className="event_title">Netlify Compose</p></a><p>October 3, 2024</p></li>
                 <li><a href="https://2024.allthingsopen.org/speakers/abbey-perini" rel="noreferrer" className="talk_link"><p className="event_title">All Things Open</p></a><p>October 29, 2024</p></li>
               </ul>
               <h3>Recordings of Past Talks</h3>
               <ul className="talk-list">
+                <li><p className="event_title">Developers of the World</p><a href="https://youtu.be/C_E4xghf-8Y?t=20525" rel="noreferrer" className="talk_link"><p>Interview with James Q. Quick at THAT 2024</p></a></li>
                 <li><p className="event_title">VueConf US 2024</p><a href="https://www.vuemastery.com/conferences/vueconf-us-2024/slots-slots-slots-everybody/" rel="noreferrer" className="talk_link"><p>Slots, Slots, Slots, Everybody!</p></a></li>
-                <li><p className="event_title">TechLead Conference 2024</p><a href="https://portal.gitnation.org/contents/cognitive-load-and-your-development-environment" rel="noreferrer" className="talk_link"><p>Cognitive Load and Your Developent Environment</p></a></li>
+                <li><p className="event_title">TechLead Conference 2024</p><a href="https://portal.gitnation.org/contents/cognitive-load-and-your-development-environment" rel="noreferrer" className="talk_link"><p>Cognitive Load and Your Development Environment</p></a></li>
                 <li><p className="event_title">StirTrek 2024</p><a href="https://www.youtube.com/watch?v=jghWtOIYP54&t=6s&ab_channel=StirTrek" rel="noreferrer" className="talk_link"><p>#gitPanic - Merging and Rebasing</p></a></li>
                 <li><p className="event_title">MagnoliaJS 2023</p><a href="https://youtu.be/mr6rWFgh_1E?t=20463" rel="noreferrer" className="talk_link"><p>Cognitive Load and Your Development Environment</p></a></li>
                 <li><p className="event_title">The Monthly dev #32</p><a href="https://www.youtube.com/watch?v=XWW1hQEnERQ&ab_channel=dailydev" rel="noreferrer" className="talk_link"><p>Getting Started in a New Codebase</p></a></li>
