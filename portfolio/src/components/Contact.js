@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SingleWrapper from "./SingleWrapper";
 import { ReactComponent as ExternalLink } from '../images/external-link.svg';
+import BlueskyLogo from '../images/Bluesky.png';
 import TwitterLogo from '../images/Twitter.png';
 import LinkedInLogo from '../images/Linked-logo.png';
 import InstagramLogo from '../images/insta-icon.png';
@@ -46,6 +47,7 @@ function Contact({home}) {
             <div className="contact">
                 <h3 className="contact_text">Connect with me here:</h3>
                 <ul className="contact_list">
+                  <li><a className="link-new-tab" aria-label="link to open Abbey's Bluesky profile in a new tab" href="https://bsky.app/profile/abbeyperini.dev" target="_blank" rel="noreferrer">Bluesky<ExternalLink className="external-link" id="BlueskyExternalLink" focusable="false"/></a><img src={BlueskyLogo} alt="" className="contact-logo"/></li>
                   <li><a className="link-new-tab" aria-label="link to open Abbey's Twitter profile in a new tab" href="https://twitter.com/AbbeyPerini" target="_blank" rel="noreferrer">Twitter<ExternalLink className="external-link" id="TwitterExternalLink" focusable="false"/></a><img src={TwitterLogo} alt="" className="contact-logo"/></li>
                   <li><a className="link-new-tab" aria-label="link to open Abbey's LinkedIn profile in a new tab" href="https://www.linkedin.com/in/abbey-perini/" target="_blank" rel="noreferrer">LinkedIn<ExternalLink className="external-link" id="LinkedInExternalLink" focusable="false"/></a><img src={LinkedInLogo} alt="" className="contact-logo linked-in"/></li>
                   <li><a className="link-new-tab" aria-label="link to open Abbey's Instagram profile in a new tab" href="https://www.instagram.com/abbeyperinicodes/" target="_blank" rel="noreferrer">Instagram<ExternalLink className="external-link" id="InstagramExternalLink" focusable="false"/></a><img src={InstagramLogo} alt="" className="contact-logo instagram"/></li>
