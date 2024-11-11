@@ -16,10 +16,6 @@ function Speaking({home}) {
                 <li><p>"Intimidatingly good" - James Q. Quick</p></li>
                 <li><p>"A wonderful talk, and ...brilliant at the event" - Phil Hawksworth</p></li>
               </ul>
-              <h3>Upcoming Talks</h3>
-              <ul className="talk-list">
-                <li><a href="https://2024.allthingsopen.org/speakers/abbey-perini" rel="noreferrer" className="talk_link"><p className="event_title">All Things Open</p></a><p>October 29, 2024</p></li>
-              </ul>
               <h3>Recordings of Past Talks</h3>
               <ul className="talk-list">
                 <li><p className="event_title">Netlify Compose 2024</p><a href="https://www.youtube.com/watch?v=hSotPlaVxjg&ab_channel=Netlify" rel="noreferrer" className="talk_link">Slots, Slots, Slots, Everybody!</a></li>
