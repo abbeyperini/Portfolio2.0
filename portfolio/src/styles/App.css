@@ -422,6 +422,7 @@ nav {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  color: var(--light-text);
 }
 
 .contact_text {
@@ -485,6 +486,11 @@ nav {
   font-size: 1em;
   border: solid 2px transparent;
   margin: 3px;
+}
+
+.contact_p {
+  padding-top: 0;
+  margin-top: 0;
 }
 
 /* button animations */
