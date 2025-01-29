@@ -9,6 +9,10 @@ function Speaking({home}) {
         <section aria-label="Speaking" className="container_speaking" name="Speaking">
             <h2 className="section_title">Speaking</h2>
             <div className="talks secondary-container">
+              <h3>Upcoming Talks</h3>
+              <ul className="talk-list">
+                <li><p className="event_title">dotJS 2025</p><a href="https://www.dotjs.io/speakers" rel="noreferrer" className="talk_link">Coding and ADHD: Where We Excel</a></li>
+              </ul>
               <h3>Testimonials</h3>
               <ul>
                 <li><p>"Should be a voice actor"</p></li>
