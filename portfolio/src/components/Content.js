@@ -16,7 +16,7 @@ function Content({home}) {
               <ul>
                 <li><p>More than 460,000 total blog views</p></li>
                 <li><p>About 10,000 blog views a month</p></li>
-                <li><p>A Top Author on <a href="https://dev.to" rel="noreferrer">DEV</a> 2021 - 2023</p></li>
+                <li><p>A Top Author on <a href="https://dev.to" rel="noreferrer">DEV</a> 2021 - 2024</p></li>
                 <li><p>The most Top 7 badges of any author on <a href="https://dev.to" rel="noreferrer">DEV</a> in 2023</p></li>
                 <li class="content_link"><p>2022 Hackernoon Contributor of the Year - </p><a href="https://noonies.hackernoon.com/2022/internet-heroes/2022-hackernoon-contributor-of-the-year-beginners-guide" rel="noreferrer">Beginners-Guide</a></li>
                 <li class="content_link"><p>2022 Hackernoon Contributor of the Year - </p><a href="https://noonies.hackernoon.com/2022/programming/2022-hackernoon-contributor-of-the-year-refactoring" rel="noreferrer">Refactoring</a></li>
