@@ -5,6 +5,7 @@ import BlueskyLogo from '../images/Bluesky.png';
 import LinkedInLogo from '../images/Linked-logo.png';
 import YouTubeLogo from '../images/YouTube.png';
 import { ReactComponent as DEVLogo } from '../images/devto.svg';
+import { ReactComponent as GitHubLogo } from '../images/github.svg';
 import HashnodeLogo from '../images/hashnode-icon.png';
 
 function Contact({home}) {
@@ -46,6 +47,7 @@ function Contact({home}) {
                   <li><a className="link-new-tab" aria-label="link to open Abbey's Bluesky profile in a new tab" href="https://bsky.app/profile/abbeyperini.dev" target="_blank" rel="noreferrer">Bluesky<ExternalLink className="external-link" id="BlueskyExternalLink" focusable="false"/></a><img src={BlueskyLogo} alt="" className="contact-logo"/></li>
                   <li><a className="link-new-tab" aria-label="link to open Abbey's LinkedIn profile in a new tab" href="https://www.linkedin.com/in/abbey-perini/" target="_blank" rel="noreferrer">LinkedIn<ExternalLink className="external-link" id="LinkedInExternalLink" focusable="false"/></a><img src={LinkedInLogo} alt="" className="contact-logo linked-in"/></li>
                   <li><a className="link-new-tab" aria-label="link to open Abbey's YouTube profile in a new tab" href="https://www.youtube.com/channel/UCJYky0mE6tqM9hMDsQAIrEg" target="_blank" rel="noreferrer">YouTube<ExternalLink className="external-link" id="YouTubeExternalLink" focusable="false"/></a><img src={YouTubeLogo} alt="" className="contact-logo youtube"/></li>
+                  <li><a className="link-new-tab" aria-label="link to open Abbey's GitHub profile in a new tab" href="https://github.com/abbeyperini" target="_blank" rel="noreferrer">GitHub<ExternalLink className="external-link" id="YouTubeExternalLink" focusable="false"/></a><GitHubLogo id="DigitalGardenGithub" focusable="false" alt="" className="contact-logo"/></li>
                   <li><a href="https://dev.to/abbeyperini" target="_blank" rel="noreferrer" aria-label="link to Abbey's Profile on DEV">DEV</a><ExternalLink className="external-link" id="DEVExternalLink" focusable="false"/><DEVLogo className="contact-logo" focusable="false" /></li>
                   <li><a href="https://abbeyperini.hashnode.dev/" target="_blank" rel="noreferrer" aria-label="link to Abbey's Profile on Hashnode">Hashnode</a><ExternalLink className="external-link" id="HashnodeExternalLink" focusable="false"/><img src={HashnodeLogo} alt="" className="contact-logo"/></li>
                 </ul>
