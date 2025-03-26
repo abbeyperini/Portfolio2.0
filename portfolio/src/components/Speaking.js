@@ -12,6 +12,7 @@ function Speaking({home}) {
               <h3>Upcoming Talks</h3>
               <ul className="talk-list">
                 <li><p className="event_title">dotJS 2025</p><a href="https://www.dotjs.io/speakers" rel="noreferrer" className="talk_link">Coding and ADHD: Where We Excel</a></li>
+                <li><p className="event_title">Code and Coffee:</p><a href="https://cfe.dev/events/virtual-coffee-conf-2025/" rel="noreferrer" className="talk_link">A Virtual Coffee Conference</a></li>
               </ul>
               <h3>Testimonials</h3>
               <ul>
