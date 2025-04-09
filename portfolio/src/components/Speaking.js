@@ -11,8 +11,7 @@ function Speaking({home}) {
             <div className="talks secondary-container">
               <h3>Upcoming Talks</h3>
               <ul className="talk-list">
-                <li><p className="event_title">dotJS 2025</p><a href="https://www.dotjs.io/speakers" rel="noreferrer" className="talk_link">Coding and ADHD: Where We Excel</a></li>
-                <li><p className="event_title">Code and Coffee:</p><a href="https://cfe.dev/events/virtual-coffee-conf-2025/" rel="noreferrer" className="talk_link">A Virtual Coffee Conference</a></li>
+                <li><p className="event_title">Code and Coffee: A Virtual Coffee Conference</p><a href="https://cfe.dev/events/virtual-coffee-conf-2025/" rel="noreferrer" className="talk_link">Coding and ADHD: Where We Excel</a></li>
               </ul>
               <h3>Testimonials</h3>
               <ul>
@@ -23,6 +22,7 @@ function Speaking({home}) {
               </ul>
               <h3>Recordings of Past Talks</h3>
               <ul className="talk-list">
+                <li><p className="event_title">dotJS 2025</p><a href="https://www.youtube.com/watch?si=RLUgFmQFeyEjVyrg&v=mt2v2DX5Tno&feature=youtu.be" rel="noreferrer" className="talk_link">Coding and ADHD: Where We Excel</a></li>
                 <li><p className="event_title">Netlify Compose 2024</p><a href="https://www.youtube.com/watch?v=hSotPlaVxjg&ab_channel=Netlify" rel="noreferrer" className="talk_link">Slots, Slots, Slots, Everybody!</a></li>
                 <li><p className="event_title">Developers of the World</p><a href="https://youtu.be/C_E4xghf-8Y?t=20525" rel="noreferrer" className="talk_link"><p>Interview with James Q. Quick at THAT 2024</p></a></li>
                 <li><p className="event_title">VueConf US 2024</p><a href="https://www.vuemastery.com/conferences/vueconf-us-2024/slots-slots-slots-everybody/" rel="noreferrer" className="talk_link"><p>Slots, Slots, Slots, Everybody!</p></a></li>
