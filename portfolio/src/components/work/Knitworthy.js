@@ -15,7 +15,7 @@ function Knitworthy() {
                 project data to real life time and length measurements to put the amount of love that goes into a handmade gift into perspective for 
                 someone who does not knit or crochet.</p>
             <span className="work_links">
-                <a className="link-new-tab" href="https://github.com/abbeyperini/Knitworthy" target="_blank" rel="noreferrer"><Github id="KnitworthyGithub" aria-label="open Knitworthy Github repository in a new tab" className="work_icon"/></a>
+                <a className="link-new-tab" href="https://github.com/abbeyperini/Knitworthy" target="_blank" rel="noreferrer"><Github id="KnitworthyGithub" role="img" aria-label="open Knitworthy Github repository in a new tab" className="work_icon"/></a>
             </span>
         </div>
     )
