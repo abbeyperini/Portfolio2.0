@@ -24,7 +24,7 @@ function About({home}) {
             {!home && <h1 className="offscreen">Abbey Perini's Portfolio | About</h1>}
             <h2 id="about" className="section_title">About Abbey</h2>
             <div className="about">
-                <img alt="headshot of Abbey Perini wearing a red collared shirt with white polka dots and red lipstick" src={headshot} className="about_headshot" />
+                <img alt="headshot of Abbey Perini wearing a cape blazer, a white button down shirt, a burgundy tie, and burgundy lipstick smiling at the camera. She is pale white with blue eyes and shoulder-length blonde hair." src={headshot} className="about_headshot" />
                 <p className="about_text">Abbey Perini is many things - a metro Atlanta native, a person of many hobbies, and a full-stack web developer. Passionate about accessibility, she's worked in Vue, React, and even AngularJS (2013). She's happiest problem solving in the front-end, back-end, and all the APIs and microservices in between. She's spent her development career rectifying tech debt in existing codebases. She loves blogging and speaking about fun and useful things about programming, especially if it helps other developers.</p>
                 <div className="container_skills-icon">
                     <JSLogo className="skills-icon" focusable="false" />
