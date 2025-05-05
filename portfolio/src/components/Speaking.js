@@ -11,7 +11,7 @@ function Speaking({home}) {
             <div className="talks secondary-container">
               <h3>Upcoming Talks</h3>
               <ul className="talk-list">
-                <li><p className="event_title">Code and Coffee: A Virtual Coffee Conference</p><a href="https://cfe.dev/events/virtual-coffee-conf-2025/" rel="noreferrer" className="talk_link">Coding and ADHD: Where We Excel</a></li>
+                <li><p className="event_title">Frontend Queens</p><a href="https://us06web.zoom.us/meeting/register/fAYiSPmSRACXbkkwUJs3ug#/registration" rel="noreferrer" className="talk_link">Global Accessibility Awareness Day: Building an Inclusive Web</a></li>
               </ul>
               <h3>Testimonials</h3>
               <ul>
