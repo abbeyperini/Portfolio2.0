@@ -13,6 +13,7 @@ function NavBar(props) {
         <Link to="/about" className="nav_button">About</Link>
         <Link to="/contact" className="nav_button">Contact</Link>
         <Link to="https://abbeyperini.shop/" className="nav_button">Shop</Link>
+        <Link to="https://abbeynormal.tech/" className="nav_button">Newsletter</Link>
         <Toggle setClassName={props.setClassName} />
       </nav>
     )
