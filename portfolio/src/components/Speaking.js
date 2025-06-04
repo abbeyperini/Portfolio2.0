@@ -11,7 +11,7 @@ function Speaking({home}) {
             <div className="talks secondary-container">
               <h3>Upcoming Talks</h3>
               <ul className="talk-list">
-                <li><p className="event_title">Frontend Queens</p><a href="https://us06web.zoom.us/meeting/register/fAYiSPmSRACXbkkwUJs3ug#/registration" rel="noreferrer" className="talk_link">Global Accessibility Awareness Day: Building an Inclusive Web</a></li>
+                <li><p className="event_title">Commit Your Code 2025</p><a href="https://www.commityourcode.com/speakers" className="talk_link">Slot, Slots, Slots, Everybody!</a></li>
               </ul>
               <h3>Testimonials</h3>
               <ul>
@@ -22,6 +22,7 @@ function Speaking({home}) {
               </ul>
               <h3>Recordings of Past Talks</h3>
               <ul className="talk-list">
+                <li><p className="event_title">Frontend Queens</p><a href="https://www.youtube.com/watch?v=cZJ19XzS3ng" rel="noreferrer" className="talk_link">Global Accessibility Awareness Day: Building an Inclusive Web</a></li>
                 <li><p className="event_title">dotJS 2025</p><a href="https://www.youtube.com/watch?si=RLUgFmQFeyEjVyrg&v=mt2v2DX5Tno&feature=youtu.be" rel="noreferrer" className="talk_link">Coding and ADHD: Where We Excel</a></li>
                 <li><p className="event_title">Netlify Compose 2024</p><a href="https://www.youtube.com/watch?v=hSotPlaVxjg&ab_channel=Netlify" rel="noreferrer" className="talk_link">Slots, Slots, Slots, Everybody!</a></li>
                 <li><p className="event_title">Developers of the World</p><a href="https://youtu.be/C_E4xghf-8Y?t=20525" rel="noreferrer" className="talk_link"><p>Interview with James Q. Quick at THAT 2024</p></a></li>
