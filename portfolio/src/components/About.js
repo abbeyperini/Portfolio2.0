@@ -6,6 +6,9 @@ import { ReactComponent as PythonLogo } from '../images/python.svg';
 import { ReactComponent as HTMLLogo } from '../images/html.svg';
 import { ReactComponent as CSSLogo } from '../images/css3.svg';
 import { ReactComponent as NodeLogo } from '../images/node.svg';
+import vueLogo from "../images/Vue.png";
+import { ReactComponent as NuxtLogo } from "../images/nuxt.svg";
+import piniaLogo from "../images/PiniaLogo.png";
 import { ReactComponent as ReactLogo } from '../images/react.svg';
 import { ReactComponent as ReduxLogo } from '../images/redux.svg';
 import { ReactComponent as PostgreSQLLogo } from '../images/postgresql.svg';
@@ -32,6 +35,9 @@ function About({home}) {
                     <HTMLLogo className="skills-icon" focusable="false" />
                     <CSSLogo className="skills-icon" focusable="false" />
                     <NodeLogo className="skills-icon" focusable="false" />
+                    <img alt="Vue logo" src={vueLogo} className="vue-icon" focusable="false" />
+                    <NuxtLogo className="nuxt-icon" focusable="false" />
+                    <img alt="Pinia logo" src={piniaLogo} className="pinia-icon" focusable="false" />
                     <ReactLogo className="skills-icon" focusable="false" />
                     <ReduxLogo className="skills-icon" focusable="false" />
                     <PostgreSQLLogo className="skills-icon" focusable="false" />

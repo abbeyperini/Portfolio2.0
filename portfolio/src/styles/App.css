@@ -400,6 +400,21 @@ nav {
   margin: 20px;
 }
 
+.nuxt-icon {
+  width: 80px;
+  margin: 20px 20px 35px 20px;
+}
+
+.vue-icon {
+  width: 40px;
+  margin-bottom: 30px;
+}
+
+.pinia-icon {
+    width: 40px;
+  margin-bottom: 20px;
+}
+
 .container_skills-icon {
   background: rgba(255, 255, 255, .55);
   box-shadow: 0 8px 32px 0 rgba(0,0,0,.37);
