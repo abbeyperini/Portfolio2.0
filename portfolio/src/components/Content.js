@@ -15,7 +15,7 @@ function Content({home}) {
               <p>If you want to buy stickers or send me a lil treat, check out <a href="https://abbeyperini.shop" rel="noreferrer" >my shop</a>.</p>
               <h3>Writing Awards and Honors</h3>
               <ul>
-                <li><p>More than 460,000 total blog views</p></li>
+                <li><p>More than ✨half a million✨ total blog views</p></li>
                 <li><p>About 10,000 blog views a month</p></li>
                 <li><p>A Top Author on <a href="https://dev.to" rel="noreferrer">DEV</a> 2021 - 2024</p></li>
                 <li><p>The most Top 7 badges of any author on <a href="https://dev.to" rel="noreferrer">DEV</a> in 2023</p></li>
