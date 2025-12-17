@@ -11,10 +11,7 @@ function Speaking({home}) {
             <div className="talks secondary-container">
               <h3>Upcoming Talks</h3>
               <ul className="talk-list">
-                <li><p className="event_title">Commit Your Code 2025</p><a href="https://www.commityourcode.com/speakers" className="talk_link">Slot, Slots, Slots, Everybody!</a></li>
-                <li><p className="event_title">CodeWord Conf 2025</p><a href="https://cfe.dev/events/codeword-conf-2025/" className="talk_link">Web Development === Accessibility</a></li>
-                <li><p className="event_title">Magnolia Conf 2025</p><a href="https://2025.magnoliaconf.com/" className="talk_link">#gitPanic - Restoring Lost Work</a></li>
-                <li><p className="event_title">React Summit US 2025</p><a href="https://gitnation.com/badges/react-summit-us-2025/abbey_perini" className="talk_link">Slot, Slots, Slots, Everybody!</a></li>
+                <li><p className="event_title">CodeMash 2026</p><a href="https://events.codemash.org/2026CodeMashConference#/agenda?day=3&lang=en&speakerId=76186000008346098&viewMode=2" className="talk_link">#gitPanic - Restoring Lost Work, Fiber Arts as Programming Workshop</a></li>
               </ul>
               <h3>Testimonials</h3>
               <ul>
