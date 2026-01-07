@@ -30,6 +30,12 @@ function Speaking({home}) {
                 <li><p className="event_title">The Monthly dev #32</p><a href="https://www.youtube.com/watch?v=XWW1hQEnERQ&ab_channel=dailydev" rel="noreferrer" className="talk_link"><p>Getting Started in a New Codebase</p></a></li>
                 <li><p className="event_title">JSDrops</p><a href="https://dropjs.com/from-idea-to-design-for-non-designers-with-abbey-perini" rel="noreferrer" className="talk_link"><p>From Idea to Design for Non-Designers</p></a></li>
               </ul>
+              <h3>Interviews and More</h3>
+              <ul className="talk-list">
+                <li><a href="https://www.youtube.com/watch?si=QrlWH64qghXtDpe1&v=rgt5GPFgryI&feature=youtu.be" rel="noreferrer" className="talk_link">FreeCodeCamp Podcast</a></li>
+                <li><a href="https://codetv.dev/series/web-dev-challenge/s2/e1-build-a-custom-api-postman" rel="noreferrer" className="talk_link">Web Dev Challenge</a></li>
+                <li><a href="https://youtu.be/C_E4xghf-8Y?t=20525" rel="noreferrer" className="talk_link">Developers of the World with James Q. Quick</a></li>
+              </ul>
               <a href="/contact" className="speaking_CTA">Invite Me to Speak <Arrow className="button_arrow" focusable="false"/></a>
             </div>
         </section>
