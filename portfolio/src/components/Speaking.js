@@ -11,11 +11,12 @@ function Speaking({home}) {
             <div className="talks secondary-container">
               <h3>Upcoming Talks</h3>
               <ul className="talk-list">
-                <li><p className="event_title">CodeMash 2026</p><a href="https://events.codemash.org/2026CodeMashConference#/agenda?day=3&lang=en&speakerId=76186000008346098&viewMode=2" className="talk_link">#gitPanic - Restoring Lost Work, Fiber Arts as Programming Workshop</a></li>
+                <li><p className="event_title">VueConfUS 2026</p><a href="https://vueconf.us/#speakers" className="talk_link">#gitPanic - Restoring Lost Work, Fiber Arts as Programming Workshop</a></li>
               </ul>
               <h3>Testimonials</h3>
               <ul>
-                <li><p>"Should be a voice actor"</p></li>
+                <li><p>"Should be a voice actor" - many</p></li>
+                <li><p>"Very energetic" - anonymous</p></li>
                 <li><p>"A big deal" - Danny Thompson</p></li>
                 <li><p>"Intimidatingly good" - James Q. Quick</p></li>
                 <li><p>"A wonderful talk, and ...brilliant at the event" - Phil Hawksworth</p></li>
@@ -32,6 +33,7 @@ function Speaking({home}) {
               </ul>
               <h3>Interviews and More</h3>
               <ul className="talk-list">
+                <li><a href="https://overcommitted.dev/accessibility-fiber-arts-and-adhd-with-abbey-perini/">Overcommitted Podcast</a></li>
                 <li><a href="https://www.youtube.com/watch?si=QrlWH64qghXtDpe1&v=rgt5GPFgryI&feature=youtu.be" rel="noreferrer" className="talk_link">FreeCodeCamp Podcast</a></li>
                 <li><a href="https://codetv.dev/series/web-dev-challenge/s2/e1-build-a-custom-api-postman" rel="noreferrer" className="talk_link">Web Dev Challenge</a></li>
                 <li><a href="https://youtu.be/C_E4xghf-8Y?t=20525" rel="noreferrer" className="talk_link">Developers of the World with James Q. Quick</a></li>
