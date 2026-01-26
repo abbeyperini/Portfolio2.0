@@ -6,12 +6,11 @@ function Content({home}) {
     return (
       <SingleWrapper home={home}>
         {!home && <h1 className="offscreen">Abbey Perini's Portfolio | Content</h1>}
-        <section aria-label="Content" className="container_content" name="Content">
-            <h2 className="section_title">Content</h2>
+        <section aria-label="Writing" className="container_content" name="Content">
+            <h2 className="section_title">Writing</h2>
             <div className="secondary-container content-content">
               <img src={devShiba} className="content-graphic" alt="a shiba inu wearing glasses and a bowtie and working on a laptop covered in stickers" />
-              <p>Check out my newsletter, <a href="https://www.abbeynormal.tech">Abbey Normal Tech</a>.</p>
-              <p>You can find my writing on <a href="https://dev.to/abbeyperini" rel="noreferrer">DEV</a> and <a href="https://abbeyperini.hashnode.dev/" rel="noreferrer">Hashnode</a>, and in my <a href="https://www.abbeyperini.com" rel="noreferrer">digital garden</a> (a work in progress).</p>
+              <p>You can find my writing on <a href="https://dev.to/abbeyperini" rel="noreferrer">DEV</a> and in my <a href="https://www.abbeyperini.com" rel="noreferrer">digital garden</a> (a work in progress).</p>
               <p>If you want to buy stickers or send me a lil treat, check out <a href="https://abbeyperini.shop" rel="noreferrer" >my shop</a>.</p>
               <h3>Writing Awards and Honors</h3>
               <ul>

@@ -51,8 +51,7 @@ function Contact({home}) {
                   <li><a className="link-new-tab" href="https://dev.to/abbeyperini" target="_blank" rel="noreferrer" aria-label="link to Abbey's Profile on DEV">DEV<ExternalLink className="external-link" id="DEVExternalLink" focusable="false" aria-hidden="true"/></a><DEVLogo className="contact-logo" focusable="false" aria-hidden="true" /></li>
                   <li><a className="link-new-tab" href="https://abbeyperini.hashnode.dev/" target="_blank" rel="noreferrer" aria-label="link to Abbey's Profile on Hashnode">Hashnode<ExternalLink className="external-link" id="HashnodeExternalLink" focusable="false" aria-hidden="true"/></a><img src={HashnodeLogo} alt="" className="contact-logo"/></li>
                 </ul>
-                <p className="contact_text">I do not have accounts on ByteDance or Meta products.</p>
-                <p className="contact_p">I'm working on hosting my tweets on <a href="https://abbeyperini.com">my digital garden</a>.</p>
+                <p className="contact_text">I don't have accounts on ByteDance or Meta products. </p>
                 <h3>Fill out the form to send me an email!</h3>
                 <form className="contact-form" onSubmit={handleSubmit}>
                     <p>
