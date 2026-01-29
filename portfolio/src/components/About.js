@@ -30,7 +30,7 @@ function About({home}) {
             <div className="about">
                 <img alt="headshot of Abbey Perini wearing a cape blazer, a white button down shirt, a burgundy tie, and burgundy lipstick smiling at the camera. She is pale white with blue eyes and shoulder-length blonde hair." src={headshot} className="about_headshot" />
                 <p className="about_text">Abbey Perini is many things - a metro Atlanta native, person of many hobbies, full-stack web developer, accessibility advocate, international speaker, and technical writer with ✨over 500,000 views.✨</p>
-                <p className="about_text">She's full-stack in the truest sense - give her a problem and she'll figure it out. Passionate about accessibility, she's worked in Vue, React, and even AngularJS(2013). She's spent her development career rectifying tech debt in existing codebases.</p>            
+                <p className="about_text">She's full-stack in the truest sense - give her a problem and she'll figure it out. She's happiest problem solving in the front-end, back-end, and all the APIs and microservices in between. Passionate about accessibility, she's worked in Vue, React, and even AngularJS (2013). She's spent her development career rectifying tech debt in existing codebases.</p>            
                 <div className="container_skills-icon">
                     <JSLogo className="skills-icon" focusable="false" />
                     <PythonLogo className="skills-icon" focusable="false" />
