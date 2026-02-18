@@ -11,7 +11,7 @@ function Speaking({home}) {
             <div className="talks secondary-container">
               <h3>Upcoming Talks</h3>
               <ul className="talk-list">
-                <li><p className="event_title">VueConfUS 2026</p><a href="https://vueconf.us/#speakers" className="talk_link">#gitPanic - Restoring Lost Work, Fiber Arts as Programming Workshop</a></li>
+                <li><p className="event_title">VueConfUS 2026</p><a href="https://vueconf.us/#speakers" className="talk_link">Universal Lessons Learned from Legacy Codebases</a></li>
               </ul>
               <h3>Testimonials</h3>
               <ul>
