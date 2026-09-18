@@ -11,8 +11,6 @@ function Speaking({home}) {
             <div className="talks secondary-container">
               <h3>Upcoming Talks</h3>
               <ul className="talk-list">
-                <li><p className="event_title">Nebraska.code() 2026</p><a href="https://www.nebraska-code.com/#speakers" className="talk_link">Restoring Lost Work in Git: A Forbidden Love Story and Slots, Slots, Slots, Everybody!</a></li>
-                <li><p className="event_title">KCDC 2026</p><a href="https://www.kcdc.info/speakers" className="talk_link">State Management in Front-end Development Workshop</a></li>
                 <li><p className="event_title">TechBash 2026</p><a href="https://techbash.com/sessions" className="talk_link">Restoring Lost Work in Git: A Forbidden Love Story and From Idea to Design for Non-Designers</a></li>
               </ul>
               <h3>Testimonials</h3>
