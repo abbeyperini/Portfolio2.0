@@ -11,15 +11,16 @@ function Speaking({home}) {
             <div className="talks secondary-container">
               <h3>Upcoming Talks</h3>
               <ul className="talk-list">
-                <li><p className="event_title">TechBash 2026</p><a href="https://techbash.com/sessions" className="talk_link">Restoring Lost Work in Git: A Forbidden Love Story and From Idea to Design for Non-Designers</a></li>
+                <li><p className="event_title">CodeMash 2027</p><a href="https://events.codemash.org/2027CodeMashConference#/acceptedSpeakers" className="talk_link">State Management in Front-end Web Development</a></li>
+                <li><p className="event_title">DevNexus 2027</p><a href="https://devnexus.com/" className="talk_link">Restoring Lost Work in git: A Forbidden Love Story</a></li>
               </ul>
               <h3>Testimonials</h3>
               <ul>
-                <li><p>"Should be a voice actor" - many</p></li>
-                <li><p>"Very energetic" - anonymous</p></li>
                 <li><p>"A big deal" - Danny Thompson</p></li>
                 <li><p>"Intimidatingly good" - James Q. Quick</p></li>
                 <li><p>"A wonderful talk, and ...brilliant at the event" - Phil Hawksworth</p></li>
+                <li><p>"The example of a perfect code-heavy development talk" - Andrew McLean</p></li>
+                <li><p>"Her talks are consistently excellent" - Andrea Griffiths</p></li>
               </ul>
               <h3>Recordings of Past Talks</h3>
               <ul className="talk-list">

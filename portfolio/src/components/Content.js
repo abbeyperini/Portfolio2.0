@@ -24,12 +24,13 @@ function Content({home}) {
               </ul>
               <h3>Testimonials</h3>
               <ul>
-                <li><p>"Very helpful"</p></li>
+                <li><p>"It's a joy to read what [she writes]." - Quincy Larson</p></li>
                 <li><p>"Life changing" - Luiz Amaral</p></li>
                 <li><p>"Inspiring and reassuring" - Sara Brielmaier</p></li>
                 <li><p>"Abbey's articles are so informative and enjoyable to read." - Ayu Adiati</p></li>
                 <li><p>"At first I thought I was reading something from a national publication" - Julia Seidman</p></li>
                 <li><p>"I think I've learned more from this article than my college classes about computer networks." - Leticia Pegoraro Garcez</p></li>
+                <li><p>"This is the kind of explanation I wish I had..." - many</p></li>
               </ul>
             </div>
         </section>
